@@ -1,0 +1,42 @@
+.hide {
+  background-color: black;
+  color: black;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.hide:hover {
+  background-color: transparent;
+  color: initial;
+}
+
+code {
+  font-family: "Consolas", monospace; /* 使用等宽字体 */
+  background-color: #f4f4f4;
+  line-height: 1; /* 行高 */
+  margin: 0px 0; /* 外部间距 */
+  padding: 1px;
+  color: #333;
+}
+
+.styled-code {
+  /* border-left: 5px solid #f36d33; 左边框为橙色 */
+  padding: 3cqw; /* 内部间距 */
+  overflow-x: auto; /* 超长代码时可横向滚动 */
+  display: block; /* 使其作为块级元素显示 */
+  line-height: 1.2; /* 行高 */
+  color: #333; /* 字体颜色 */
+  margin: 4px 0; /* 外部间距 */
+  border-radius: 5px; /* 边框圆角 */
+  white-space: pre-wrap;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+  text-align: center;
+}
