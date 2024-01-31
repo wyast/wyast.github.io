@@ -1,3 +1,44 @@
+/* 通用样式 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* 标题样式 */
+h1,
+h2,
+h3 {
+  color: #444; /* 标题颜色 */
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em; /* 小标题字体大小 */
+  margin-bottom: 0.75em; /* 标题下方的边距 */
+}
+
+/* 段落样式 */
+p {
+  margin-bottom: 1em; /* 段落之间的间距 */
+}
+
+/* 设置链接样式 */
+a {
+  color: #06c; /* 链接颜色 */
+  text-decoration: none; /* 去除下划线 */
+}
+
+a:hover {
+  text-decoration: underline; /* 悬停时添加下划线 */
+}
+
+/* 隐藏块 */
+
 .hide {
   background-color: black;
   color: black;
@@ -8,6 +49,8 @@
   background-color: transparent;
   color: initial;
 }
+
+/* 代码块 */
 
 code {
   font-family: "Consolas", monospace; /* 使用等宽字体 */
@@ -30,13 +73,25 @@ code {
   white-space: pre-wrap;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
+/* 图片 */
+
+figure {
+  /* border: 1px solid #ddd; 灰色边框 */
+  /* padding: 10px; 内边距 */
+  margin: auto; /* 水平居中 */
+  max-width: auto; /* 最大宽度 */
+  text-align: center; /* 图片居中 */
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-  text-align: center;
+figcaption {
+  text-align: center; /* 标题居中 */
+  color: #666; /* 标题颜色 */
+  font-style: italic; /* 斜体字 */
+  margin-top: 5px; /* 与图片的距离 */
+}
+
+figure:hover img {
+  filter: brightness(80%); /* 图片变暗 */
+  transform: scale(1.05); /* 稍微放大图片 */
+  transition: all 0.3s ease; /* 平滑过渡效果 */
 }
