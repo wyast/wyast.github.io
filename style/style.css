@@ -85,7 +85,7 @@ figure {
 img {
   display: block; /* 使其作为块级元素显示 */
   width: auto; /* 图片宽度 */
-  max-width: 100%; /* 确保图片不超过其父容器的宽度 */
+  max-width: 90%; /* 确保图片不超过其父容器的宽度 */
   height: auto; /* 图片高度 */
   border-radius: 5px; /* 边框圆角 */
   margin: 0 auto; /* 水平居中 */
