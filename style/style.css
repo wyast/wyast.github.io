@@ -76,11 +76,20 @@ code {
 /* 图片 */
 
 figure {
-  /* border: 1px solid #ddd; 灰色边框 */
-  /* padding: 10px; 内边距 */
   margin: auto; /* 水平居中 */
-  max-width: auto; /* 最大宽度 */
+  width: auto; /* 最大宽度 */
+  max-width: 100%; /* 确保图片不超过其父容器的宽度 */
   text-align: center; /* 图片居中 */
+}
+
+img {
+  display: block; /* 使其作为块级元素显示 */
+  width: auto; /* 图片宽度 */
+  max-width: 100%; /* 确保图片不超过其父容器的宽度 */
+  height: auto; /* 图片高度 */
+  border-radius: 5px; /* 边框圆角 */
+  margin: 0 auto; /* 水平居中 */
+  transition: all 0.3s ease; /* 平滑过渡效果 */
 }
 
 figcaption {
