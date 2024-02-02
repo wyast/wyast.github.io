@@ -1,44 +1,3 @@
-/* 通用样式 */
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-}
-
-/* 标题样式 */
-h1,
-h2,
-h3 {
-  color: #444; /* 标题颜色 */
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.5em; /* 小标题字体大小 */
-  margin-bottom: 0.75em; /* 标题下方的边距 */
-}
-
-/* 段落样式 */
-p {
-  margin-bottom: 1em; /* 段落之间的间距 */
-}
-
-/* 设置链接样式 */
-a {
-  color: #06c; /* 链接颜色 */
-  text-decoration: none; /* 去除下划线 */
-}
-
-a:hover {
-  text-decoration: underline; /* 悬停时添加下划线 */
-}
-
-/* 隐藏块 */
-
 .hide {
   background-color: black;
   color: black;
@@ -49,8 +8,6 @@ a:hover {
   background-color: transparent;
   color: initial;
 }
-
-/* 代码块 */
 
 code {
   font-family: "Consolas", monospace; /* 使用等宽字体 */
@@ -68,39 +25,57 @@ code {
   display: block; /* 使其作为块级元素显示 */
   line-height: 1.2; /* 行高 */
   color: #333; /* 字体颜色 */
-  margin: 4px 0; /* 外部间距 */
+  margin: 10px 0; /* 外部间距 */
   border-radius: 5px; /* 边框圆角 */
   white-space: pre-wrap;
+  box-shadow: -3px 3px 3px var(--main-color);
 }
 
-/* 图片 */
-
-figure {
-  margin: auto; /* 水平居中 */
-  width: auto; /* 最大宽度 */
-  max-width: 100%; /* 确保图片不超过其父容器的宽度 */
-  text-align: center; /* 图片居中 */
+header {
+  background-color: var(--main-color);
+  line-height: 1.2;
+  max-width: none;
+  padding: 8vw 2em;
+  text-align: center;
 }
 
-img {
-  display: block; /* 使其作为块级元素显示 */
-  width: auto; /* 图片宽度 */
-  max-width: 90%; /* 确保图片不超过其父容器的宽度 */
-  height: auto; /* 图片高度 */
-  border-radius: 5px; /* 边框圆角 */
-  margin: 0 auto; /* 水平居中 */
-  transition: all 0.3s ease; /* 平滑过渡效果 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  padding: 4em 1em;
+  color: #555;
 }
 
-figcaption {
-  text-align: center; /* 标题居中 */
-  color: #666; /* 标题颜色 */
-  font-style: italic; /* 斜体字 */
-  margin-top: 5px; /* 与图片的距离 */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+  text-align: center;
+  color: #f4f4f4;
 }
 
-figure:hover img {
-  filter: brightness(80%); /* 图片变暗 */
-  transform: scale(1.05); /* 稍微放大图片 */
-  transition: all 0.3s ease; /* 平滑过渡效果 */
+h2 {
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+h2,strong {
+  color: #333;
+}
+
+a {
+  color: var(--main-color);
+}
+
+a:visited {
+  color: purple;
+}
+
+
+:root {
+  --main-color: #0086a9;
+  --background-color: #f4f4f4;
 }
