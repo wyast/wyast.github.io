@@ -1,200 +1,210 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zotero入门教程</title>
     <link rel="stylesheet" type="text/css" href="..\style\style.css" />
-  </head>
-  <body>
-    <h1>Zotero入门教程</h1>
+</head>
 
-    <h2>Zotero简介</h2>
+<body>
+    <header>
+        <h1>Zotero入门教程</h1>
+    </header>
+    <main>
+        <h2>Zotero简介</h2>
+        <p>
+            哎呀，老铁，听说你在进行重要研究，正在为文献管理烦恼？别怕，Zotero来搞定一切！您专属的Zotero使用指南已送达，让你轻松学会如何使用这个强大的开源工具。
+        </p>
+        <p>
+            Zotero由Roy Rosenzweig Center for History and New Media开发是一个开源工具，可以通过浏览器扩展和计算机上的独立程序，轻松地收集、整理、引用和分享研究来源。
+        </p>
+        <p>
+            闲话不多说，请大家坐稳扶好，跟随小编开启Zotero之旅吧o(￣▽￣)ブ~
+        </p>
 
-    <p>
-    哎呀，老铁，听说你在进行重要研究，正在为文献管理烦恼？别怕，Zotero来搞定一切！您专属的Zotero使用指南已送达，让你轻松学会如何使用这个强大的开源工具。
-    </p>
-    <p>
-    Zotero由Roy Rosenzweig Center for History and New Media开发是一个开源工具，可以通过浏览器扩展和计算机上的独立程序，轻松地收集、整理、引用和分享研究来源。
-    </p>
-    <p>
-    闲话不多说，请大家坐稳扶好，跟随小编开启Zotero之旅吧o(￣▽￣)ブ~
-    </p>
+        <p class="note">
+        <h3>小提示</h3>
 
-<p class="note">
-    <h3>小提示</h3>
+        <div>
+            推送只覆盖了NumPy功能的冰山一角，官方手册中还有好多好多的宝藏，非常鼓励大家去阅读学习哦。
+        </div>
 
-    <div>
-    推送只覆盖了NumPy功能的冰山一角，官方手册中还有好多好多的宝藏，非常鼓励大家去阅读学习哦。
-    </div>
+        <div>
+            本推送所有内容来源为<a href="https://libguides.dickinson.edu/citing/Zotero">Zotero官方文档</a>。</div>
+        </p>
 
-    <div>
-    本推送所有内容来源为<a href="https://libguides.dickinson.edu/citing/Zotero"
-    >Zotero官方文档</a>。</div>
-</p>
-
-<h2>下载安装Zotero</h2>
-
-
-    <p>
-        首先，打开你的浏览器，点击<a href="https://www.zotero.org/">Zotero的官网</a>。下载并安装Zotero应用程序，然后再去找你喜欢的浏览器插件，装上Zotero Connector。别担心，这一切都是免费的！
-    </p>
-    
-
-    <figure>
-        <img src="/posts/fig/zotero/1.png" alt="浏览器插件">
-        <figcaption>Zotero浏览器插件</figcaption>
-    </figure>
-    
+        <h2>下载安装Zotero</h2>
 
 
-<p>
-   Zotero的浏览器扩展（Zotero Connector）在浏览器地址栏中添加了一个按钮，允许你保存许多来源的引文信息（元数据），有时甚至可以保存来源文件本身，然后同步到你的设备上。这有助于组织你的来源并创建自动引文。Zotero可以从任何给定的资源中捕获元数据，并可以直接从图书馆数据库保存全文PDF文件。
-</p>
+        <p>
+            首先，打开你的浏览器，点击<a href="https://www.zotero.org/">Zotero的官网</a>。下载并安装Zotero应用程序，然后再去找你喜欢的浏览器插件，装上Zotero
+            Connector。别担心，这一切都是免费的！
+        </p>
 
-<h2>捕捉文献，做个文献达人</h2>
 
-<p>
-    当安装了Zotero的浏览器扩展之后，浏览器上方会多出一个神奇的Zotero按钮，这可不是摆设，是你文献捕捉的入口。
-</p>
-<p>
-    在Chrome、Firefox、Safari上，点击这个按钮，嗖的一下，你正在浏览的文章的信息就被保存了，还能同步到你其他设备。别忘了，Zotero的独立应用程序必须在运行状态哦！
-</p>
-    
-
-<figure>
-    <img src="/posts/fig/zotero/2.png" alt="保存文章到Zotero">
-    <figcaption>保存文章到Zotero</figcaption>
-</figure>
-
-<p>
-    如果你有文章的ISBN、DOI、或PubMed ID，也可以直接用Zotero顶部工具栏的“Add Item(s) by Identifier” 工具，输入信息，秒变文献管理大神。当然，如果你喜欢手动操作，点一下“New Item” ，然后按照提示填写文献信息，嗯，就这么简单。
-</p>
-
-<figure>
-    <img src="/posts/fig/zotero/3.png" alt="填写文献信息">
-    <figcaption>填写文献信息</figcaption>
-</figure>
-
-<h2>搞定PDF和图书馆检索</h2>
-
-<p>
-    Zotero可不是只会保存文献信息，还能搞到文献的全文PDF。右键点击文献，选择“Find Available PDF”，Zotero就会为你搜寻开放获取的PDF，真是太贴心了！
-</p>
-
-<figure>
-    <img src="/posts/fig/zotero/4.png" alt="搜寻开放获取的PDF">
-    <figcaption>搜寻开放获取的PDF</figcaption>
-</figure>
-
-<p>
-    如果没有PDF，或者是其他类型的文献，你可以使用“Library Lookup”选项，通过JumpStart搜索这个文献。别忘了在“首选项”菜单-->“高级”中配置OpenURL Resolver，并在标有“解析器”的框中输入下面的链接：
-<code class= "styled-code">https://dickinson.primo.exlibrisgroup.com/openurl/01DICKINSON_INST/01DICKINSON_INST:DICKINSON?
-</code>
-，这样你就可以方便地查找文献。
-</p>
-
-<figure>
-    <img src="/posts/fig/zotero/5.png" alt="这样填写">
-    <figcaption>这样填写</figcaption>
-</figure>
-
-<p>
-    添加OpenURL后，你可以选择一个来源，然后点击右侧的绿色箭头，最后选择“图书馆查找”如下图，自动在JumpStart中搜索该来源以访问我们的馆藏或提交ILL请求。
-</p>
-
-<figure>
-    <img src="/posts/fig/zotero/6.png" alt="图书馆查找">
-    <figcaption>图书馆查找</figcaption>
-</figure>
-
-<h2>整理文献库，写写笔记</h2>
-
-<p>
-    Zotero的“Collection”功能让你轻松整理文献，创建不同的组和子组。直接导入或事后再加入，一切随心所欲。记得右键点击创建子组哦，这样你的文献库更井井有条。
-</p>
-
-<figure>
-    <img src="/posts/fig/zotero/7.png" alt="创建子组">
-    <figcaption>创建子组</figcaption>
-</figure>
-
-<p>
-    要创建集合，点击“New collection”工具并输入你选择的标题。新集合将出现在“我的库”菜单下。要创建子集合，右键点击特定的集合，将出现一个工具箱。你可以选择“New subcollection”并像上面那样添加标题。使用相同的工具箱，你可以根据需要重命名和删除集合。
-</p>
-
-<figure>
-    <img src="/posts/fig/zotero/8.png" alt="创建集合">
-    <figcaption>创建集合</figcaption>
-</figure>
-
-<p>
-    “Tags”功能可以帮你给文献打标签，方便分类和查找。点开文献，找到“Tags”，随便加上几个，然后用“Advanced Search”工具，选择“Tag”，就能轻松找到你需要的文献了。要添加标签，请点击特定项目，右侧将出现工具箱。在顶部工具栏中选择“Tags”，然后点击“Add”。
-</p>
-
-<figure>
-    <img src="/posts/fig/zotero/9.png" alt="“Tags”">
-    <figcaption>“Tags”功能</figcaption>
-</figure>
-
-<p>
-    当然，Zotero还支持文献笔记。选中文献，点“New Note” ，随意记一笔。说不定这个笔记以后能救你一命哦！
-</p>
-
-<h2>生成参考文献，妈妈再也不用担心我的格式了</h2>
-
-<p>
-    生成参考文献简直不要太容易。选中文献，右键，“Create Bibliography from Item”，然后选择你喜欢的格式，是不是觉得轻松愉快？你还可以按住“Shift”键，选中多个文献，一键生成完整的参考文献。在“Manage Styles”里还能找到更多的引文风格，太贴心了吧！
-</p>
-
-<figure>
-    <img src="/posts/fig/zotero/10.png" alt="Create Bibliography from Item">
-    <figcaption>Create Bibliography from Item</figcaption>
-</figure>
-
-<figure>
-    <img src="/posts/fig/zotero/11.png" alt="选择引文风格">
-    <figcaption>选择引文风格</figcaption>
-</figure>
-
-<h2>Zotero与Word、Google Docs和LibreOffice的绝妙合作</h2>
-
-<p>
-    不仅能在Zotero里生成参考文献，它还能和Microsoft Word、Google Docs、以及LibreOffice深度融合。安装插件，选择你的文书处理软件，Zotero就能在里面嗖嗖地工作了。你可以在Zotero独立应用程序中选择首选项-->引用-->文字处理器，并安装适用于你的文字处理器的插件。
-</p>
-
-<p>
-    如果Word插件未激活（在Word功能区中看不到Zotero选项卡），请在打开Word后单击Zotero文字处理器首选项菜单中的“重新安装Microsoft Word插件”以解决问题。如果你使用Google Docs，则无需安装单独的插件，因为Firefox或Google Chrome的浏览器连接器已经为你处理了这个集成。
-</p>
-
-<figure>
-    <img src="/posts/fig/zotero/12.png" alt="Microsoft Word插件">
-    <figcaption>Microsoft Word插件</figcaption>
-</figure>
-
-<p>
-    在Word里插入引文也是分分钟的事情。插入完引文后，去文末，随便输入个“References”或者“Bibliography”，然后点一下“Add/Edit Bibliography”，Zotero会为你创造一个完美的参考文献列表。别慌，如果有信息错误，打开Zotero修改就行！
-</p>
-
-<h2>语言驾驭，让引文更有范儿</h2>
-
-<p>
-    Zotero支持多种语言，你可以在设置选项里面调整用户界面语言，或者在文献记录中添加语言标签。还能根据你使用的引文样式选择不同的语言格式，这也太细致了吧！有时候你可能需要从已有的文档中提取文献信息，Zotero也能搞定。如果文档不是用Zotero或RefWorks准备的，用AnyStyle.io吧，简单粗暴。
-</p>
-
-<h2>总结</h2>
-
-<p>
-    好了，以上就是您的Zotero的使用指南！希望你的科研之路因为Zotero变得更轻松愉快。快去试试吧，变成文献收藏家，成为学术巨星的第一步就是从这里开始的！
-</p>
-
-<p>
-最后祝大家期中/期末/学业/科研/生活顺利啦~(๑•̀ㅂ•́)و✧
-</p>
+        <figure>
+            <img src="./fig/zotero/1.png" alt="浏览器插件">
+            <figcaption>Zotero浏览器插件</figcaption>
+        </figure>
 
 
 
+        <p>
+            Zotero的浏览器扩展（Zotero
+            Connector）在浏览器地址栏中添加了一个按钮，允许你保存许多来源的引文信息（元数据），有时甚至可以保存来源文件本身，然后同步到你的设备上。这有助于组织你的来源并创建自动引文。Zotero可以从任何给定的资源中捕获元数据，并可以直接从图书馆数据库保存全文PDF文件。
+        </p>
+
+        <h2>捕捉文献，做个文献达人</h2>
+
+        <p>
+            当安装了Zotero的浏览器扩展之后，浏览器上方会多出一个神奇的Zotero按钮，这可不是摆设，是你文献捕捉的入口。
+        </p>
+        <p>
+            在Chrome、Firefox、Safari上，点击这个按钮，嗖的一下，你正在浏览的文章的信息就被保存了，还能同步到你其他设备。别忘了，Zotero的独立应用程序必须在运行状态哦！
+        </p>
+
+
+        <figure>
+            <img src="./fig/zotero/2.png" alt="保存文章到Zotero">
+            <figcaption>保存文章到Zotero</figcaption>
+        </figure>
+
+        <p>
+            如果你有文章的ISBN、DOI、或PubMed ID，也可以直接用Zotero顶部工具栏的“Add Item(s) by Identifier”
+            工具，输入信息，秒变文献管理大神。当然，如果你喜欢手动操作，点一下“New Item” ，然后按照提示填写文献信息，嗯，就这么简单。
+        </p>
+
+        <figure>
+            <img src="./fig/zotero/3.png" alt="填写文献信息">
+            <figcaption>填写文献信息</figcaption>
+        </figure>
+
+        <h2>搞定PDF和图书馆检索</h2>
+
+        <p>
+            Zotero可不是只会保存文献信息，还能搞到文献的全文PDF。右键点击文献，选择“Find Available PDF”，Zotero就会为你搜寻开放获取的PDF，真是太贴心了！
+        </p>
+
+        <figure>
+            <img src="./fig/zotero/4.png" alt="搜寻开放获取的PDF">
+            <figcaption>搜寻开放获取的PDF</figcaption>
+        </figure>
+
+        <p>
+            如果没有PDF，或者是其他类型的文献，你可以使用“Library Lookup”选项，通过JumpStart搜索这个文献。别忘了在“首选项”菜单-->“高级”中配置OpenURL
+            Resolver，并在标有“解析器”的框中输入下面的链接：
+            <code class="styled-code">https://dickinson.primo.exlibrisgroup.com/openurl/01DICKINSON_INST/01DICKINSON_INST:DICKINSON?
+    </code>
+            ，这样你就可以方便地查找文献。
+        </p>
+
+        <figure>
+            <img src="./fig/zotero/5.png" alt="这样填写">
+            <figcaption>这样填写</figcaption>
+        </figure>
+
+        <p>
+            添加OpenURL后，你可以选择一个来源，然后点击右侧的绿色箭头，最后选择“图书馆查找”如下图，自动在JumpStart中搜索该来源以访问我们的馆藏或提交ILL请求。
+        </p>
+
+        <figure>
+            <img src="./fig/zotero/6.png" alt="图书馆查找">
+            <figcaption>图书馆查找</figcaption>
+        </figure>
+
+        <h2>整理文献库，写写笔记</h2>
+
+        <p>
+            Zotero的“Collection”功能让你轻松整理文献，创建不同的组和子组。直接导入或事后再加入，一切随心所欲。记得右键点击创建子组哦，这样你的文献库更井井有条。
+        </p>
+
+        <figure>
+            <img src="./fig/zotero/7.png" alt="创建子组">
+            <figcaption>创建子组</figcaption>
+        </figure>
+
+        <p>
+            要创建集合，点击“New collection”工具并输入你选择的标题。新集合将出现在“我的库”菜单下。要创建子集合，右键点击特定的集合，将出现一个工具箱。你可以选择“New
+            subcollection”并像上面那样添加标题。使用相同的工具箱，你可以根据需要重命名和删除集合。
+        </p>
+
+        <figure>
+            <img src="./fig/zotero/8.png" alt="创建集合">
+            <figcaption>创建集合</figcaption>
+        </figure>
+
+        <p>
+            “Tags”功能可以帮你给文献打标签，方便分类和查找。点开文献，找到“Tags”，随便加上几个，然后用“Advanced
+            Search”工具，选择“Tag”，就能轻松找到你需要的文献了。要添加标签，请点击特定项目，右侧将出现工具箱。在顶部工具栏中选择“Tags”，然后点击“Add”。
+        </p>
+
+        <figure>
+            <img src="./fig/zotero/9.png" alt="“Tags”">
+            <figcaption>“Tags”功能</figcaption>
+        </figure>
+
+        <p>
+            当然，Zotero还支持文献笔记。选中文献，点“New Note” ，随意记一笔。说不定这个笔记以后能救你一命哦！
+        </p>
+
+        <h2>生成参考文献，妈妈再也不用担心我的格式了</h2>
+
+        <p>
+            生成参考文献简直不要太容易。选中文献，右键，“Create Bibliography from
+            Item”，然后选择你喜欢的格式，是不是觉得轻松愉快？你还可以按住“Shift”键，选中多个文献，一键生成完整的参考文献。在“Manage Styles”里还能找到更多的引文风格，太贴心了吧！
+        </p>
+
+        <figure>
+            <img src="./fig/zotero/10.png" alt="Create Bibliography from Item">
+            <figcaption>Create Bibliography from Item</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./fig/zotero/11.png" alt="选择引文风格">
+            <figcaption>选择引文风格</figcaption>
+        </figure>
+
+        <h2>Zotero与Word、Google Docs和LibreOffice的绝妙合作</h2>
+
+        <p>
+            不仅能在Zotero里生成参考文献，它还能和Microsoft Word、Google
+            Docs、以及LibreOffice深度融合。安装插件，选择你的文书处理软件，Zotero就能在里面嗖嗖地工作了。你可以在Zotero独立应用程序中选择首选项-->引用-->文字处理器，并安装适用于你的文字处理器的插件。
+        </p>
+
+        <p>
+            如果Word插件未激活（在Word功能区中看不到Zotero选项卡），请在打开Word后单击Zotero文字处理器首选项菜单中的“重新安装Microsoft Word插件”以解决问题。如果你使用Google
+            Docs，则无需安装单独的插件，因为Firefox或Google Chrome的浏览器连接器已经为你处理了这个集成。
+        </p>
+
+        <figure>
+            <img src="./fig/zotero/12.png" alt="Microsoft Word插件">
+            <figcaption>Microsoft Word插件</figcaption>
+        </figure>
+
+        <p>
+            在Word里插入引文也是分分钟的事情。插入完引文后，去文末，随便输入个“References”或者“Bibliography”，然后点一下“Add/Edit
+            Bibliography”，Zotero会为你创造一个完美的参考文献列表。别慌，如果有信息错误，打开Zotero修改就行！
+        </p>
+
+        <h2>语言驾驭，让引文更有范儿</h2>
+
+        <p>
+            Zotero支持多种语言，你可以在设置选项里面调整用户界面语言，或者在文献记录中添加语言标签。还能根据你使用的引文样式选择不同的语言格式，这也太细致了吧！有时候你可能需要从已有的文档中提取文献信息，Zotero也能搞定。如果文档不是用Zotero或RefWorks准备的，用AnyStyle.io吧，简单粗暴。
+        </p>
+
+        <h2>总结</h2>
+
+        <p>
+            好了，以上就是您的Zotero的使用指南！希望你的科研之路因为Zotero变得更轻松愉快。快去试试吧，变成文献收藏家，成为学术巨星的第一步就是从这里开始的！
+        </p>
+
+        <p>
+            最后祝大家期中/期末/学业/科研/生活顺利啦~(๑•̀ㅂ•́)و✧
+        </p>
+    </main>
 
 </body>
 
