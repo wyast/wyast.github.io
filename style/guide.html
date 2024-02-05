@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未央科协样式指南</title>
+    <style>
+.swatches {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+.swatch {
+    padding: 0.75em;
+    margin-right: 0.25em;
+    margin-bottom: 0.25em;
+    border-radius: 5px;
+    width: fit-content;
+}
+.box {
+    border: 3px dashed #0086a9;
+    border-radius: 8px;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+    </style>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>未央书院科协网站样式指南</h1>
+    </header>
+    <main>
+        <p>样式指南是一个网站的设计规范。其好处有：</p>
+        <ul>
+            <li>为直接创作html，或者从markdown生成html提供参考</li>
+            <li>使网站风格更统一</li>
+            <li>方便测试对文章样式的改动</li>
+        </ul>
+        <p>希望未来能从markdown文件直接生成此样式指南，方便改动与内部链接、导览生成。</p>
+        <p>需要增加的内容：</p>
+        <ul>
+            <li>脚注，最好点开来会在文本下显示内容</li>
+            <li>边上的注解</li>
+            <li>更多的图片位置，比如内嵌的小图</li>
+            <li>更好看的列表</li>
+        </ul>
+        <h2>文件安排</h2>
+        <p>每篇文章都要使用的样式存放在<code>style.css</code>文件中。</p>
+        <p>仅此文章使用的样式直接写在head中，或者储存在元素的style属性中。这样的属性应该尽可能少。</p>
+
+        <h2>颜色参考</h2>
+        <p>大部分文章的内容应该由这些颜色组成。</p>
+        <div class="swatches">
+            <div class="swatch" style="background-color: #0086a9; color: #f4f4f4;">未央蓝</div>
+            <div class="swatch" style="background-color: #333; color:#f4f4f4;">正文黑</div>
+            <div class="swatch" style="background-color: #f4f4f4; ">代码浅灰</div>
+            <div class="swatch" style="background-color: #666; color:#f4f4f4;">附注灰</div>
+        </div>
+        <p>有待补充。</p>
+
+        <h2>文字样式</h2>
+
+        <h3>标题与段落</h3>
+        <div class="box">
+            <header>
+                <h1>第一级标题</h1>
+            </header>
+            <p>NumPy（Numerical Python）是一个开源Python库，几乎在科学和工程的各个领域都有使用，是Python中处理数字数据的通用标准。NumPy功能强大，支持对数组进行快速操作的各种例程，包括数学、逻辑、排序、选择、I/O、甚至离散傅立叶变换、基本统计运算、随机模拟等等。</p>
+            <h2>第二级标题</h2>
+            <p>NumPy（Numerical Python）是一个开源Python库，几乎在科学和工程的各个领域都有使用，是Python中处理数字数据的通用标准。NumPy功能强大，支持对数组进行快速操作的各种例程，包括数学、逻辑、排序、选择、I/O、甚至离散傅立叶变换、基本统计运算、随机模拟等等。</p>
+            <h3>第三级标题</h3>
+            <p>NumPy（Numerical Python）是一个开源Python库，几乎在科学和工程的各个领域都有使用，是Python中处理数字数据的通用标准。NumPy功能强大，支持对数组进行快速操作的各种例程，包括数学、逻辑、排序、选择、I/O、甚至离散傅立叶变换、基本统计运算、随机模拟等等。</p>
+            <h4>第四级标题</h4>
+            <p>NumPy（Numerical Python）是一个开源Python库，几乎在科学和工程的各个领域都有使用，是Python中处理数字数据的通用标准。NumPy功能强大，支持对数组进行快速操作的各种例程，包括数学、逻辑、排序、选择、I/O、甚至离散傅立叶变换、基本统计运算、随机模拟等等。</p>
+        </div>
+
+        <h3>代码</h3>
+        <p>内联代码如<code>style.css</code>。代码块如：</p>
+        <pre><code class="styled-code">
+conda install numpy
+        </code></pre>
+        <p>如上所示。</p>
+
+        <h3>链接</h3>
+        <p>这是标准外链：<a href="https://numpy.org/doc/1.26/index.html">NumPy官方文档ver1.26</a></p>
+
+        <h3>引用</h3>
+        <p>这是块状引用：</p>
+        <blockquote>
+            <p>学工具的最好方法就是看官方文档(Documentation)或手册(Manual)或源码(Source Code)啦~</p>
+        </blockquote>
+        <p>如上所示。</p>
+
+        <h2>多媒体内容</h2>
+        <h3>图片</h3>
+        <p>这是一张大图片。</p>
+        <figure>
+            <img src="../material/latex/teach.jpg" alt="学术部LaTeX讲座中教学的场景" />
+            <figcaption>学术部LaTeX讲座中教学的场景</figcaption>
+        </figure>
+        <p>如上所示。</p>
+    </main>
+</body>
+
+</html>

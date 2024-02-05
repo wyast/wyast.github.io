@@ -1,6 +1,6 @@
 .hide {
-  background-color: black;
-  color: black;
+  background-color: #333;
+  color: #333;
   transition: background-color 0.5s, color 0.5s;
 }
 
@@ -38,7 +38,7 @@ code {
   border-radius: 5px;
   /* 边框圆角 */
   white-space: pre-wrap;
-  box-shadow: -3px 3px 3px var(--main-color);
+  box-shadow: -4px 3px 3px var(--main-color);
 }
 
 header {
@@ -57,7 +57,7 @@ body {
   margin-right: auto;
   line-height: 1.5;
   padding: 4em 1em;
-  color: #444;
+  color: #333;
 }
 
 h1 {
@@ -94,8 +94,11 @@ a:hover {
   text-decoration: underline; /* 悬停时添加下划线 */
 }
 
-a:visited {
-  color: purple;
+blockquote {
+  border-left: 5px solid #0086a9;
+  background-color: #f4f4f4;
+  margin: 1.5em 0;
+  padding: 0.5em 1em;
 }
 
 figure {
