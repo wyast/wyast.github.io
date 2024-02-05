@@ -10,23 +10,33 @@
 }
 
 code {
-  font-family: "Consolas", monospace; /* 使用等宽字体 */
+  font-family: "Consolas", monospace;
+  /* 使用等宽字体 */
   background-color: #f4f4f4;
-  line-height: 1; /* 行高 */
-  margin: 0px 0; /* 外部间距 */
+  line-height: 1;
+  /* 行高 */
+  margin: 0px 0;
+  /* 外部间距 */
   padding: 1px;
   color: #333;
 }
 
 .styled-code {
   /* border-left: 5px solid #f36d33; 左边框为橙色 */
-  padding: 3cqw; /* 内部间距 */
-  overflow-x: auto; /* 超长代码时可横向滚动 */
-  display: block; /* 使其作为块级元素显示 */
-  line-height: 1.2; /* 行高 */
-  color: #333; /* 字体颜色 */
-  margin: 10px 0; /* 外部间距 */
-  border-radius: 5px; /* 边框圆角 */
+  padding: 3cqw;
+  /* 内部间距 */
+  overflow-x: auto;
+  /* 超长代码时可横向滚动 */
+  display: block;
+  /* 使其作为块级元素显示 */
+  line-height: 1.2;
+  /* 行高 */
+  color: #333;
+  /* 字体颜色 */
+  margin: 10px 0;
+  /* 外部间距 */
+  border-radius: 5px;
+  /* 边框圆角 */
   white-space: pre-wrap;
   box-shadow: -3px 3px 3px var(--main-color);
 }
@@ -47,7 +57,7 @@ body {
   margin-right: auto;
   line-height: 1.5;
   padding: 4em 1em;
-  color: #555;
+  color: #444;
 }
 
 h1 {
@@ -60,20 +70,81 @@ h1 {
 h2 {
   margin-top: 1em;
   padding-top: 1em;
+  font-size: 1.5em; /* 小标题字体大小 */
+  margin-bottom: 0.75em; /* 标题下方的边距 */
 }
 
-h2,strong {
+h2,
+h3,
+strong {
   color: #333;
+}
+
+/* 段落样式 */
+p {
+  margin-bottom: 1em; /* 段落之间的间距 */
 }
 
 a {
   color: var(--main-color);
+  text-decoration: none; /* 去除下划线 */
+}
+
+a:hover {
+  text-decoration: underline; /* 悬停时添加下划线 */
 }
 
 a:visited {
   color: purple;
 }
 
+figure {
+  margin: auto;
+  /* 水平居中 */
+  width: auto;
+  /* 最大宽度 */
+  max-width: 100%;
+  /* 确保图片不超过其父容器的宽度 */
+  text-align: center;
+  /* 图片居中 */
+}
+
+img {
+  display: block;
+  /* 使其作为块级元素显示 */
+  width: auto;
+  /* 图片宽度 */
+  max-width: 90%;
+  /* 确保图片不超过其父容器的宽度 */
+  height: auto;
+  /* 图片高度 */
+  border-radius: 5px;
+  /* 边框圆角 */
+  margin: 0 auto;
+  /* 水平居中 */
+  transition: all 0.3s ease;
+  /* 平滑过渡效果 */
+}
+
+figcaption {
+  text-align: center;
+  /* 标题居中 */
+  color: #666;
+  /* 标题颜色 */
+  font-style: italic;
+  /* 斜体字 */
+  margin-top: 5px;
+  /* 与图片的距离 */
+}
+
+figure:hover img {
+  /* filter: brightness(80%); */
+  /* 图片变暗 */
+  transform: scale(1.1);
+  /* 稍微放大图片 */
+  transition: all 0.3s ease;
+  /* 平滑过渡效果 */
+}
 
 :root {
   --main-color: #0086a9;
