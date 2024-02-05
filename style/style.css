@@ -150,3 +150,34 @@ figure:hover img {
   --main-color: #0086a9;
   --background-color: #f4f4f4;
 }
+
+.wy {
+  color: #0086a9;
+}
+
+.c{
+  text-align: center;
+    /* 标题居中 */
+}
+
+.dot-paragraph {
+  position: relative;
+  /* 设置相对定位 */
+}
+
+.dot-paragraph::before {
+  content: "•";
+  /* 设置内容为点号 */
+  position: absolute;
+  /* 设置绝对定位 */
+  left: -10px;
+  /* 调整点号与文本之间的间距 */
+}
+
+.midsize {
+  width: 300px;
+  /* 设置宽度 */
+  height: auto;
+  /* 高度根据宽度自适应 */
+}
+
