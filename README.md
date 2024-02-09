@@ -7,6 +7,12 @@ If you are working on a project in YuQue list, pls fill in that tickbox in order
 
 从新到旧：
 
+### 2024/2/9 HCX
+
+* 加入classless.css
+* 加入导航栏、页尾
+* 使用新样式修饰
+
 ### 2024/2/5 HCX
 
 * 加入样式指南
