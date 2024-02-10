@@ -1,4 +1,4 @@
-/* Classless.css v1.0
+/* Classless.css v1.0 wyast version
 
 Table of Contents:
  1. Theme Settings
@@ -398,4 +398,14 @@ p>select { padding: 0;      margin: 0 .5em; }
 	h2, h3, h4, h5 { page-break-after: avoid;}
 	.noprint, body>nav, section:after { display: none; }
 	.row { flex-direction: row; }
+}
+
+/* hidden text */
+.hide {
+	background-color: var(--cfg);
+	transition: background-color 0.5s, color 0.5s;
+}
+.hide:hover {
+	background-color: transparent;
+	color: initial;
 }
