@@ -11,7 +11,7 @@ If you are working on a project in YuQue list, pls fill in that tickbox in order
 
 * 加入classless.css
 * 加入导航栏、页尾
-* 使用新样式修饰
+* 使用新样式修饰部分网站
 
 ### 2024/2/5 HCX
 
