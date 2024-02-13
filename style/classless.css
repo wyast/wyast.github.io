@@ -238,14 +238,14 @@ body>nav, header nav {
 	z-index: 41;
 	box-shadow: 0vw -50vw 0 50vw var(--clight), 0 calc(-50vw + 2px) 4px 50vw var(--cdark);
 }
-nav ul { list-style-type: none; }
-nav ul:first-child { margin: 0; padding: 0; overflow: visible; }
-nav ul:first-child > li {
+nav menu { list-style-type: none; }
+nav menu:first-child { margin: 0; padding: 0; overflow: visible; }
+nav menu:first-child > li {
 	display: inline-block;
 	margin: 0;
 	padding: 0.8rem .6rem;
 }
-nav ul > li > ul {
+nav menu > li > ul {
 	display: none;
 	width: auto;
 	position: absolute;
@@ -256,12 +256,12 @@ nav ul > li > ul {
 	border-radius: 4px;
 	z-index: 42;
 }
-nav ul > li > ul > li { white-space: nowrap; }
-nav ul > li:hover > ul { display: block; }
+nav menu > li > ul > li { white-space: nowrap; }
+nav menu > li:hover > ul { display: block; }
 @media (max-width: 40rem) {
-	nav ul:first-child > li:first-child:after { content: " \25BE"; }
-	nav ul:first-child > li:not(:first-child):not(.sticky) { display: none; }
-	nav ul:first-child:hover > li:not(:first-child):not(.sticky) { display: block; float: none !important; }
+	nav menu:first-child > li:first-child:after { content: " \25BE"; }
+	nav menu:first-child > li:not(:first-child):not(.sticky) { display: none; }
+	nav menu:first-child:hover > li:not(:first-child):not(.sticky) { display: block; float: none !important; }
 }
 
 /* details/cards */
