@@ -1,7 +1,7 @@
 ---
 title: 一篇文章的例子：如何使用不同的html tag？
 author: 黄晨轩，
-date: 2024年2月9日
+date: 2024-2-9
 pic-src: https://placekitten.com/960/480
 ---
 <section>
