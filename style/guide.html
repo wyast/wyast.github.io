@@ -1,340 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>未央科协样式指南</title>
     <style>
-      .swatches {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 0.5em;
-      }
+        .swatches {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0.5em;
+        }
 
-      .swatch {
-        padding: 0.75em;
-        margin-right: 0.25em;
-        margin-bottom: 0.25em;
-        border-radius: 5px;
-        width: fit-content;
-      }
+        .swatch {
+            padding: 0.75em;
+            margin-right: 0.25em;
+            margin-bottom: 0.25em;
+            border-radius: 5px;
+            width: fit-content;
+        }
 
-      .box {
-        border: 3px dashed #0086a9;
-        border-radius: 8px;
-        padding: 1em;
-        margin-bottom: 1em;
-      }
+        .box {
+            border: 3px dashed #0086a9;
+            border-radius: 8px;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
     </style>
     <link rel="stylesheet" type="text/css" href="./classless.css" />
     <!-- <link rel="stylesheet" type="text/css" href="./style.css"> -->
-  </head>
+</head>
 
-  <body>
+<body>
     <header>
-      <section>
-        <h1>未央书院科协网站样式指南</h1>
-        <nav class="noprint">
-          <menu>
-            <li>
-              <img style="height: 1.2em" src="favicon.png" />
-              <a href="../index.html"> 未央科协</a>
-            </li>
-            <li class="float-right sticky">
-              <a onclick="toggleDarkMode(this)">🌚</a>
-            </li>
-            <li>这里应该放目录</li>
-            <li>但这么短的文章</li>
-            <li>其实不需要目录</li>
-            <li>这玩意不大好看</li>
-            <li>想改就随便改！</li>
-            <li class="float-right">
-              <a href="https://github.com/wyast/wyast.github.io">@GitHub</a>
-            </li>
-          </menu>
-          <script>
-            function toggleDarkMode(el) {
-              var theme = "light";
-              if (el.innerText == "🌚") {
-                el.innerText = "🌞";
-                theme = "dark";
-              } else {
-                el.innerText = "🌚";
-              }
-              document.documentElement.setAttribute("data-theme", theme);
-            }
-          </script>
-        </nav>
-        <h4>这是什么？</h4>
-        <p>
-          这个文件是未央科协文章的样式指南，它是这个网站的设计规范。写这么一个东西的目标是：
-        </p>
-        <ul>
-          <li>为直接创作html，或者从markdown生成html提供参考</li>
-          <li>使网站风格更统一</li>
-          <li>方便测试对文章样式的改动</li>
-        </ul>
-        <p>
-          希望未来能从markdown文件直接生成此样式指南，方便改动与内部链接、导览生成。
-        </p>
-        <p>
-          每篇文章都要使用的样式存放在<code>style.css</code>文件中。仅此文章使用的样式直接写在head中，或者储存在元素的style属性中。这样的属性应该尽可能少。
-        </p>
-      </section>
+        <section>
+            <h1>未央书院科协网站样式指南</h1>
+            <nav class="noprint">
+                <menu>
+                    <li>
+                        <img style="height: 1.2em" src="favicon.png" />
+                        <a href="../index.html" style="padding-left: 0.5ch;">未央科协</a>
+                    </li>
+                    <li class="float-right sticky">
+                        <a onclick="toggleDarkMode(this)">🌚</a>
+                    </li>
+                    <li>这里应该放目录</li>
+                    <li class="float-right">
+                        <a href="https://github.com/wyast/wyast.github.io">@GitHub</a>
+                    </li>
+                </menu>
+                <script>
+                    function toggleDarkMode(el) {
+                        var theme = "light";
+                        if (el.innerText == "🌚") {
+                            el.innerText = "🌞";
+                            theme = "dark";
+                        } else {
+                            el.innerText = "🌚";
+                        }
+                        document.documentElement.setAttribute("data-theme", theme);
+                    }
+                </script>
+            </nav>
+            <h4>这是什么？</h4>
+            <p>
+                这个文件是未央科协文章的样式指南，它是这个网站的设计规范。写这么一个东西的目标是：
+            </p>
+            <ul>
+                <li>为直接创作html，或者从markdown生成html提供参考</li>
+                <li>使网站风格更统一</li>
+                <li>方便测试对文章样式的改动</li>
+            </ul>
+            <p>
+                希望未来能从markdown文件直接生成此样式指南，方便改动与内部链接、导览生成。
+            </p>
+            <p>
+                每篇文章都要使用的样式存放在<code>style.css</code>文件中。仅此文章使用的样式直接写在head中，或者储存在元素的style属性中。这样的属性应该尽可能少。
+            </p>
+        </section>
     </header>
     <main>
-      <article>
-        <img
-          src="https://placekitten.com/1920/960"
-          style="max-height: 60vh"
-          alt="一张猫片"
-        />
-        <nav class="section-nav">
-          <ol>
-            <li><a href="#intro">引入</a></li>
-            <li><a href="#basics">基本</a></li>
-            <li>
-              <a href="#fancy">花哨</a>
-              <ol>
-                <li><a href="#position">地方</a></li>
-                <li><a href="#figure">图片</a></li>
-                <li><a href="#more">更多信息</a></li>
-              </ol>
-            </li>
-          </ol>
-          <script>
-            window.addEventListener("DOMContentLoaded", () => {
-              const observer = new IntersectionObserver((entries) => {
-                let activeElements = [];
+        <article>
+            <img src="https://placekitten.com/1920/960" style="max-height: 60vh" alt="一张猫片" />
+            <nav class="section-nav">
+                <ol>
+                    <li><a href="#intro">引入</a></li>
+                    <li><a href="#basics">基本</a></li>
+                    <li>
+                        <a href="#fancy">花哨</a>
+                        <ol>
+                            <li><a href="#position">地方</a></li>
+                            <li><a href="#figure">图片</a></li>
+                            <li><a href="#more">更多信息</a></li>
+                        </ol>
+                    </li>
+                </ol>
+                <script>
+                    window.addEventListener("DOMContentLoaded", () => {
+                        const observer = new IntersectionObserver((entries) => {
+                            let activeElements = [];
 
-                entries.forEach((entry) => {
-                  const id = entry.target.getAttribute("id");
-                  const navLink = document.querySelector(
-                    `nav li a[href="#${id}"]`
-                  ).parentElement;
+                            entries.forEach((entry) => {
+                                const id = entry.target.getAttribute("id");
+                                const navLink = document.querySelector(
+                                    `nav li a[href="#${id}"]`
+                                ).parentElement;
 
-                  if (entry.intersectionRatio > 0) {
-                    navLink.classList.add("active");
-                    activeElements.push(entry.target); // 添加到:视窗中的元素列表
-                  } else {
-                    navLink.classList.remove("active");
-                  }
-                });
+                                if (entry.intersectionRatio > 0) {
+                                    navLink.classList.add("active");
+                                    activeElements.push(entry.target); // 添加到:视窗中的元素列表
+                                } else {
+                                    navLink.classList.remove("active");
+                                }
+                            });
 
-                // 在所有active的元素中找到最高的一个
-                if (activeElements.length > 0) {
-                  // 移除所有元素的highest标记
-                  document.querySelectorAll(`nav li.active`).forEach((el) => {
-                    el.classList.remove("highest");
-                  });
+                            // 在所有active的元素中找到最高的一个
+                            if (activeElements.length > 0) {
+                                // 移除所有元素的highest标记
+                                document.querySelectorAll(`nav li.active`).forEach((el) => {
+                                    el.classList.remove("highest");
+                                });
 
-                  // 找到最高的active元素
-                  const highestElement = activeElements.reduce(
-                    (prev, current) => {
-                      return prev.getBoundingClientRect().top <
-                        current.getBoundingClientRect().top
-                        ? prev
-                        : current;
-                    }
-                  );
+                                // 找到最高的active元素
+                                const highestElement = activeElements.reduce(
+                                    (prev, current) => {
+                                        return prev.getBoundingClientRect().top <
+                                            current.getBoundingClientRect().top
+                                            ? prev
+                                            : current;
+                                    }
+                                );
 
-                  // 给最高的active元素的导航链接添加highest标记
-                  document
-                    .querySelector(
-                      `nav li a[href="#${highestElement.getAttribute("id")}"]`
-                    )
-                    .parentElement.classList.add("highest");
-                }
-              });
+                                // 给最高的active元素的导航链接添加highest标记
+                                document
+                                    .querySelector(
+                                        `nav li a[href="#${highestElement.getAttribute("id")}"]`
+                                    )
+                                    .parentElement.classList.add("highest");
+                            }
+                        });
 
-              document.querySelectorAll("span.anchor").forEach((span) => {
-                observer.observe(span);
-              });
-            });
-          </script>
-        </nav>
-        <section>
-          <h1>一篇文章的例子：如何使用不同的 html tag ？</h1>
-          <p>黄晨轩，<time>2024年2月9日</time></p>
-        </section>
-        <span class="anchor" id="intro"></span>
-        <section>
-          <h2>引入</h2>
-          <p>
-            html由很多元素组成，每一个元素都有一个tag，描述这个元素起什么作用。比如，<code>h1</code>包裹的内容表示大标题，<code>p</code>表示段落，然后，额……
-          </p>
-          <p>等等还有哪些来着？</p>
-          <aside>
-            这个引入真是有一点点生硬，但反正是示例文章，你也不能拿我怎么办🥲
-          </aside>
-          <p>
-            好吧，把所有的tag记全是一件不大可能的事情。但是写文章需要的tag本身也没那么多！只要你把文章不同的部分用合适的tag进行标记，在<strong>我们的样式</strong>加持下，你只需要自然地描述每一段的内容，不需要花其他力气就能排版出很漂亮的文章！
-          </p>
-          <p>
-            <strong><em>值得注意的是</em></strong
-            >，这篇文章的部分效果与目前的样式文件紧密挂钩，所以以下的建议并不适用于所有未来的样式文件。到时候再改吧！
-          </p>
-        </section>
-        <span class="anchor" id="basics"></span>
-        <section>
-          <h2>基本</h2>
-          <h5>先从标题开始吧。</h5>
-          <p>
-            <code>h1</code
-            >-<code>h6</code>是六级不同的标题，但是一般人不会写这么深的标题。目前的主题把<code>h1</code>用作文章大标题，<code>h2</code>-<code>h3</code>用作标数字的小标题，<code>h4</code>-<code>h5</code>用作不标数字的小标题，<code>h6</code>用来作为段落修饰（它会把后面的一段文章吞到它后边）。前边你看到的这个小小标题就是一个<code>h5</code>元素。这似乎让元素的语义发生了微妙的变化，有人很反感这个，我觉得还成，只是不推荐使用就是了……
-          </p>
-          <p>
-            <code>p</code
-            >指的是段落，<code>div</code>、<code>span</code>指的分别是内部、外部的一点点东西，你应该会用。然后<strong
-              >粗体使用<code>strong</code></strong
-            >，<em>斜体使用<code>em</code></em
-            >。
-          </p>
-          <blockquote>
-            <p>大块大块的引用，用<code>blockquote</code></p>
-            <p>使用方法，和你想象中的</p>
-            <p>应该也没有什么大区别。</p>
-          </blockquote>
-          <ul>
-            <li>列表</li>
-            <li>亦如是</li>
-            <li>用<code>ul</code>与<code>ol</code></li>
-          </ul>
-          <p>
-            你也可以写代码。内联代码就使用<code>code</code>，一段代码使用<span
-              data-tooltip="这很重要！"
-              ><code>pre</code>套<code>code</code></span
-            >。
-          </p>
-          <pre class="language-c"><code>main(int a){
+                        document.querySelectorAll("span.anchor").forEach((span) => {
+                            observer.observe(span);
+                        });
+                    });
+                </script>
+            </nav>
+            <section>
+                <h1>一篇文章的例子：如何使用不同的 html tag ？</h1>
+                <p>黄晨轩，<time>2024年2月9日</time></p>
+            </section>
+            <span class="anchor" id="intro"></span>
+            <section>
+                <h2>引入</h2>
+                <p>
+                    html由很多元素组成，每一个元素都有一个tag，描述这个元素起什么作用。比如，<code>h1</code>包裹的内容表示大标题，<code>p</code>表示段落，然后，额……
+                </p>
+                <p>等等还有哪些来着？</p>
+                <aside>
+                    这个引入真是有一点点生硬，但反正是示例文章，你也不能拿我怎么办🥲
+                </aside>
+                <p>
+                    好吧，把所有的tag记全是一件不大可能的事情。但是写文章需要的tag本身也没那么多！只要你把文章不同的部分用合适的tag进行标记，在<strong>我们的样式</strong>加持下，你只需要自然地描述每一段的内容，不需要花其他力气就能排版出很漂亮的文章！
+                </p>
+                <p>
+                    <strong><em>值得注意的是</em></strong>，这篇文章的部分效果与目前的样式文件紧密挂钩，所以以下的建议并不适用于所有未来的样式文件。到时候再改吧！
+                </p>
+            </section>
+            <span class="anchor" id="basics"></span>
+            <section>
+                <h2>基本</h2>
+                <h5>先从标题开始吧。</h5>
+                <p>
+                    <code>h1</code>-<code>h6</code>是六级不同的标题，但是一般人不会写这么深的标题。目前的主题把<code>h1</code>用作文章大标题，<code>h2</code>-<code>h3</code>用作标数字的小标题，<code>h4</code>-<code>h5</code>用作不标数字的小标题，<code>h6</code>用来作为段落修饰（它会把后面的一段文章吞到它后边）。前边你看到的这个小小标题就是一个<code>h5</code>元素。这似乎让元素的语义发生了微妙的变化，有人很反感这个，我觉得还成，只是不推荐使用就是了……
+                </p>
+                <p>
+                    <code>p</code>指的是段落，<code>div</code>、<code>span</code>指的分别是内部、外部的一点点东西，你应该会用。然后<strong>粗体使用<code>strong</code></strong>，<em>斜体使用<code>em</code></em>。
+                </p>
+                <blockquote>
+                    <p>大块大块的引用，用<code>blockquote</code></p>
+                    <p>使用方法，和你想象中的</p>
+                    <p>应该也没有什么大区别。</p>
+                </blockquote>
+                <ul>
+                    <li>列表</li>
+                    <li>亦如是</li>
+                    <li>用<code>ul</code>与<code>ol</code></li>
+                </ul>
+                <p>
+                    你也可以写代码。内联代码就使用<code>code</code>，一段代码使用<span
+                        data-tooltip="这很重要！"><code>pre</code>套<code>code</code></span>。
+                </p>
+                <pre class="language-c"><code>main(int a){
     println(&quot;hello world&quot;)
 }</code></pre>
-          <aside>
-            代码包在pre里面，所以会保留所有换行符和缩进。如果觉得自己的代码显示得怪怪的，多半是这个原因。
-          </aside>
-        </section>
-        <span class="anchor" id="fancy"></span>
-        <section>
-          <h2>花哨</h2>
-          <p>
-            在不同tag的帮助下，一个文章里的内容能够<strong
-              >很<span class="hide">花哨</span></strong
-            >。
-          </p>
-          <span class="anchor" id="position"></span>
-          <h3>地方</h3>
-          <p>
-            使用<code>cite</code>可以进行引用。<cite
-              ><a href="https://classless.de">信息来自classless.de</a></cite
-            >，用这种张扬的形式显示。
-          </p>
-          <p>
-            同时，只要加上data-tooltip，就可以手动给<span
-              data-tooltip="但这里的内容不能使用html进行修饰……"
-              >任何东西</span
-            >加上炫酷的浮动效果！详见源代码。
-          </p>
-          <aside>
-            使用<code>aside</code>把内容放到旁边。应该已经见过这个了。
-          </aside>
-          <span class="anchor" id="figure"></span>
-          <h3>图片</h3>
-          <p>
-            每张图片都会被自动标号。只要在一个<code>figure</code>里面，放入一个<code>img</code>元素，一个<code>figcaption</code>元素……
-          </p>
-          <figure>
-            <img
-              src="https://placekitten.com/480/320"
-              alt="就获得了一个有标记的图片！"
-            />
-            <figcaption aria-hidden="true">
-              就获得了一个有标记的图片！
-            </figcaption>
-          </figure>
-          <p>
-            如果你想把两张图片放到一起，只要把<code>figure</code>进行轻松嵌套……
-          </p>
-          <figure>
-            <figure>
-              <img src="https://placekitten.com/240/320" alt="左边一张图片" />
-              <figcaption aria-hidden="true">左边一张图片</figcaption>
-            </figure>
-            <figure>
-              <img src="https://placekitten.com/420/320" alt="右边一张图片" />
-              <figcaption aria-hidden="true">右边一张图片</figcaption>
-            </figure>
-            <figcaption>就完成了一张包含两个图片的图片！</figcaption>
-          </figure>
-          <aside>
-            <img src="https://placekitten.com/120/120" alt="img" /><br />
-            旁边也可以放图片！
-          </aside>
-          <span class="anchor" id="more"></span>
-          <h3>更多信息</h3>
-          <p>
-            更多内容，请参照<a href="https://classless.de">classless.de</a
-            >，里面有详细的介绍。
-          </p>
-        </section>
-      </article>
-      <hr />
-      <article>
-        <span class="anchor"></span>
-        <section>
-          <h1>样式指南</h1>
-          <p>上一次更新于<time>2024年2月9日</time></p>
-          <h2>使用颜色</h2>
-          <p>大部分文章的内容应该由这些颜色组成。</p>
-          <div class="swatches">
-            <div
-              class="swatch"
-              style="background-color: #0086a9; color: #f4f4f4"
-            >
-              未央蓝
-            </div>
-            <div
-              class="swatch"
-              style="background-color: #0f7dc2; color: #f4f4f4"
-            >
-              外链蓝
-            </div>
-            <div class="swatch" style="background-color: #333; color: #f4f4f4">
-              正文黑
-            </div>
-            <div class="swatch" style="background-color: #f4f4f4">代码浅灰</div>
-            <div class="swatch" style="background-color: #666; color: #f4f4f4">
-              附注灰
-            </div>
-          </div>
-          <p>
-            有待补充。自己的文章其实可以随便，但是我们已经给了一个很好的预设。
-          </p>
-          <p>我开始觉得后边不大需要其他东西了……</p>
-          <figure>
-            <img
-              src="../material/latex/teach.jpg"
-              alt="学术部LaTeX讲座中教学的场景"
-            />
-            <figcaption>
-              学术部LaTeX讲座中教学的场景。多么优秀又好学的同学们！
-            </figcaption>
-          </figure>
-        </section>
-      </article>
+                <aside>
+                    代码包在pre里面，所以会保留所有换行符和缩进。如果觉得自己的代码显示得怪怪的，多半是这个原因。
+                </aside>
+            </section>
+            <span class="anchor" id="fancy"></span>
+            <section>
+                <h2>花哨</h2>
+                <p>
+                    在不同tag的帮助下，一个文章里的内容能够<strong>很<span class="hide">花哨</span></strong>。
+                </p>
+                <span class="anchor" id="position"></span>
+                <h3>地方</h3>
+                <p>
+                    使用<code>cite</code>可以进行引用。<cite><a
+                            href="https://classless.de">信息来自classless.de</a></cite>，用这种张扬的形式显示。
+                </p>
+                <p>
+                    同时，只要加上data-tooltip，就可以手动给<span data-tooltip="但这里的内容不能使用html进行修饰……">任何东西</span>加上炫酷的浮动效果！详见源代码。
+                </p>
+                <aside>
+                    使用<code>aside</code>把内容放到旁边。应该已经见过这个了。
+                </aside>
+                <span class="anchor" id="figure"></span>
+                <h3>图片</h3>
+                <p>
+                    每张图片都会被自动标号。只要在一个<code>figure</code>里面，放入一个<code>img</code>元素，一个<code>figcaption</code>元素……
+                </p>
+                <figure>
+                    <img src="https://placekitten.com/480/320" alt="就获得了一个有标记的图片！" />
+                    <figcaption aria-hidden="true">
+                        就获得了一个有标记的图片！
+                    </figcaption>
+                </figure>
+                <p>
+                    如果你想把两张图片放到一起，只要把<code>figure</code>进行轻松嵌套……
+                </p>
+                <figure>
+                    <figure>
+                        <img src="https://placekitten.com/240/320" alt="左边一张图片" />
+                        <figcaption aria-hidden="true">左边一张图片</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://placekitten.com/420/320" alt="右边一张图片" />
+                        <figcaption aria-hidden="true">右边一张图片</figcaption>
+                    </figure>
+                    <figcaption>就完成了一张包含两个图片的图片！</figcaption>
+                </figure>
+                <aside>
+                    <img src="https://placekitten.com/120/120" alt="img" /><br />
+                    旁边也可以放图片！
+                </aside>
+                <span class="anchor" id="more"></span>
+                <h3>更多信息</h3>
+                <p>
+                    更多内容，请参照<a href="https://classless.de">classless.de</a>，里面有详细的介绍。
+                </p>
+            </section>
+        </article>
+        <hr />
+        <article>
+            <span class="anchor"></span>
+            <section>
+                <h1>样式指南</h1>
+                <p>上一次更新于<time>2024年2月9日</time></p>
+                <h2>使用颜色</h2>
+                <p>大部分文章的内容应该由这些颜色组成。</p>
+                <div class="swatches">
+                    <div class="swatch" style="background-color: var(--cemph); color: #f4f4f4">
+                        未央蓝
+                    </div>
+                    <div class="swatch" style="background-color: var(--clink); color: #f4f4f4">
+                        外链蓝
+                    </div>
+                    <div class="swatch" style="background-color: #333; color: #f4f4f4">
+                        正文黑
+                    </div>
+                    <div class="swatch" style="background-color: #f4f4f4">代码浅灰</div>
+                    <div class="swatch" style="background-color: #666; color: #f4f4f4">
+                        附注灰
+                    </div>
+                </div>
+                <p>
+                    有待补充。自己的文章其实可以随便，但是我们已经给了一个很好的预设。
+                </p>
+                <p>我开始觉得后边不大需要其他东西了……</p>
+                <figure>
+                    <img src="../material/latex/teach.jpg" alt="学术部LaTeX讲座中教学的场景" />
+                    <figcaption>
+                        学术部LaTeX讲座中教学的场景。多么优秀又好学的同学们！
+                    </figcaption>
+                </figure>
+            </section>
+        </article>
     </main>
     <footer>
-      <hr />
-      <h5>❤来自未央科协</h5>
-      <p>
-        代码<a href="https://github.com/wyast/wyast.github.io">@GitHub</a
-        >。<br />
-        大部分样式来自<a href="http://github.com/emareg/classlesscss"
-          >classless.de</a
-        >。<br />
-        <a href="mailto:john.doe@foo.bar">john.doe@foo.bar</a><br />
-        <a href="tel:+1234567890">+1234567890</a>
-      </p>
+        <hr />
+        <h5>❤来自未央科协</h5>
+        <p>
+            代码<a href="https://github.com/wyast/wyast.github.io">@GitHub</a>。<br />
+            大部分样式来自<a href="http://github.com/emareg/classlesscss">classless.de</a>。<br />
+            <a href="mailto:john.doe@foo.bar">john.doe@foo.bar</a><br />
+            <a href="tel:+1234567890">+1234567890</a>
+        </p>
     </footer>
-  </body>
+</body>
+
 </html>
