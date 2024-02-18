@@ -13,7 +13,7 @@ Table of Contents:
 
 :root, html[data-theme='light'] {
 	--rem: 12pt;
-	--width: 50rem;
+	--width: 80ch;
 	--navpos: fixed;  /* fixed | absolute */
 	--font-p: 1em/1.7  'Open Sans', 'DejaVu Sans', FreeSans, Helvetica, sans-serif;
 	--font-h: .9em/1.5 'Open Sans', 'DejaVu Sans', FreeSans, Helvetica, sans-serif;
@@ -53,7 +53,7 @@ html[data-theme='dark'] {
 /* reset block elements  */
 * { box-sizing: border-box; border-spacing: 0; margin: 0; padding: 0;}
 header, footer, figure, table, video, details, blockquote,
-ul, ol, dl, fieldset, pre, pre > code, caption {
+ul, ol, dl, fieldset, pre, pre > code, caption, menu {
 	display: block;
 	margin: 0.5rem 0rem 1rem;
 	width: 100%;
@@ -67,17 +67,26 @@ a, button, select, summary { color: var(--clink); cursor: pointer; }
 
 
 /* 3. Base Style ––––––––––––––––––––––––––––––––––––––– */
-html { font-size: var(--rem); background: var(--cbg); }
+html { font-size: var(--rem); background: var(--cbg); scroll-behavior: smooth; }
 body {
 	position: relative;
 	margin: auto;
-	max-width: var(--width);
+	width: 100%;
 	font: var(--font-p);
 	color: var(--cfg);
-	padding: 3.0rem 0.6rem 0;
+	padding: 3.0rem 0 0;
 	overflow-x: hidden;
 }
 body > footer { margin: 10rem 0rem 0rem; font-size: 90%; }
+
+/* grid style for content elements */
+article, header, footer, article>section {
+	display: grid;
+	grid-template-columns: 2fr min(var(--width), calc(100% - 96px)) 5fr;
+	column-gap: 48px;
+}
+article>*, header>*, footer>*, article>section>* { grid-column: 2; }
+article>section { grid-column: 1 / -1; }
 p { margin: .6em 0; }
 
 /* links */
@@ -210,12 +219,13 @@ article p>cite:before {
 	counter-increment: ref; content: " [" counter(ref) "] ";
 	vertical-align: super; font-size: .6em;
 }
-article p>cite > *:only-child { display: none; }
+/* article p>cite > *:only-child { display: none; }
 article p>cite:hover > *:only-child,
 [data-tooltip]:hover:before {
 	display: inline-block; z-index: 40;
 	white-space: pre-wrap;
 	position: absolute; left: 1rem; right: 1rem;
+	grid-column: 2;
 	padding: 1em 2em;
 	text-align: center;
 	transform:translateY( calc(-100%) );
@@ -228,7 +238,7 @@ article p>cite:hover > *:only-child,
 	color: var(--clink);
 	border: .8rem solid transparent; margin: -.8rem;
 }
-abbr[title], [data-tooltip] { cursor: help; }
+abbr[title], [data-tooltip] { cursor: help; } */
 
 /* navbar */
 nav+* { margin-top: 3rem; }
@@ -238,14 +248,14 @@ body>nav, header nav {
 	z-index: 41;
 	box-shadow: 0vw -50vw 0 50vw var(--clight), 0 calc(-50vw + 2px) 4px 50vw var(--cdark);
 }
-nav ul { list-style-type: none; }
-nav ul:first-child { margin: 0; padding: 0; overflow: visible; }
-nav ul:first-child > li {
+nav menu { list-style-type: none; }
+nav menu:first-child { margin: 0; padding: 0; overflow: visible; }
+nav menu:first-child > li {
 	display: inline-block;
 	margin: 0;
 	padding: 0.8rem .6rem;
 }
-nav ul > li > ul {
+nav menu > li > ul {
 	display: none;
 	width: auto;
 	position: absolute;
@@ -256,12 +266,53 @@ nav ul > li > ul {
 	border-radius: 4px;
 	z-index: 42;
 }
-nav ul > li > ul > li { white-space: nowrap; }
-nav ul > li:hover > ul { display: block; }
+nav menu > li > ul > li { white-space: nowrap; }
+nav menu > li:hover > ul { display: block; }
 @media (max-width: 40rem) {
-	nav ul:first-child > li:first-child:after { content: " \25BE"; }
-	nav ul:first-child > li:not(:first-child):not(.sticky) { display: none; }
-	nav ul:first-child:hover > li:not(:first-child):not(.sticky) { display: block; float: none !important; }
+	nav menu:first-child > li:first-child:after { content: " \25BE"; }
+	nav menu:first-child > li:not(:first-child):not(.sticky) { display: none; }
+	nav menu:first-child:hover > li:not(:first-child):not(.sticky) { display: block; float: none !important; }
+}
+
+/* Sidebar Navigation */
+.section-nav {
+	position: sticky;
+	top: 8rem;
+	align-self: start;
+	grid-column: 1;
+	margin-top: 2rem;
+	padding-left: 0;
+	background-color: var(--cbg);
+}
+
+.section-nav li.active > a {
+	background-color: var(--cemph);
+	color: var(--cbg);
+	font-weight: 500;
+}
+  
+.section-nav a {
+	text-decoration: none;
+	margin: 0;
+	display: block;
+	padding: .125rem 0;
+	color: var(--cmed);
+	transition: all 50ms ease-in-out; /* This small transition makes setting of the active state smooth */
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+	color: var(--cdark);
+}
+
+ul.section-nav, ol.section-nav, .section-nav ul, .section-nav ol{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.section-nav li {
+	margin-left: 4ch;
 }
 
 /* details/cards */
@@ -293,6 +344,7 @@ article > h2:first-of-type + p:first-letter, .lettrine {
 
 /* ornaments */
 section:after {
+	grid-column: 2; 
 	display: block;
 	margin: 1em 0;
 	color: var(--cmed);
@@ -303,11 +355,10 @@ section:after {
 
 /* side menu (aside is not intended for use in a paragraph!) */
 main aside {
-	position: absolute;
-	width: 8rem;      right: -8.6rem;
+	grid-column: 3 / 4;
+	width: 24ch;      left: 8ch;
 	font-size: 0.8em; line-height: 1.4em;
 }
-@media (max-width: 70rem) { main aside { display: none; } }
 
 /* forms and inputs  */
 textarea, input:not([type=range]), button, select {
@@ -407,11 +458,12 @@ p>select { padding: 0;      margin: 0 .5em; }
 }
 .hide:hover {
 	background-color: transparent;
-	color: initial;
+	color: var(--cfg);
 }
 
-/* scrolling behavior */
-*{scroll-behavior: smooth;}
+/* full bleed content */
+.full-bleed, article>img { display: block; width: 100%; grid-column: 1 / -1; }
 
 /* set anchor offset */
-.anchor {position: relative; padding-top: 90px;}
+.anchor {grid-column: 3; position: relative; margin-top: -2rem;}
+
