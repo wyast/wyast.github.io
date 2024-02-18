@@ -7,6 +7,9 @@ If you are working on a project in YuQue list, pls fill in that tickbox in order
 
 从新到旧：
 
+### 2024/2/18 HCX
+-   完成了侧边栏目录等
+
 ### 2024/2/12 LYF
 
 -   finished MatLab
