@@ -1,65 +1,271 @@
-<!DOCTYPE html>
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
 <html>
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>未央科协网站</title>
-    <link rel="stylesheet" type="text/css" href="style\classless.css" />
-</head>
-
+	<head>
+		<title>Productive-ly Bootstrap Website Template | Home :: w3layouts</title>
+		<link href="./css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link href="./css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="./js/jquery.min.js"></script>
+		 <!-- Custom Theme files -->
+		<link href="./css/theme-style.css" rel='stylesheet' type='text/css' />
+   		 <script src="./js/jquery.easing.min.js"></script>
+   		 <!-- Custom Theme files -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!----webfonts---->
+			<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,300,500,700,800,900,600,200' rel='stylesheet' type='text/css'>
+		    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600,700' rel='stylesheet' type='text/css'>
+		<!----//webfonts---->
+		<script src="./js/modernizr.custom.js" type="text/javascript"></script>
+		<script type="text/javascript" 	src="./js/jquery.smint.js"></script>
+		<script type="text/javascript">
+			$(document).ready( function() {
+			    $('.subMenu').smint({
+			    	'scrollSpeed' : 1000
+			    });
+			});
+		</script>
+	</head>
 <body>
-    <header>
-        <h1>未央科协网站</h1>
-        <nav class="noprint">
-            <menu>
-                <li>
-                    <img style="height: 1.2em;" src="favicon.png">
-                    <a href="#"> 未央科协</a>
-                </li>
-                <li class="float-right sticky"><a onclick="toggleDarkMode(this)">🌚</a></li>
-                <li>这里应该放目录</li>
-                <li>但这么短的文章</li>
-                <li>其实不需要目录</li>
-                <li>这玩意不大好看</li>
-                <li>想改就随便改！</li>
-                <li class="float-right"><a href="https://github.com/wyast/wyast.github.io">@GitHub</a></li>
-            </menu>
-            <script>
-                function toggleDarkMode(el) {
-                    var theme = 'light'
-                    if (el.innerText == '🌚') {
-                        el.innerText = '🌞'; theme = 'dark';
-                    } else {
-                        el.innerText = '🌚';
-                    }
-                    document.documentElement.setAttribute('data-theme', theme)
-                }
-            </script>
-        </nav>
-    </header>
-    <main>
-        <h4>这里是已有的文章</h4>
-        <p>先试试超链接。</p>
-        <p>
-            <a href="posts\numpy.html">numpy</a>
-            <a href="posts\latex.html">LaTeX</a>
-            <a href="posts\zotero.html">zotero</a>
-            <a href="posts\fish.html">FISH</a>
-            <a href="posts\matlab.html">MATLAB</a>
-        </p>
-        <p><a href="style/guide.html">样式指南</a></p>
-    </main>
-    <footer>
-        <hr>
-        <h5>❤来自未央科协</h5>
-        <p>
-            代码<a href="https://github.com/wyast/wyast.github.io">@GitHub</a>。<br />
-            大部分样式来自<a href="http://github.com/emareg/classlesscss">classless.de</a>。<br />
-            <a href="mailto:john.doe@foo.bar">john.doe@foo.bar</a><br />
-            <a href="tel:+1234567890">+1234567890</a>
-        </p>
-    </footer>
-</body>
+		<!----start-container----->
+		<div class="head-bg sTop">
+			<div class="conatiner">
+				<div class="header-note">
+					<span class="border"> </span>
+						<h1>Changing The face of Productivity.</h1>
+						<p>Productive.l is a game  changing productivy app that utilizes gamification and social influence toget you working.</p>
+				</div>
+			</div>
+		</div>
+		<!----//End-container----->
+		<!----start-top-nav---->
+		<nav class="subMenu navbar-custom navbar-scroll-top" role="navigation">
+	        <div class="container">
+	            <div class="navbar-header page-scroll">
+	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+	                    <img src="./images/menu-icon.png" title="drop-down-menu" /> 
+	                </button>
+	            </div>
+	            <div class="h_logo">
+	            <div class="logo1">
+	            	  <a id="s3"  href="#">Productive.ly</a>
+	            </div>
+	            </div>
+	            <!-- Collect the nav links, forms, and other content for toggling -->
+	            <div class="collapse navbar-collapse navbar-main-collapse top-nav">
+	                <ul class="nav navbar-nav full-nav-top">
+	                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+	                    <li>
+	                        <a id="sTop" class="subNavBtn" href="#">Philosophy</a>
+	                    </li>
+	                    <li class="page-scroll">
+	                        <a id="s2" class="subNavBtn" href="#">Features</a>
+	                    </li>
+	                    <li class="page-scroll logo">
+	                        <a id="s3" class="subNavBtn" href="#">Productive.ly</a>
+	                    </li>
+	                    <li class="page-scroll">
+	                        <a id="s4" class="subNavBtn" href="#">Reviews</a>
+	                    </li>
+	                     <li class="page-scroll active">
+	                        <a id="s5" class="subNavBtn download" href="#">Download</a>
+	                    </li>
+	                </ul>
+	            </div>
+	            <!-- /.navbar-collapse -->
+	                <div class="clearfix"> </div>
+	        </div>
+	        <!-- /.container -->
+   	  </nav>
+		<!----//End-top-nav---->
+		<!---- start-top-grids---->
+<div  class="features s2">
+	<div class="container-fluid">
+			<div class="row top-grids">
+				<div class="col-md-4 text-center grid1">
+					<div class="grid">
+						<img src="./images/icon-1.png" alt=""/> 
+						<h2>Gamification</h2>
+						<p>Amass points to level and earn rewords based on you're Produtivy.</p>
+					</div>
+					<span class="plus"> </span>
+				</div>
+					<div class="col-md-4 text-center grid1">
+						<div class="grid">
+							<img src="./images/icon-2.png" alt=""/>
+							<h2>Social</h2>
+							<p>Get more productive with tips from friends and complete to earn points.</p>
+						</div>
+						<span class="eual"> </span>
+					</div>
+					<div class="col-md-4 text-center">
+						<div class="grid">
+							<img src="./images/icon-3.png" alt=""/>
+							<h2>Productivity</h2>
+							<p>Soon enough,you'll be completing projects left and right faster than ever.</p>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+			</div>
+		</div>	
+	</div>
+		<!---- //End-top-grids---->
+		<!----start-Produtive---->
+	<div  class="productive.ly s3" >
+		<div id="cbp-so-scroller" class="cbp-so-scroller"> 		
+ 		    				 <div class="content_top">																 			
+						 			 <div class="ipad_desc" id="about">      
+					                   <h3>Gamification</h3>
+					                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+					                 </div>     
+					                <div class="ipad_img">
+					                  <section class="cbp-so-section cbp-so-init cbp-so-animate">
+					                  	<article class="cbp-so-side cbp-so-side-right">						                
+							         	 	<img src="./images/01.jpg" alt="">			         
+						 	        </article>
+						         </section>  
+					 	 	 </div> 
+				       <div class="clearfix"> </div>   					              		    				    					                      			   							
+				</div>		   		   				    		    					
+  		    		<div class="content_bottom" id="portfolio">
+  		    			     <div class="devices">
+  		    				      <section class="cbp-so-section cbp-so-init">		
+  		    					    <article class="cbp-so-side cbp-so-side-left">			  		  	    
+					  		  	   	    	<img src="./images/02.jpg" alt="">			  		  	     
+					  		  	     </article>
+					  		  	  </section>	
+					  		   </div>			
+					  		  	    <div class="devices_desc">
+					  		  	    	 <h3>Social</h3>
+					  		  	    	 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+					  		  	    </div>
+					  		       <div class="clearfix"> </div>   
+					  		  </div> 	    																 				 	
+		  				 </div>  			  
+  		   
+    <script src="./js/classie.js"></script>
+		<script src="./js/cbpScroller.js"></script>
+		<script>
+			new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
+		</script>
+	</div>
+	<div class="clearfix"> </div>
+		<!----//End-Produtive---->
+			<!----/start-Down-load---->
+			<div  class="download s4">
+					<div class="Downlod">
+						<h4>Download Producteve.ly for Free </h4>
+						<div class="row form">
+							<div class="download-icons text-center">
+						    			 <div class="col-md-6 span1"> <a href="#"> <img src="./images/winds.png" alt=""/><i>Download for Windows </i> <div class="clearfix"> </div></a></div>
+				    					 <div class="col-md-6 span2"> <a href="#"> <img src="./images/Andrd.png" alt=""/><i>Download for Android</i> <div class="clearfix"> </div></a></div>
+    										  <div class="clearfix"> </div>
+									</div>
+								</div>
+						  </div>
+					</div>
+			<!----//End-Down-load---->
+			<!----/start-Awesome-Reviews---->
+		<div  class="riviews s5">
+			<div class=" container Reviews">
+				<h5>Awesome Reviews</h5>
+				<div class="row Awesome">
+					<span class="border-2"> </span>
+					<div class="col-md-6 Fellow">
+						<div class="follow-left pull-left">
+							<img src="./images/pic1.jpg" alt="" />
+						</div>
+						<div class="follow-right pull-left">
+							<h6>Musthache Man</h6>
+							<span>Designer and Developer</span>
+						</div>
+						 <div class="clearfix"> </div>
+						<p>This is Photoshop's version of Lorem ipsum.Proin Gravida  nibh velit actor aliquet.Aenean sollicitudian,Lorem quis bibendum actor,nii elit consequant ipsum,nec sagittis sem nibh id elit. diis sed odio sit amet mauris. </p>
+					</div>
+					<div class="col-md-6 Fellow">
+						<div class="follow-left pull-left">
+							<img src="./images/pic2.png" alt="" />
+						</div>
+						<div class="follow-right pull-left">
+							<h6> Bearded Fellow</h6>
+							<span>Proffessional Beard Grower</span>
+						</div>
+						 <div class="clearfix"> </div>
+						<p>This is Photoshop's version of Lorem ipsum.Proin Gravida  nibh velit actor aliquet.Aenean sollicitudian,Lorem quis bibendum actor,nii elit consequant ipsum,nec sagittis sem nibh id elit. diis sed odio sit amet mauris. </p>
+					</div>
+					<div class="col-md-6 Fellow">
+						<div class="follow-left pull-left">
+							<img src="./images/pic1.jpg" alt="" />
+						</div>
+						<div class="follow-right  pull-left">
+							<h6> Hair</h6>
+							<span>Live on your face</span>
+						</div>
+						 <div class="clearfix"> </div>
+						<p>This is Photoshop's version of Lorem ipsum.Proin Gravida  nibh velit actor aliquet.Aenean sollicitudian,Lorem quis bibendum actor,nii elit consequant ipsum,nec sagittis sem nibh id elit. diis sed odio sit amet mauris. </p>
+					</div>
+					<div class="col-md-6 Fellow ">
+						<div class="follow-left  pull-left">
+							<img src="./images/pic2.png" alt="" />
+						</div>
+						<div class="follow-right  pull-left">
+							<h6>Manly Mike</h6>
+							<span>Interest Enthusiast</span>
+						</div>
+						 <div class="clearfix"> </div>
+						<p>This is Photoshop's version of Lorem ipsum.Proin Gravida  nibh velit actor aliquet.Aenean sollicitudian,Lorem quis bibendum actor,nii elit consequant ipsum,nec sagittis sem nibh id elit. diis sed odio sit amet mauris. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!----//End-Awesome-Reviews---->
+		
+				<!----//End-social-icons--->
+				<!----start-copy-right---->
+				<div class="footer">
+					<div class=" col-md 6 collapse navbar-collapse navbar-main-collapse bottom-nav pull-left">
+	               	 <ul class="nav navbar-nav full-nav-bottom">
+	                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+	                     <li class="page-scroll">
+	                        <a id="s1" class="subNavBtn" href="#">Productive.ly</a>
+	                    </li>
+	                    <li class="page-scroll">
+	                        <a id="s2" class="subNavBtn" href="#">Contact</a>
+	                    </li>
+	                    <li class="page-scroll">
+	                        <a id="s31" class="subNavBtn" href="#">Press</a>
+	                    </li>
+	                </ul>
+	            </div>
+	            <!-- /.navbar-collapse -->
+	             <div class="row form2">
+									<div class="col-md 6 download-icons download-icons1 pull-right">
+										 <div class="span3"> <a href="#"> <img src="./images/winds2.png" alt=""/><i>Download for Windows </i> <div class="clearfix"> </div></a></div>
+				    					 <div class="span4"> <a href="#"> <img src="./images/andrd2.png" alt=""/><i>Download for Android</i> <div class="clearfix"> </div></a></div>
+    										  <div class="clearfix"> </div>
+									</div>
+								
+						  </div>
+						     <div class="clearfix"> </div>
+				 <div class="row copy-right">
+				 	<div class="col-md-12 text-center">
+						<p>Copyright &#169; 2014 | Template by &nbsp;<a href="http://w3layouts.com">W3Layouts</a></p>
+					</div>
+				</div>	
+				</div>
 
+		<!----//End-contact---->
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="./js/bootstrap.min.js"></script>
+			<!----//End-copy-right---->
+				
+</body>
 </html>
+
