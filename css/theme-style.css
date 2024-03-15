@@ -114,7 +114,7 @@ body a {
   background-position: -45px 0px;
 }
 .navbar-nav li.active a {
-  color: var(--cemphh);
+  color: var(--cemphbg);
 }
 
 a#s3 {
@@ -178,14 +178,14 @@ a#s3 {
 }
 /*******************/
 .Downlod {
-  background: url(../images/download-bg.jpg) no-repeat;
+  background: var(--cemphbg);
   background-size: cover;
   padding: 4em 0;
 }
 .Downlod h4 {
   font-size: 1.8em;
-  font-weight: 400;
-  color: #fff;
+  font-weight: bold;
+  color: #555353;
   text-align: center;
 }
 .btn-primary:hover {
@@ -228,7 +228,7 @@ a#s3 {
 }
 .span1 i,
 .span2 i {
-  color: #f6bb31;
+  color: var(--clink);
   padding: 10px 23px 10px 0px;
   float: left;
   font-size: 18px;
@@ -463,7 +463,7 @@ a#s3 {
   padding-top: 45px;
 }
 .bottom-nav li a:hover {
-  color: #f8a312;
+  color: var(--cemph);
   text-decoration: none;
 }
 .form2 {
@@ -523,7 +523,7 @@ a#s3 {
 }
 .span3:hover,
 .span4:hover {
-  background: #f6bb31;
+  background: var(--clink);
   outline: none;
   border: 6px solid #222;
 }
@@ -535,7 +535,7 @@ nav.subMenu.navbar-custom.navbar-scroll-top.smint {
   width: 100%;
   z-index: 1000;
   padding: 0.8em;
-  border-bottom: 2px solid #faa71a;
+  border-bottom: 2px solid var(--cemph);
 }
 .subMenu .inner {
   padding: 0;
@@ -558,7 +558,7 @@ nav.subMenu.navbar-custom.navbar-scroll-top.smint {
 /***************/
 .copy-right {
   padding: 0.5em 0;
-  border-top: 1.5px solid #faa71a;
+  border-top: 1.5px solid var(--cemph);
 }
 .copy-right p {
   color: #fff;
@@ -569,7 +569,7 @@ nav.subMenu.navbar-custom.navbar-scroll-top.smint {
   margin-top: 0.5em;
 }
 .copy-right p a {
-  color: #f8a312;
+  color: var(--cemph);
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
@@ -822,7 +822,7 @@ nav.subMenu.navbar-custom.navbar-scroll-top.smint {
   .logo1 a {
     font-size: 1.5em;
     font-weight: 600;
-    color: #faa71a;
+    color: var(--cemph);
     text-transform: uppercase;
     font-weight: 700;
   }
