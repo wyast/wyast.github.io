@@ -72,39 +72,39 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="collapse navbar-collapse navbar-main-collapse top-nav">
                 <ul class="nav navbar-nav full-nav-top">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li>
+                    <li class="page-scroll">
                         <a id="sTop" class="subNavBtn" href="#">资源</a>
                     </li>
                     <li class="page-scroll">
                         <a id="s2" class="subNavBtn" href="#">珐露珊最可爱！</a>
                     </li>
-                    <li class="page-scroll logo">
+                    <li class="page-scroll">
                         <a id="s3" class="subNavBtn" href="#">部门介绍</a>
                     </li>
                     <li class="page-scroll">
                         <a id="s4" class="subNavBtn" href="#">wiki</a>
                     </li>
-                    <li class="page-scroll active">
+                    <li class="page-scroll">
                         <a id="s5" class="subNavBtn download" href="#">最新资讯</a>
                     </li>
-                </ul>
-                <!--点击标签后就高亮-->
-                <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                        var navItems = document.querySelectorAll(".nav li");
+                    <!--点击标签后就高亮-->
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            navItems = document.querySelectorAll(".nav li");
 
-                        navItems.forEach(function (item) {
-                            item.addEventListener("click", function () {
-                                // 移除其他li的高亮样式
-                                navItems.forEach(function (navItem) {
-                                    navItem.classList.remove("active");
+                            navItems.forEach(function (item) {
+                                item.addEventListener("click", function () {
+                                    // 移除其他li的高亮样式
+                                    navItems.forEach(function (navItem) {
+                                        navItem.classList.remove("active");
+                                    });
+                                    // 为被点击的li添加高亮样式
+                                    item.classList.add("active");
                                 });
-                                // 为被点击的li添加高亮样式
-                                item.classList.add("active");
                             });
                         });
-                    });
-                </script>
+                    </script>
+                </ul>
             </div>
             <!-- /.navbar-collapse -->
             <div class="clearfix"></div>
@@ -116,34 +116,51 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="features s2">
         <div class="container-fluid">
             <div class="row top-grids">
-                <div class="col-md-4 text-center grid1">
+                <div class="col-md-3 text-center grid1">
+                    <!--颜色暂且都是黑色，网址暂且都是百度-->
                     <div class="grid">
                         <img src="./images/icon-1.png" alt="" />
-                        <h2>TODO：链接</h2>
+                        <h2>
+                            <a style="color: black;" href="https://baidu.com" target="_blank">咨询</a>
+                        </h2>
                         <p>
-                            在这里我想要并列放四个图标，引向我们的四个分页面。
+                            页面1描述
                         </p>
                     </div>
                     <span class="plus"> </span>
                 </div>
-                <div class="col-md-4 text-center grid1">
+                <div class="col-md-3 text-center grid1">
                     <div class="grid">
                         <img src="./images/icon-2.png" alt="" />
-                        <h2>Social</h2>
+                        <h2>
+                            <a style="color: black;" href="https://baidu.com" target="_blank">教程</a>
+                        </h2>
                         <p>
-                            Get more productive with tips from friends and
-                            complete to earn points.
+                            页面2描述
+                        </p>
+                    </div>
+                    <span class="plus"> </span>
+                </div>
+                <div class="col-md-3 text-center grid1">
+                    <div class="grid">
+                        <img src="./images/icon-3.png" alt="" />
+                        <h2>
+                            <a style="color: black;" href="https://baidu.com" target="_blank">论坛</a>
+                        </h2>
+                        <p>
+                            页面3描述
                         </p>
                     </div>
                     <span class="eual"> </span>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-md-3 text-center">
                     <div class="grid">
-                        <img src="./images/icon-3.png" alt="" />
-                        <h2>Productivity</h2>
+                        <img src="./images/icon-2.png" alt="" />
+                        <h2>
+                            <a style="color: black;" href="https://baidu.com" target="_blank">图</a>
+                        </h2>
                         <p>
-                            Soon enough,you'll be completing projects left
-                            and right faster than ever.
+                            页面4描述
                         </p>
                     </div>
                 </div>
@@ -151,6 +168,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
     </div>
+
     <!---- //End-top-grids---->
     <!----start-Produtive---->
     <div class="productive.ly s3">
