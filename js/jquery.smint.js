@@ -44,7 +44,7 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
             );
 
             ///////////////////////////////////
-            /*
+
             // get initial top offset for the menu
             $(document).ready(function () {
                 // Store the original position of the .smint element
@@ -101,7 +101,7 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 
             // run functions
             stickyMenu();
-*/
+
             // run function every time you scroll
             $(window).scroll(function () {
                 //Get the direction of scroll
@@ -112,7 +112,7 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
                     direction = "up";
                 }
                 lastScrollTop = st;
-                // stickyMenu(direction);
+                stickyMenu(direction);
 
                 // Check if at bottom of page, if so, add class to last <a> as sometimes the last div
                 // isnt long enough to scroll to the top of the page and trigger the active state.
