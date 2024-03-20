@@ -80,105 +80,161 @@
 /* style for footer */
 
 .footer {
-  font-family: 'Arial', sans-serif;
-  color: #fff;
-  
+  color: var(--white);
 }
 
-.footer__top{
+/* Footer Top */
+.footer__top {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding:30px 20px;
-  background-color:#353e58;
-
-}
-.footer__middle,
-.footer__bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1f1f1f;
-  padding:30px 20px;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  flex-wrap: wrap;
+  padding: 1rem 3rem;
+  background-color: var(--navy);
 }
 
-.footer__top--right{
+
+.footer__top-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 40px;
-  margin: 0px 0px;
+  gap: 1rem;
+  padding: 0;
+  margin: 2rem 0;
 }
 
-.footer__top--right p {
-  font-size: 26px;
+.footer__button {
+  background-color: var(--light-red);
+  color: var(--near-white);
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 2rem;
+  font-size: 16px;
+  cursor: pointer;
+  will-change: background-color transform;
+  transition: background-color 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.footer__button:hover {
+  transition: background-color 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: var(--dark-red);
+}
+
+.footer__title {
+  font-size: 36px;
+  padding: 0;
   margin: 0;
-  color: #fff;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.125rem;
+}
+
+.footer__phrase {
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  margin: 2rem 0;
+  font-family: serif;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.footer__phrase-word {
+  margin: 0;
   padding-right: 0px;
 }
 
-
-.footer__top--left{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px 40px;
-  margin: 0px 0px;
-}
-.footer__top--left button {
-  background-color: #e42d42;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.footer__top--left p {
-  font-size: 36px;
-  padding: 0px 0px;
-  color:#fff;
-}
-
-.footer__links {
+/* Footer Middle */
+.footer__middle {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: var(--near-black);
+  color: var(--white);
+  padding: 2rem;
 }
 
-.footer__links--list {
-  list-style-type: none;
-  padding-right: 20px;
-  margin: 0;
+.footer__icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  min-width: 5rem;
+  padding-bottom: 2rem;
+  color: var(--white);
+  text-decoration: wavy;
+}
+
+.footer__dummy {
+  flex-grow: 1;
+}
+
+.footer__list-container {
+  display: flex;
+  flex-grow: 1;
+  margin-left: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__list {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
-.footer__links--list li {
-  margin-bottom: 5px;
-  font-size: 20px;
+.footer__list-title {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.footer__list-content {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.footer__list-content>li { /* acceptable only because a list always contains li elements */
   padding-right: 60px;
 }
 
-.footer__links--list a {
-  color: #fff;
+.footer__link {
+  color: var(--white);
+  font-size: 0.75rem;
   text-decoration: none;
 }
+.footer__link:hover {
+  text-decoration: underline;
+}
 
-.footer__bottom--social {
+/* Footer Bottom */
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--near-black);
+  color: var(--white);
+  padding: 2rem;
+  font-size: 0.75rem;
+}
+
+.footer__social {
   display: flex;
   justify-content: space-between;
-  padding: 0px 0px;
-  margin: 0px 0px;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
 }
 
-.footer__bottom--social a {
-  color: #fff;
-  text-decoration: none;
-  padding-right: 20px;
-}
-
-.footer__bottom--legal p {
+.footer__legal {
   text-align: center;
-  font-size: 20px;
+  font-size: 0.75rem;
   margin: 0;
 }
