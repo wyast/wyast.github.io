@@ -99,6 +99,10 @@ main > * {
 
 /* essential style for the timeline element */
 
+.selection {
+  margin: 4rem 1rem 6rem 1rem;
+}
+
 .selection__section {
   display: grid;
   grid-template-columns: 20% auto;

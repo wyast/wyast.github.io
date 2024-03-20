@@ -89,9 +89,11 @@
   font-weight: 500;
   margin: 0;
   font-family: serif;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.headpic__title--strong {
+.headpic__phrase--strong {
   font-weight: 700;
 }
 
