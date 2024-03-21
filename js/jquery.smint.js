@@ -44,7 +44,7 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
             );
 
             ///////////////////////////////////
-
+            /*
             // get initial top offset for the menu
             $(document).ready(function () {
                 // Store the original position of the .smint element
@@ -125,7 +125,7 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
                     $(".smint a").last().addClass("active");
                 }
             });
-
+*/
             ///////////////////////////////////////
 
             $(this).on("click", function (e) {
