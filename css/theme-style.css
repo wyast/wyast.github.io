@@ -618,8 +618,8 @@ a#s3 {
 
 /* This is the selector i used for my menu, it needs to be set as position:absolute; */
 nav.subMenu.navbar-custom.navbar-scroll-top.smint {
-    position: absolute;
-    top: 692px;
+    position: sticky;
+    top: 0px;
     width: 100%;
     z-index: 1000;
     padding: 0.8em;
