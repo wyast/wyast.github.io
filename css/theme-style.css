@@ -345,13 +345,13 @@ a#s3 {
 
 /***** Content - botttom ******/
 .content_bottom {
-    padding-top: 8em;
+    padding-top: 1em;
 }
 
 .devices {
     float: left;
-    padding-top: 4em;
-    margin-bottom: 4em;
+    width: 50%;
+    margin-bottom: -1em;
 }
 
 .devices img {
