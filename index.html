@@ -1,537 +1,310 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>
-            Productive-ly Bootstrap Website Template | Home :: w3layouts
-        </title>
-        <link href="./css/bootstrap.css" rel="stylesheet" type="text/css" />
-        <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="./js/jquery.min.js"></script>
-        <!-- Custom Theme files -->
-        <link href="./css/theme-style.css" rel="stylesheet" type="text/css" />
-        <script src="./js/jquery.easing.min.js"></script>
-        <!-- Custom Theme files -->
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script type="application/x-javascript">
-            addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
-        </script>
-        <link rel="stylesheet" href="css/danmu.css">
-        <!----webfonts---->
-        <link
-            href="http://fonts.googleapis.com/css?family=Raleway:400,100,300,500,700,800,900,600,200"
-            rel="stylesheet"
-            type="text/css" />
-        <link
-            href="http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600,700"
-            rel="stylesheet"
-            type="text/css" />
-        <!----//webfonts---->
-        <script src="./js/modernizr.custom.js" type="text/javascript"></script>
-        <script type="text/javascript" src="./js/jquery.smint.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $(".subMenu").smint({
-                    scrollSpeed: 1000,
-                });
-            });
-        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./index.css" />
+        <title>整个文章</title>
     </head>
-
     <body>
-        <!----start-container----->
-        <div class="head-bg sTop">
-            <div class="conatiner">
-                <div class="header-note">
-                    <span class="border"> </span>
-                    <h1>未央科协</h1>
-                    <p>
-                        这里放一些介绍文字，比如说这是什么，这里有什么。别自己写英文。
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!----//End-container----->
-        <!----start-top-nav---->
-        <nav class="subMenu navbar-custom navbar-scroll-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header page-scroll">
-                    <button
-                        type="button"
-                        class="navbar-toggle"
-                        data-toggle="collapse"
-                        data-target=".navbar-main-collapse">
-                        <img
-                            src="./images/menu-icon.svg"
-                            title="drop-down-menu" />
-                    </button>
-                </div>
-                <div class="h_logo">
-                    <div class="logo1">
-                        <a id="s3" href="#">展开</a>
-                    </div>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div
-                    class="collapse navbar-collapse navbar-main-collapse top-nav">
-                    <ul class="nav navbar-nav full-nav-top">
-                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                        <li class="page-scroll">
-                            <a id="sTop" class="subNavBtn" href="./pages/info/index.html">资讯</a>
-                        </li>
-                        <li class="page-scroll">
-                            <a id="s2" class="subNavBtn" href="#"
-                                >你最可爱！</a
-                            >
-                        </li>
-                        <li class="page-scroll">
-                            <a id="s3" class="subNavBtn" href="#">部门介绍</a>
-                        </li>
-                        <li class="page-scroll">
-                            <a id="s4" class="subNavBtn" href="#">wiki</a>
-                        </li>
-                        <li class="page-scroll">
-                            <a id="s5" class="subNavBtn download" href="#"
-                                >资源</a
-                            >
-                        </li>
-                        <!--点击标签后就高亮-->
-                        <script>
-                            document.addEventListener(
-                                "DOMContentLoaded",
-                                function () {
-                                    navItems =
-                                        document.querySelectorAll(".nav li");
+        <header>
+            <div class="headpic">
+                <h1 class="headpic__title">
+                    未央科协,
+                    <strong class="headpic__phrase--strong"> WYAST </strong>
+                </h1>
 
-                                    navItems.forEach(function (item) {
-                                        item.addEventListener(
-                                            "click",
-                                            function () {
-                                                // 移除其他li的高亮样式
-                                                navItems.forEach(function (
-                                                    navItem
-                                                ) {
-                                                    navItem.classList.remove(
-                                                        "active"
-                                                    );
-                                                });
-                                                // 为被点击的li添加高亮样式
-                                                item.classList.add("active");
-                                                window.location.href='./pages/info/index.html'
-                                            }
-                                        );
-                                    });
-                                }
-                            );
-                        </script>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-                <div class="clearfix"></div>
+                <!-- <a href="./components/headpic/index.html"> 
+                    <button class="headpic__button">前往头图页面</button>
+                </a>-->
             </div>
-            <!-- /.container -->
-        </nav>
-        <!----//End-top-nav---->
-        <!---- start-top-grids---->
-        <div class="features s2">
-            <div class="container-fluid">
-                <div class="row top-grids">
-                    <div class="col-md-3 text-center grid1">
-                        <!--颜色暂且都是黑色，网址暂且都是百度-->
-                        <div class="grid">
-                            <img
-                                src="./images/icon-1.svg"
-                                alt="GOOD IMAGE"
-                                style="cursor: pointer"
-                                onclick="window.location.href='./pages/info/index.html';" />
-                            <h2>
-                                <a
-                                    style="color: black"
-                                    href="./pages/info/index.html"
-                                    target="_blank"
-                                    >资讯</a
-                                >
-                            </h2>
-                            <p>页面1描述</p>
-                        </div>
-                        <!-- <span class="plus"> </span> -->
-                    </div>
-                    <div class="col-md-3 text-center grid1">
-                        <div class="grid">
-                            <img
-                                src="./images/icon-2.svg"
-                                alt="GOOD IMAGE"
-                                style="cursor: pointer"
-                                onclick="window.open('https://baidu.com', '_blank');" />
-                            <h2>
-                                <a
-                                    style="color: black"
-                                    href="https://baidu.com"
-                                    target="_blank"
-                                    >教程</a
-                                >
-                            </h2>
-                            <p>页面2描述</p>
-                        </div>
-                        <!-- <span class="plus"> </span> -->
-                    </div>
-                    <div class="col-md-3 text-center grid1">
-                        <div class="grid">
-                            <img
-                                src="./images/icon-3.svg"
-                                alt="GOOD IMAGE"
-                                style="cursor: pointer"
-                                onclick="window.open('https://baidu.com', '_blank');" />
-                            <h2>
-                                <a
-                                    style="color: black"
-                                    href="https://baidu.com"
-                                    target="_blank"
-                                    >论坛</a
-                                >
-                            </h2>
-                            <p>页面3描述</p>
-                        </div>
-                        <!-- <span class="eual"> </span> -->
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <div class="grid">
-                            <img
-                                src="./images/icon-4.svg"
-                                alt="GOOD IMAGE"
-                                style="cursor: pointer"
-                                onclick="window.location.href='https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/pc_default';" />
-                            <h2>
-                                <a
-                                    style="color: black"
-                                    href="https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/pc_default"
-                                    target="_blank"
-                                    >好东西点点看</a
-                                >
-                            </h2>
-                            <p>页面4描述</p>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
-
-        <!---- //End-top-grids---->
-        <!----start-Produtive---->
-        <div class="productive.ly s3">
-            <div id="cbp-so-scroller" class="cbp-so-scroller">
-                <div class="content_top">
-                    <div class="ipad_desc">
-                        <h3>办公室</h3>
-                        <p>
-                            办公室的介绍blablablaba-》右边要放能代表办公室的图片。其他五个部门也是如此
+        </header>
+        <main>
+            <article class="selection">
+                <section class="selection__section">
+                    <div class="selection__description">
+                        <h3 class="description__title">最近的文章</h3>
+                        <p class="description__content">
+                            我们最近的一些文章在这里。
                         </p>
-                    </div>
-                    <div class="ipad_img">
-                        <section
-                            class="cbp-so-section cbp-so-init cbp-so-animate">
-                            <article class="cbp-so-side cbp-so-side-right">
-                                <img src="./images/01.jpg" alt="" />
-                            </article>
-                        </section>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="content_bottom">
-                    <div class="devices">
-                        <section 
-                            class="cbp-so-section cbp-so-init cbp-so-animate">
-                            <article class="cbp-so-side cbp-so-side-left">
-                                <img src="./images/02.jpg" alt="" />
-                            </article>
-                        </section>
-                    </div>
-                    <div class="devices_desc">
-                        <h3>学术部</h3>
-                        <p>
-                            学术部的介绍blablablaba-》右边要放能代表学术部的图片。其他五个部门也是如此
-                        </p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="content_top">
-                    <div class="ipad_desc" id="about">
-                        <h3>赛事部</h3>
-                        <p>
-                            赛事部的介绍blablablaba-》右边要放能代表赛事部的图片。其他五个部门也是如此
-                        </p>
-                    </div>
-                    <div class="ipad_img">
-                        <section
-                            class="cbp-so-section cbp-so-init cbp-so-animate">
-                            <article class="cbp-so-side cbp-so-side-right">
-                                <img src="./images/01.jpg" alt="" />
-                            </article>
-                        </section>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="content_bottom" id="portfolio">
-                    <div class="devices">
-                        <section class="cbp-so-section cbp-so-init">
-                            <article class="cbp-so-side cbp-so-side-left">
-                                <img src="./images/02.jpg" alt="" />
-                            </article>
-                        </section>
-                    </div>
-                    <div class="devices_desc">
-                        <h3>项目部</h3>
-                        <p>
-                            项目部的介绍blablablaba-》右边要放能代表项目部的图片。其他五个部门也是如此
-                        </p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="content_top">
-                    <div class="ipad_desc" id="about">
-                        <h3>从游部</h3>
-                        <p>
-                            从游部的介绍blablablaba-》右边要放能代表从游部的图片。其他五个部门也是如此
-                        </p>
-                    </div>
-                    <div class="ipad_img">
-                        <section
-                            class="cbp-so-section cbp-so-init cbp-so-animate">
-                            <article class="cbp-so-side cbp-so-side-right">
-                                <img src="./images/congyou.png" alt="" />
-                            </article>
-                        </section>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="content_bottom" id="portfolio">
-                    <div class="devices">
-                        <section class="cbp-so-section cbp-so-init">
-                            <article class="cbp-so-side cbp-so-side-left">
-                                <img src="./images/02.jpg" alt="" />
-                            </article>
-                        </section>
-                    </div>
-                    <div class="devices_desc">
-                        <h3>研创中心</h3>
-                        <p>
-                            研创中心的介绍blablablaba-》右边要放能代表研创中心的图片。其他五个部门也是如此
-                        </p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-
-            <script src="./js/classie.js"></script>
-            <script src="./js/cbpScroller.js"></script>
-            <script>
-                new cbpScroller(document.getElementById("cbp-so-scroller"));
-            </script>
-        </div>
-        <div class="clearfix"></div>
-        <!----//End-Produtive---->
-        <!----/start-Down-load---->
-        <div class="download s4">
-            <div class="Downlod">
-                <h4>Download Producteve.ly for Free</h4>
-                <!-- <div class="row form">
-                    <div class="download-icons text-center">
-                        <div class="col-md-6 span1">
-                            <a href="#">
-                                <img src="./images/accont.svg" alt="" /><i
-                                    >Download for Windows
-                                </i>
-                                <div class="clearfix"></div>
+                        <nav class="description__nav">
+                            <a
+                                href="./components/grid/index.html"
+                                class="description__link">
+                                前往列表页面
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                    fill="none"
+                                    class="child">
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        fill="currentColor"
+                                        d="M9.11458 11.5121L11.6146 8.51215L12.0414 8L11.6146 7.48785L9.11458 4.48785L7.88542 5.51215L9.29197 7.2L4 7.2V8.8L9.29197 8.8L7.88542 10.4879L9.11458 11.5121Z"></path>
+                                </svg>
                             </a>
-                        </div>
-                        <div class="col-md-6 span2">
-                            <a href="#">
-                                <img src="./images/accont.svg" alt="" /><i
-                                    >Download for Android</i
-                                >
-                                <div class="clearfix"></div>
+                        </nav>
+                    </div>
+                    <div class="selection__grid">
+                        <!--Item Reference-->
+                        <template x-for="article in articles">
+                            <div class="selection__item">
+                                <a :href="article.link" class="item__imgholder">
+                                    <img
+                                        :src="`https://picsum.photos/640/400.webp?blur=3&random=${Math.random()}`"
+                                        class="item__img" />
+                                </a>
+                                <div class="item__description">
+                                    <a
+                                        class="item__title"
+                                        :href="article.link"
+                                        x-text="article.title"
+                                        >标题</a
+                                    >
+                                    <time
+                                        class="item__time"
+                                        x-text="article.time"
+                                        >时间</time
+                                    >
+                                </div>
+                            </div>
+                        </template>
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
+                                <img
+                                    src="https://picsum.photos/640/400.webp?blur=3&random=2"
+                                    class="item__img" />
                             </a>
+                            <div class="item__description">
+                                <a class="item__title" href="#">开小会</a>
+                                <time class="item__time">2024-03-10</time>
+                            </div>
                         </div>
-                        <div class="clearfix"></div> -->
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
+                                <img
+                                    src="https://picsum.photos/640/400.webp?blur=3&random=3"
+                                    class="item__img" />
+                            </a>
+                            <div class="item__description">
+                                <a class="item__title" href="#">庆祝闰日</a>
+                                <time class="item__time">2024-02-29</time>
+                            </div>
+                        </div>
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
+                                <img
+                                    src="https://picsum.photos/640/400.webp?blur=3&random=4"
+                                    class="item__img" />
+                            </a>
+                            <div class="item__description">
+                                <a class="item__title" href="#"
+                                    >看到一只大松鼠</a
+                                >
+                                <time class="item__time">2024-02-15</time>
+                            </div>
+                        </div>
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
+                                <img
+                                    src="https://picsum.photos/640/400.webp?blur=3&random=5"
+                                    class="item__img" />
+                            </a>
+                            <div class="item__description">
+                                <a class="item__title" href="#"
+                                    >我是一个非常长的标题。</a
+                                >
+                                <time class="item__time">2024-02-03</time>
+                            </div>
+                        </div>
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
+                                <img
+                                    src="https://picsum.photos/640/400.webp?blur=3&random=1"
+                                    class="item__img" />
+                            </a>
+                            <div class="item__description">
+                                <a class="item__title" href="#">更多内容</a>
+                                <time class="item__time">2024-02-01</time>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!----//End-Down-load---->
-
-
-        <div id="danmu-container"></div>
-        <!----/Reviews---->
-        <div class="riviews s5">
-            <div class="container Reviews">
-                <h5>科协人要对你说</h5>
-                <div class="row Awesome">
-                   <span class="border-2"> </span>
-                    <div class="col-md-6 Fellow">
-                        <div class="follow-left pull-left">
-                            <img src="./images/pic1.jpg" alt="" />
-                        </div>
-                        <div class="follow-right pull-left">
-                            <p>
-                                同学1
-                            </p>
-                            <h6>加入科协，收获爱情！</h6>
-                        </div>
-                        <div class="clearfix"></div>
+                </section>
+                <section class="selection__section">
+                    <div class="selection__description">
+                        <h3 class="description__title">教程</h3>
+                        <p class="description__content">这里是一些教程。</p>
+                        <nav class="description__nav">
+                            <a
+                                href="./components/grid/index.html"
+                                class="description__link">
+                                查看列表样式
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                    fill="none"
+                                    class="child">
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        fill="currentColor"
+                                        d="M9.11458 11.5121L11.6146 8.51215L12.0414 8L11.6146 7.48785L9.11458 4.48785L7.88542 5.51215L9.29197 7.2L4 7.2V8.8L9.29197 8.8L7.88542 10.4879L9.11458 11.5121Z"></path>
+                                </svg>
+                            </a>
+                        </nav>
                     </div>
-
-                    <span class="border-2"> </span>
-                    <div class="col-md-6 Fellow">
-                        <div class="follow-left pull-left">
-                            <img src="./images/pic1.jpg" alt="" />
+                    <div class="selection__grid">
+                        <!--Item Reference-->
+                        <template x-for="article in articles">
+                            <div class="selection__item">
+                                <a :href="article.link" class="item__imgholder">
+                                    <img
+                                        :src="`https://picsum.photos/640/400.webp?blur=3&random=${Math.random()}`"
+                                        class="item__img" />
+                                </a>
+                                <div class="item__description">
+                                    <a
+                                        class="item__title"
+                                        :href="article.link"
+                                        x-text="article.title"
+                                        >标题</a
+                                    >
+                                    <time
+                                        class="item__time"
+                                        x-text="article.time"
+                                        >时间</time
+                                    >
+                                </div>
+                            </div>
+                        </template>
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
+                                <img
+                                    src="https://picsum.photos/640/400.webp?blur=3&random=6"
+                                    class="item__img" />
+                            </a>
+                            <div class="item__description">
+                                <a class="item__title" href="#">更多内容</a>
+                                <time class="item__time">2024-02-01</time>
+                            </div>
                         </div>
-                        <div class="follow-right pull-left">
-                            <p>
-                                同学2
-                            </p>
-                            <h6>这是一份像社团的社工，一个是社工的社团!</h6>
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
+                                <img
+                                    src="https://picsum.photos/640/400.webp?blur=3&random=7"
+                                    class="item__img" />
+                            </a>
+                            <div class="item__description">
+                                <a class="item__title" href="#">更多内容</a>
+                                <time class="item__time">2024-02-01</time>
+                            </div>
                         </div>
-                        <div class="clearfix"></div>
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
+                                <img
+                                    src="https://picsum.photos/640/400.webp?blur=3&random=8"
+                                    class="item__img" />
+                            </a>
+                            <div class="item__description">
+                                <a class="item__title" href="#">更多内容</a>
+                                <time class="item__time">2024-02-01</time>
+                            </div>
+                        </div>
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
+                                <img
+                                    src="https://picsum.photos/640/400.webp?blur=3&random=9"
+                                    class="item__img" />
+                            </a>
+                            <div class="item__description">
+                                <a class="item__title" href="#">更多内容</a>
+                                <time class="item__time">2024-02-01</time>
+                            </div>
+                        </div>
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
+                                <img
+                                    src="https://picsum.photos/640/400.webp?blur=3&random=10"
+                                    class="item__img" />
+                            </a>
+                            <div class="item__description">
+                                <a class="item__title" href="#">更多内容</a>
+                                <time class="item__time">2024-02-01</time>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!----/
-        <div class="riviews s5">
-            <div class="container Reviews">
-                <h5>Awesome Reviews</h5>
-                <div class="row Awesome">
-                    <span class="border-2"> </span>
-                    <div class="col-md-6 Fellow">
-                        <div class="follow-left pull-left">
-                            <img src="./images/pic1.jpg" alt="" />
-                        </div>
-                        <div class="follow-right pull-left">
-                            <h6>Musthache Man</h6>
-                            <span>Designer and Developer</span>
-                        </div>
-                        <div class="clearfix"></div>
-                        <p>
-                            This is Photoshop's version of Lorem ipsum.Proin
-                            Gravida nibh velit actor aliquet.Aenean
-                            sollicitudian,Lorem quis bibendum actor,nii elit
-                            consequant ipsum,nec sagittis sem nibh id elit. diis
-                            sed odio sit amet mauris.
-                        </p>
-                    </div>
-                    <div class="col-md-6 Fellow">
-                        <div class="follow-left pull-left">
-                            <img src="./images/pic2.png" alt="" />
-                        </div>
-                        <div class="follow-right pull-left">
-                            <h6>Bearded Fellow</h6>
-                            <span>Proffessional Beard Grower</span>
-                        </div>
-                        <div class="clearfix"></div>
-                        <p>
-                            This is Photoshop's version of Lorem ipsum.Proin
-                            Gravida nibh velit actor aliquet.Aenean
-                            sollicitudian,Lorem quis bibendum actor,nii elit
-                            consequant ipsum,nec sagittis sem nibh id elit. diis
-                            sed odio sit amet mauris.
-                        </p>
-                    </div>
-                    <div class="col-md-6 Fellow">
-                        <div class="follow-left pull-left">
-                            <img src="./images/pic1.jpg" alt="" />
-                        </div>
-                        <div class="follow-right pull-left">
-                            <h6>Hair</h6>
-                            <span>Live on your face</span>
-                        </div>
-                        <div class="clearfix"></div>
-                        <p>
-                            This is Photoshop's version of Lorem ipsum.Proin
-                            Gravida nibh velit actor aliquet.Aenean
-                            sollicitudian,Lorem quis bibendum actor,nii elit
-                            consequant ipsum,nec sagittis sem nibh id elit. diis
-                            sed odio sit amet mauris.
-                        </p>
-                    </div>
-                    <div class="col-md-6 Fellow">
-                        <div class="follow-left pull-left">
-                            <img src="./images/pic2.png" alt="" />
-                        </div>
-                        <div class="follow-right pull-left">
-                            <h6>Manly Mike</h6>
-                            <span>Interest Enthusiast</span>
-                        </div>
-                        <div class="clearfix"></div>
-                        <p>
-                            This is Photoshop's version of Lorem ipsum.Proin
-                            Gravida nibh velit actor aliquet.Aenean
-                            sollicitudian,Lorem quis bibendum actor,nii elit
-                            consequant ipsum,nec sagittis sem nibh id elit. diis
-                            sed odio sit amet mauris.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        ---->
-        <!----//End-Awesome-Reviews---->
-        
-        <!----//End-social-icons--->
-        <!----start-copy-right---->
-        <div class="footer">
-            <div
-                class="col-md 6 collapse navbar-collapse navbar-main-collapse bottom-nav pull-left">
-                <ul class="nav navbar-nav full-nav-bottom">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="page-scroll">
-                        <a id="s1" class="subNavBtn" href="#">Productively</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a id="s2" class="subNavBtn" href="#">Contact us</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a id="s31" class="subNavBtn" href="#">Press</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-            <div class="row form2">
-                <div class="col-md 6 download-icons download-icons1 pull-right">
-                    <div class="span3">
-                        <a href="#">
-                            <img src="./images/winds2.png" alt="" /><i
-                                >Download for Windows
-                            </i>
-                            <div class="clearfix"></div>
-                        </a>
-                    </div>
-                    <div class="span4">
-                        <a href="#">
-                            <img src="./images/andrd2.png" alt="" /><i
-                                >Download for Android</i
-                            >
-                            <div class="clearfix"></div>
-                        </a>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-            <div class="row copy-right">
-                <div class="col-md-12 text-center">
-                    <p>
-                        Copyright © 2024 | <a id="s31" class="subNavBtn" href="./developers.html">List of developers</a>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <div class="footer__top">
+                <div class="footer__top-container">
+                    <p class="footer__title">
+                        <span>欢迎</span>
+                        <span>加入</span>
+                        <span>未央</span>
+                        <span>科协</span>
                     </p>
+                    <a href="./components/footer/index.html">
+                        <button class="footer__button">前往尾巴页面</button>
+                    </a>
+                </div>
+                <div class="footer__phrase">
+                    <span class="footer__phrase-word">只此程式，</span>
+                    <span class="footer__phrase-word">万无一失。</span>
+                    <span class="footer__phrase-word">--《增广贤文》</span>
                 </div>
             </div>
-        </div>
-        <script src="js/danmu.js"></script> 
+            <div class="footer__middle">
+                <a class="footer__icon" href="/">@未央科协<br />LOGO</a>
+                <div class="footer__list-container">
+                    <div class="footer__dummy"></div>
+                    <div class="footer__list">
+                        <h2 class="footer__list-title">部门</h2>
+                        <ul class="footer__list-content">
+                            <li>
+                                <a class="footer__link" href="#">这个部门</a>
+                            </li>
+                            <li>
+                                <a class="footer__link" href="#">那个部门</a>
+                            </li>
+                            <li><a class="footer__link" href="#">友链</a></li>
+                            <!-- More links -->
+                        </ul>
+                    </div>
+                    <div class="footer__list">
+                        <h2 class="footer__list-title">友链</h2>
+                        <ul class="footer__list-content">
+                            <li>
+                                <a class="footer__link" href="#">一个网页</a>
+                            </li>
+                            <li>
+                                <a class="footer__link" href="#">两个网页</a>
+                            </li>
+                            <li>
+                                <a class="footer__link" href="#">更多网页</a>
+                            </li>
+                            <!-- More links -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- More lists  -->
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__legal">
+                    &copy; 2024 wyast，但推荐<a
+                        class="footer__link"
+                        href="https://creativecommons.org/licenses/by/4.0/"
+                        >Creative Commons
+                    </a>
+                </p>
+                <div class="footer__social">
+                    <a class="footer__link" href="#">GitHub</a>
+                    <a class="footer__link" href="#">QQ?</a>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
