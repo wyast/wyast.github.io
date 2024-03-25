@@ -72,6 +72,8 @@
   --lightest-blue: #6384dd;
   --washed-blue: #97bbf4;
   --faint-blue: #dae4ff;
+
+  --start-offset: 100vw;
 }
 * {
   box-sizing: border-box;
@@ -80,6 +82,8 @@
 #danmu__container {
   position: relative;
   width: 100%;
+  overflow: hidden;
+  width: 100%;
   height: 300px;
   background-color: var(--white-90);
   overflow: hidden;
@@ -87,7 +91,18 @@
 
 .danmu {
   position: absolute;
+  /* right: 0; */
   white-space: nowrap;
   font-weight: bold;
   color: #ffffff;
+  animation: moveDanmu 3s linear forwards;
+}
+
+@keyframes moveDanmu {
+  from {
+    transform: translateX(calc(100% + var(--start-offset)));
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
