@@ -73,6 +73,8 @@ function generateRandomBlueHues() {
     return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 }
 
+/** javascript for danmu begin**/
+
 const danmuTexts = [
     "欢迎来到未央科协！",
     "这是一个测试弹幕！",
@@ -108,3 +110,5 @@ function startDanmuStream(interval = 500) {
 }
 
 startDanmuStream();
+
+/** javascript for danmu end**/
