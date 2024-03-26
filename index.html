@@ -19,6 +19,116 @@
                 </a>-->
             </div>
         </header>
+        <nav class="navbar">
+            <div class="navbar relative">
+                <div class="navbar__root">
+                    <div class="navbar__firstelem">
+                        <a class="navbar__leftlogo" href="/">
+                            <img
+                                src="./icon/logo.svg"
+                                alt="Observable"
+                                class="near-black"
+                            />
+                        </a>
+                        <div class="navbar__leftelemframe">
+                            <div>
+                                <button
+                                    aria-haspopup="true"
+                                    aria-controls="menu--:r4:"
+                                    class="navbar__elembotton"
+                                    id="menu-button--menu--:r4:"
+                                    type="button"
+                                    data-reach-menu-button=""
+                                >
+                                    Product
+                                    <img
+                                        src="./icon/dropdown-icon.svg"
+                                        class="navbar__icon"
+                                        alt="Dropdown"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="navbar__leftelemframe">
+                            <div>
+                                <button
+                                    aria-haspopup="true"
+                                    aria-controls="menu--:r5:"
+                                    class="navbar__elembotton"
+                                    id="menu-button--menu--:r5:"
+                                    type="button"
+                                    data-reach-menu-button=""
+                                >
+                                    Learn
+                                    <img
+                                        src="./icon/dropdown-icon.svg"
+                                        width="10"
+                                        height="16"
+                                        class="navbar__icon"
+                                        alt="Dropdown"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="navbar__leftelemframe">
+                            <div>
+                                <button
+                                    aria-haspopup="true"
+                                    aria-controls="menu--:r6:"
+                                    class="navbar__elembotton"
+                                    id="menu-button--menu--:r6:"
+                                    type="button"
+                                    data-reach-menu-button=""
+                                >
+                                    Community
+                                    <img
+                                        src="./icon/dropdown-icon.svg"
+                                        width="10"
+                                        height="16"
+                                        class="navbar__icon"
+                                        alt="Dropdown"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="navbar__leftelemframe">
+                            <div>
+                                <button
+                                    aria-haspopup="true"
+                                    aria-controls="menu--:r7:"
+                                    class="navbar__elembotton"
+                                    id="menu-button--menu--:r7:"
+                                    type="button"
+                                    data-reach-menu-button=""
+                                >
+                                    <a
+                                        class="navbar__linkbotton"
+                                        href="/pricing"
+                                        >Pricing</a
+                                    >
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar__rightelemframe">
+                        <button
+                            class="navbar__searchbotton"
+                            data-testid="search-button"
+                        >
+                            <img
+                                src="./icon/search-icon.svg"
+                                width="16"
+                                height="16"
+                                class="navbar__iconright"
+                                alt="Search"
+                            />Search
+                        </button>
+                        <button class="navbar__signinbotton">Sign in</button>
+                        <button class="navbar__signbotton">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <main>
             <article class="selection">
                 <section class="selection__section">
@@ -30,19 +140,22 @@
                         <nav class="description__nav">
                             <a
                                 href="./components/grid/index.html"
-                                class="description__link">
+                                class="description__link"
+                            >
                                 前往列表页面
                                 <svg
                                     width="16"
                                     height="16"
                                     viewBox="0 0 16 16"
                                     fill="none"
-                                    class="child">
+                                    class="child"
+                                >
                                     <path
                                         fill-rule="evenodd"
                                         clip-rule="evenodd"
                                         fill="currentColor"
-                                        d="M9.11458 11.5121L11.6146 8.51215L12.0414 8L11.6146 7.48785L9.11458 4.48785L7.88542 5.51215L9.29197 7.2L4 7.2V8.8L9.29197 8.8L7.88542 10.4879L9.11458 11.5121Z"></path>
+                                        d="M9.11458 11.5121L11.6146 8.51215L12.0414 8L11.6146 7.48785L9.11458 4.48785L7.88542 5.51215L9.29197 7.2L4 7.2V8.8L9.29197 8.8L7.88542 10.4879L9.11458 11.5121Z"
+                                    ></path>
                                 </svg>
                             </a>
                         </nav>
@@ -54,7 +167,8 @@
                                 <a :href="article.link" class="item__imgholder">
                                     <img
                                         :src="`https://picsum.photos/640/400.webp?blur=3&random=${Math.random()}`"
-                                        class="item__img" />
+                                        class="item__img"
+                                    />
                                 </a>
                                 <div class="item__description">
                                     <a
@@ -75,7 +189,8 @@
                             <a class="item__imgholder" href="#">
                                 <img
                                     src="https://picsum.photos/640/400.webp?blur=3&random=2"
-                                    class="item__img" />
+                                    class="item__img"
+                                />
                             </a>
                             <div class="item__description">
                                 <a class="item__title" href="#">开小会</a>
@@ -86,7 +201,8 @@
                             <a class="item__imgholder" href="#">
                                 <img
                                     src="https://picsum.photos/640/400.webp?blur=3&random=3"
-                                    class="item__img" />
+                                    class="item__img"
+                                />
                             </a>
                             <div class="item__description">
                                 <a class="item__title" href="#">庆祝闰日</a>
@@ -97,7 +213,8 @@
                             <a class="item__imgholder" href="#">
                                 <img
                                     src="https://picsum.photos/640/400.webp?blur=3&random=4"
-                                    class="item__img" />
+                                    class="item__img"
+                                />
                             </a>
                             <div class="item__description">
                                 <a class="item__title" href="#"
@@ -110,7 +227,8 @@
                             <a class="item__imgholder" href="#">
                                 <img
                                     src="https://picsum.photos/640/400.webp?blur=3&random=5"
-                                    class="item__img" />
+                                    class="item__img"
+                                />
                             </a>
                             <div class="item__description">
                                 <a class="item__title" href="#"
@@ -123,7 +241,8 @@
                             <a class="item__imgholder" href="#">
                                 <img
                                     src="https://picsum.photos/640/400.webp?blur=3&random=1"
-                                    class="item__img" />
+                                    class="item__img"
+                                />
                             </a>
                             <div class="item__description">
                                 <a class="item__title" href="#">更多内容</a>
@@ -139,19 +258,22 @@
                         <nav class="description__nav">
                             <a
                                 href="./components/grid/index.html"
-                                class="description__link">
+                                class="description__link"
+                            >
                                 查看列表样式
                                 <svg
                                     width="16"
                                     height="16"
                                     viewBox="0 0 16 16"
                                     fill="none"
-                                    class="child">
+                                    class="child"
+                                >
                                     <path
                                         fill-rule="evenodd"
                                         clip-rule="evenodd"
                                         fill="currentColor"
-                                        d="M9.11458 11.5121L11.6146 8.51215L12.0414 8L11.6146 7.48785L9.11458 4.48785L7.88542 5.51215L9.29197 7.2L4 7.2V8.8L9.29197 8.8L7.88542 10.4879L9.11458 11.5121Z"></path>
+                                        d="M9.11458 11.5121L11.6146 8.51215L12.0414 8L11.6146 7.48785L9.11458 4.48785L7.88542 5.51215L9.29197 7.2L4 7.2V8.8L9.29197 8.8L7.88542 10.4879L9.11458 11.5121Z"
+                                    ></path>
                                 </svg>
                             </a>
                         </nav>
@@ -163,7 +285,8 @@
                                 <a :href="article.link" class="item__imgholder">
                                     <img
                                         :src="`https://picsum.photos/640/400.webp?blur=3&random=${Math.random()}`"
-                                        class="item__img" />
+                                        class="item__img"
+                                    />
                                 </a>
                                 <div class="item__description">
                                     <a
@@ -184,7 +307,8 @@
                             <a class="item__imgholder" href="#">
                                 <img
                                     src="https://picsum.photos/640/400.webp?blur=3&random=6"
-                                    class="item__img" />
+                                    class="item__img"
+                                />
                             </a>
                             <div class="item__description">
                                 <a class="item__title" href="#">更多内容</a>
@@ -195,7 +319,8 @@
                             <a class="item__imgholder" href="#">
                                 <img
                                     src="https://picsum.photos/640/400.webp?blur=3&random=7"
-                                    class="item__img" />
+                                    class="item__img"
+                                />
                             </a>
                             <div class="item__description">
                                 <a class="item__title" href="#">更多内容</a>
@@ -206,7 +331,8 @@
                             <a class="item__imgholder" href="#">
                                 <img
                                     src="https://picsum.photos/640/400.webp?blur=3&random=8"
-                                    class="item__img" />
+                                    class="item__img"
+                                />
                             </a>
                             <div class="item__description">
                                 <a class="item__title" href="#">更多内容</a>
@@ -217,7 +343,8 @@
                             <a class="item__imgholder" href="#">
                                 <img
                                     src="https://picsum.photos/640/400.webp?blur=3&random=9"
-                                    class="item__img" />
+                                    class="item__img"
+                                />
                             </a>
                             <div class="item__description">
                                 <a class="item__title" href="#">更多内容</a>
@@ -228,7 +355,8 @@
                             <a class="item__imgholder" href="#">
                                 <img
                                     src="https://picsum.photos/640/400.webp?blur=3&random=10"
-                                    class="item__img" />
+                                    class="item__img"
+                                />
                             </a>
                             <div class="item__description">
                                 <a class="item__title" href="#">更多内容</a>
@@ -242,7 +370,8 @@
                     <img
                         class="pic__left"
                         src="./images/Chevreuse.jpg"
-                        alt="Your Image" />
+                        alt="Your Image"
+                    />
                     <div class="text__right">
                         <h1 class="department__title">原神启动</h1>
                         Your text goes here Your text goes
@@ -262,13 +391,15 @@
                     <img
                         class="pic__right"
                         src="./images/starrail.png"
-                        alt="Your Image" />
+                        alt="Your Image"
+                    />
                 </div>
                 <div class="department__container">
                     <img
                         class="pic__left"
                         src="./images/Chevreuse.jpg"
-                        alt="Your Image" />
+                        alt="Your Image"
+                    />
                     <div class="text__right">
                         <h1 class="department__title">原神启动</h1>
                         Your text goes here Your text goes
@@ -288,7 +419,8 @@
                     <img
                         class="pic__right"
                         src="./images/starrail.png"
-                        alt="Your Image" />
+                        alt="Your Image"
+                    />
                 </div>
                 <!-- departments:finish -->
             </article>
