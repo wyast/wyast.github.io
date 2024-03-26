@@ -833,3 +833,9 @@ nav .relative {
     margin-right: var(--spacing-small);
 }
 /* stylez for da nav end */
+.marginset__1{
+    margin:6px 22px;
+}
+.marginset__2{
+    margin:0px 30px 0px 30px;
+}
