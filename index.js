@@ -87,7 +87,7 @@ function createDanmu(text) {
     const container = document.getElementById('danmu__container');
     const danmu = document.createElement('div');
     danmu.textContent = text;
-    danmu.className = 'danmu';
+    danmu.className = 'danmu__text';
     danmu.style.color = generateRandomBlueHues();
     var width = window.innerWidth;
     var width = Math.min(width, 120 * 8);

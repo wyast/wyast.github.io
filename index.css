@@ -425,18 +425,23 @@ main > * {
 /* stylez for da footer end */
 
 /* stylez for da danmu begin */
+danmu {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
 #danmu__container {
     position: relative;
     width: 100%;
     overflow: hidden;
     width: 100%;
     height: 300px;
-    background-color: var(--white-90);
+    background-color: var(--faint-blue);
     overflow: hidden;
     grid-column: 2;
 }
 
-.danmu {
+.danmu__text {
     position: absolute;
     white-space: nowrap;
     font-weight: bold;
@@ -454,6 +459,7 @@ main > * {
 }
 /* stylez for da danmu end */
 
+/* stylez for da department begin */
 .department__title {
     font-size: 2rem;
     font-weight: 500;
@@ -515,7 +521,6 @@ main > * {
     .department__container {
         flex-direction: column;
     }
-
     .pic__left,
     .text__right {
         width: 100%;
@@ -528,7 +533,6 @@ main > * {
     .department__container {
         flex-direction: column;
     }
-
     .pic__right,
     .text__left {
         width: 100%;
@@ -536,3 +540,4 @@ main > * {
         margin-top: 15px;
     }
 }
+/* stylez for da department end */

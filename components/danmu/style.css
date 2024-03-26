@@ -90,7 +90,7 @@
     grid-column: 2;
 }
 
-.danmu {
+.danmu__text {
     position: absolute;
     white-space: nowrap;
     font-weight: bold;

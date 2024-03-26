@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-label="Search" xmlns="http://www.w3.org/2000/svg">
+<path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M6.5 10C8.433 10 10 8.433 10 6.5C10 4.567 8.433 3 6.5 3C4.567 3 3 4.567 3 6.5C3 8.433 4.567 10 6.5 10ZM6.5 12C9.53757 12 12 9.53757 12 6.5C12 3.46243 9.53757 1 6.5 1C3.46243 1 1 3.46243 1 6.5C1 9.53757 3.46243 12 6.5 12Z"
+></path>
+<rect
+    x="9.17157"
+    y="10.5858"
+    width="2"
+    height="5"
+    transform="rotate(-45 9.17157 10.5858)"
+></rect></svg>
