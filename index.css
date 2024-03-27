@@ -218,11 +218,11 @@ main > * {
         gap: 0;
     }
 }
-
+/*
 .selection__grid {
     display: grid;
 }
-
+*/
 @media screen and (min-width: 30em) and (max-width: 45em) {
     .selection__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -242,17 +242,11 @@ main > * {
     }
 }
 
-.temp_grid{
+.selection__description {
     display: flex;
     flex-direction: row;
     gap: 2rem;
     width: 100%;
-}
-
-.selection__description {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
 }
 
 .description__title {
@@ -297,7 +291,7 @@ main > * {
 
 .item__imgholder {
     display: block;
-    width: 200px;
+    width: 210px;
 }
 .item__img {
     width: 100%;
@@ -833,3 +827,9 @@ nav .relative {
     margin-right: var(--spacing-small);
 }
 /* stylez for da nav end */
+.marginset__1{
+    margin:6px 20px;
+}
+.marginset__2{
+    margin:0px 30px 0px 30px;
+}
