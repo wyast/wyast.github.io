@@ -218,11 +218,11 @@ main > * {
         gap: 0;
     }
 }
-/*
+
 .selection__grid {
     display: grid;
 }
-*/
+
 @media screen and (min-width: 30em) and (max-width: 45em) {
     .selection__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -244,9 +244,8 @@ main > * {
 
 .selection__description {
     display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .description__title {
@@ -291,19 +290,18 @@ main > * {
 
 .item__imgholder {
     display: block;
-    width: 210px;
+    width: 100%;
 }
 .item__img {
     width: 100%;
-    aspect-ratio:initial;
+    aspect-ratio: 8 / 5;
     border-radius: 0.25rem;
     border-color: var(--silver);
-    border-width: 0px;
+    border-width: 1px;
     border-style: solid;
     object-fit: cover;
     transition: box-shadow 0.15s ease, transform 0.15s ease;
     will-change: transform;
-    margin: 0 auto;
 }
 .item__imgholder:hover .item__img {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -320,17 +318,15 @@ main > * {
     font-family: "Courier New", Courier, monospace;
     font-size: 0.875rem;
     color: var(--mid-gray);
-    text-align: center;
 }
 
 .item__title {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 0.875rem;
     color: var(--near-black);
     text-decoration: none;
     overflow-wrap: break-word;
     word-break: break-word;
-    text-align: center;
 }
 .item__title:hover {
     color: var(--blue);
@@ -827,9 +823,45 @@ nav .relative {
     margin-right: var(--spacing-small);
 }
 /* stylez for da nav end */
+
+/* stylez for da grid begin */
 .marginset__1{
-    margin:6px 20px;
+    margin:4px 20px;
 }
 .marginset__2{
     margin:0px 30px 0px 30px;
 }
+
+.selection__grid{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+}
+.imgholder__grid{
+    width: 210px;
+}
+.img__grid {
+    width: 100%;
+    aspect-ratio:initial;
+    border-radius:0.25rem;
+    border-color:var(--silver);
+    border-width: 0px;
+    border-style: solid;
+    margin: 0 auto;
+}
+.img__grid:hover{
+    border-width: 2px;
+}
+
+.text__grid {
+    font-family:Heiti;
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: var(--near-black);
+    text-decoration:none;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    text-align: center;
+}
+/* stylez for da grid end */
