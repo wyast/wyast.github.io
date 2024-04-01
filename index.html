@@ -132,9 +132,9 @@
         <main>
             <article class="selection">
                 <section class="selection__section">
-                    <div class="selection__grid ">
-                        <div class="selection__item marginset__1 gridset__1">
-                            <a class="item__imgholder imgholder__grid" href="https://baidu.com" target="_blank">
+                    <div class="nav__grid">
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="https://baidu.com" target="_blank">
                                 <img
                                     src=images/icon-1.svg
                                     class="img__grid"
@@ -145,8 +145,8 @@
                                 <time class="item__time" style="text-align: center;">2024-03-10</time>
                             </div>
                         </div>
-                        <div class="selection__item marginset__1 gridset__1">
-                            <a class="item__imgholder imgholder__grid" href="#">
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
                                 <img
                                     src=images/icon-2.svg
                                     class="img__grid"
@@ -157,8 +157,8 @@
                                 <time class="item__time" style="text-align: center;">2024-02-29</time>
                             </div>
                         </div>
-                        <div class="selection__item marginset__1 gridset__1">
-                            <a class="item__imgholder imgholder__grid" href="#">
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
                                 <img
                                     src=images/icon-3.svg
                                     class="img__grid"
@@ -169,8 +169,8 @@
                                 <time class="item__time" style="text-align: center;">2024-02-15</time>
                             </div>
                         </div>
-                        <div class="selection__item marginset__1 gridset__1">
-                            <a class="item__imgholder imgholder__grid" href="#">
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
                                 <img
                                     src=images/icon-4.svg
                                     class="img__grid"
@@ -211,7 +211,6 @@
                         </nav>
                     </div>
                     <div class="selection__grid">
-                        Item Reference
                         <template x-for="article in articles">
                             <div class="selection__item">
                                 <a :href="article.link" class="item__imgholder">

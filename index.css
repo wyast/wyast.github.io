@@ -831,23 +831,30 @@ nav .relative {
 .marginset__2{
     margin:0px 30px 0px 30px;
 }
-.gridset__1{
-    width:15vw;
-}
-.gridset__2{
-    width:100%;
 
+.nav__grid {
+    display: grid;
 }
 
-.selection__grid{
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    width: 100%;
+@media screen and (min-width: 30em) and (max-width: 45em) {
+    .nav__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 1.25rem;
+    }
 }
-.imgholder__grid{
-    width: 210px;
+@media screen and (min-width: 45em) and (max-width: 60em) {
+    .nav__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 1.25rem;
+    }
 }
+@media screen and (min-width: 60em) {
+    .nav__grid {
+        grid-template-columns: repeat(4, minmax(250px, 1fr));
+        grid-gap: 1.5rem;
+    }
+}
+
 .img__grid {
     width: 100%;
     transition: transform 0.3s ease;
