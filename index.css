@@ -851,7 +851,7 @@ nav .relative {
 @media screen and (min-width: 60em) {
     .nav__grid {
         grid-template-columns: repeat(4, minmax(250px, 1fr));
-        grid-gap: 1.5rem;
+        grid-gap: 2rem;
     }
 }
 
@@ -878,5 +878,8 @@ nav .relative {
     overflow-wrap: break-word;
     word-break: break-word;
     text-align: center;
+}
+.text__grid:hover{
+    color:gray;
 }
 /* stylez for da grid end */
