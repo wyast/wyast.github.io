@@ -738,6 +738,7 @@ nav .relative {
     position: sticky;
     top: 0;
     padding-right: var(--spacing-large);
+    margin-left: auto;
     z-index: 5;
     display: flex;
     align-items: center;
@@ -821,6 +822,33 @@ nav .relative {
 }
 .navbar__iconright {
     margin-right: var(--spacing-small);
+}
+
+@media screen and (max-width: 700px) {
+    .navbar__root {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .navbar__firstelem {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .navbar__rightelemframe {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        margin-top: 15px;
+    }
 }
 /* stylez for da nav end */
 
