@@ -382,62 +382,12 @@ main > * {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: stretch;
-    padding: 0;
-    margin: 0.5rem 0;
-    justify-content: center;
-    width: 65%;
-}
-.footer__top-container02 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: stretch;
-    padding: 0;
-    margin: 0.5rem 0;
-    justify-content: center;
-    width: 35%;
-}
-.footer__top-container03 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: stretch;
-    padding: 0;
-    margin: 0.5rem 0;
-    justify-content: center;
-    width: 50%;
-}
-.footer__top-container04 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: stretch;
-    padding: 0;
-    margin: 0.5rem 0;
-    justify-content: center;
-    width: 25%;
-}
-.footer__top-container001 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
+    padding: 0;
     margin: 0.5rem 0;
-    justify-content: center;
-    width: 100%;
-    min-width: 100px;
+    justify-content: stretch;
 }
-.footer__top-container002 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: stretch;
-    margin: 0.5rem 0;
-    justify-content: center;
-    width: 100%;
-    min-width: 100px;
-}
+
 .footer__button {
     background-color: var(--light-red);
     color: var(--near-white);
@@ -476,6 +426,7 @@ main > * {
     font-family: serif;
     font-size: 1.5rem;
     color: var(--white);
+    width:100%;
 }
 
 .footer__phrase-word {
