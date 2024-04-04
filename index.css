@@ -357,7 +357,7 @@ main > * {
     padding: 0;
     margin: 1rem 0;
     justify-content: center;
-    width:40%;
+    width: 40%;
 }
 
 .footer__top-container2 {
@@ -367,7 +367,7 @@ main > * {
     padding: 0;
     margin: 1rem 0;
     justify-content: center;
-    width:60%;
+    width: 60%;
 }
 
 .footer__top-container3 {
@@ -375,7 +375,7 @@ main > * {
     gap: 1rem;
     padding: 0;
     margin: 2rem 0;
-    width:100%;
+    width: 100%;
 }
 
 .footer__top-container01 {
@@ -386,7 +386,7 @@ main > * {
     padding: 0;
     margin: 0.5rem 0;
     justify-content: center;
-    width:65%;
+    width: 65%;
 }
 .footer__top-container02 {
     display: flex;
@@ -396,7 +396,7 @@ main > * {
     padding: 0;
     margin: 0.5rem 0;
     justify-content: center;
-    width:35%;
+    width: 35%;
 }
 .footer__top-container03 {
     display: flex;
@@ -406,7 +406,7 @@ main > * {
     padding: 0;
     margin: 0.5rem 0;
     justify-content: center;
-    width:50%;
+    width: 50%;
 }
 .footer__top-container04 {
     display: flex;
@@ -416,7 +416,7 @@ main > * {
     padding: 0;
     margin: 0.5rem 0;
     justify-content: center;
-    width:25%;
+    width: 25%;
 }
 .footer__top-container001 {
     display: flex;
@@ -425,8 +425,8 @@ main > * {
     align-items: center;
     margin: 0.5rem 0;
     justify-content: center;
-    width:100%;
-    min-width:100px;
+    width: 100%;
+    min-width: 100px;
 }
 .footer__top-container002 {
     display: flex;
@@ -435,8 +435,8 @@ main > * {
     align-items: stretch;
     margin: 0.5rem 0;
     justify-content: center;
-    width:100%;
-    min-width:100px;
+    width: 100%;
+    min-width: 100px;
 }
 .footer__button {
     background-color: var(--light-red);
@@ -809,6 +809,49 @@ nav .relative {
     align-items: center;
     color: var(--dark-gray);
 }
+.navbar__leftelemframe > div {
+    display: inline-block;
+    position: relative;
+}
+.navbar__dropdown {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 2px 0;
+    overflow: hidden;
+}
+.navbar__leftelemframe div:hover .navbar__dropdown {
+    display: block;
+    animation: fadeIn 0.2s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.navbar__dropdown a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: small;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: background-color 0.2s;
+}
+
+.navbar__dropdown a:hover {
+    background-color: #f2f2f2;
+}
+
 .navbar__rightelemframe {
     color: var(--near-black);
     font-size: 14px;
@@ -907,7 +950,7 @@ nav .relative {
         flex-direction: column;
         width: 100%;
         margin: 0;
-        margin-top: 15px;
+        /* margin-top: 15px; */
     }
 }
 
@@ -916,7 +959,7 @@ nav .relative {
         flex-direction: column;
         width: 100%;
         margin: 0;
-        margin-top: 15px;
+        /* margin-top: 15px; */
     }
 }
 
@@ -925,17 +968,17 @@ nav .relative {
         flex-direction: column;
         width: 100%;
         margin: 0;
-        margin-top: 15px;
+        /* margin-top: 15px; */
     }
 }
 /* stylez for da nav end */
 
 /* stylez for da grid begin */
-.marginset__1{
-    margin:4px 20px;
+.marginset__1 {
+    margin: 4px 20px;
 }
-.marginset__2{
-    margin:0px 30px 0px 30px;
+.marginset__2 {
+    margin: 0px 30px 0px 30px;
 }
 
 .nav__grid {
@@ -956,7 +999,7 @@ nav .relative {
 }
 @media screen and (min-width: 60em) {
     .nav__grid {
-        grid-template-columns: repeat(4, minmax(250px, 1fr));
+        grid-template-columns: repeat(4, minmax(12em, 1fr));
         grid-gap: 2rem;
     }
 }
@@ -964,28 +1007,28 @@ nav .relative {
 .img__grid {
     width: 100%;
     transition: transform 0.3s ease;
-    aspect-ratio:initial;
-    border-radius:0.25rem;
-    border-color:var(--silver);
+    aspect-ratio: initial;
+    border-radius: 0.25rem;
+    border-color: var(--silver);
     border-width: 0px;
     border-style: solid;
     margin: 0 auto;
 }
-.img__grid:hover{
+.img__grid:hover {
     border-width: 2px;
 }
 
-.text__grid{
-    font-family:Heiti;
+.text__grid {
+    font-family: Heiti;
     font-weight: bold;
     font-size: 1.7rem;
     color: var(--near-black);
-    text-decoration:none;
+    text-decoration: none;
     overflow-wrap: break-word;
     word-break: break-word;
     text-align: center;
 }
-.text__grid:hover{
-    color:gray;
+.text__grid:hover {
+    color: gray;
 }
 /* stylez for da grid end */
