@@ -24,6 +24,14 @@ If you are working on a project in YuQue list, pls fill in that tickbox in order
 1. 四个入口可以参照黄神的“最近的文章”的 grid 写法，又快又好。
 2. navbar 很困难。最好能实现老模版“跟着走”的效果，实在不行固定在 header 之下。
 3. 我已经写好了 header，大伙看看在你们的设备上是否好。
+   
+### TODO
+1. 搜索框的搜索功能
+2. nav的窄屏效果
+3. depaertment的图片拉伸问题
+4. 侧边栏的目录（？）
+5. 页脚的嵌套问题
+6. 优化代码，使之优雅简洁
 
 ## 更新日志
 
