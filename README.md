@@ -27,11 +27,10 @@ If you are working on a project in YuQue list, pls fill in that tickbox in order
    
 ### TODO
 1. 搜索框的搜索功能
-2. nav的窄屏效果
-3. depaertment的图片拉伸问题
-4. 侧边栏的目录（？）
-5. 页脚的嵌套问题
-6. 优化代码，使之优雅简洁
+2. depaertment的图片拉伸问题
+3. 侧边栏的目录（？）
+4. 页脚的嵌套问题
+5. 优化代码，使之优雅简洁
 
 ## 更新日志
 
