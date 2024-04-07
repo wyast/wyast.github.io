@@ -3,6 +3,7 @@
  * by: winterveil (https://github.com/wintermute-cell/)
  * license: MIT
  * version: 1.0.5
+ * Modified by: wyast
 */
 
 @charset "UTF-8";
@@ -55,7 +56,7 @@ html {
 /*
     1) Set the base font-size to 18px with a normal weight.
     2) Set the text and background colors to match the theme.
-    3) Use the 'Averia Serif Libre' font for the body text.
+    3) Use the 'Averia Serif Libre' font for the body text. TODO: select a better font for the body text.
     4) Reset the counter for sidenotes.
 */
 body {
@@ -192,7 +193,7 @@ h4 {
 h1 {
     text-transform: uppercase;
     font-size: 3.6rem;
-    line-height: 3.3rem;
+    line-height: 4.4rem;
 }
 
 /* h2 headings are uppercase and 1.250x (major third) the size of the base font. */
@@ -235,7 +236,7 @@ header h1:after {
     color: var(--fg);
     font-size: 1.5rem;
     vertical-align: middle;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
 }
 
 /*
