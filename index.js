@@ -68,12 +68,14 @@ const colors = {
 
 function generateRandomBlueHues() {
     const hue = Math.floor(Math.random() * (240 - 210 + 1)) + 210;
-    const saturation = Math.floor(Math.random() * 100);
-    const lightness = Math.floor(Math.random() * 100);
+    const saturation = Math.floor(Math.random() * 50) + 50;
+    const lightness = Math.floor(Math.random() * 70) + 30;
     return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 }
 
 /** javascript for danmu begin**/
+
+//TODO: convert to custom html element
 
 const danmuTexts = [
     "欢迎来到未央科协！",
@@ -89,26 +91,33 @@ function createDanmu(text) {
     danmu.textContent = text;
     danmu.className = 'danmu__text';
     danmu.style.color = generateRandomBlueHues();
-    var width = window.innerWidth;
-    var width = Math.min(width, 120 * 8);
-    danmu.style.animationDuration = (Math.random() + 1) * (width / 300) + 's';
-    danmu.style.top = Math.random() * (container.offsetHeight - 20) + 'px';
+    const width = Math.min(window.innerWidth, 120 * 8);
+    const size = Math.random()+1;
+    danmu.style.animationDuration = size * (width / 300) + 's';
+    danmu.style.fontSize = (30 / size) + 'px';
+    danmu.style.zIndex = size * 100;
+    danmu.style.top = (Math.random() * (container.offsetHeight - 30) + 15) + 'px';
     container.appendChild(danmu);
 
-    // 动画结束后删除
     danmu.addEventListener('animationend', function () {
         danmu.remove();
     });
 }
 
-function startDanmuStream(interval = 500) {
-    setInterval(() => {
-        const text = danmuTexts[Math.floor(Math.random() * danmuTexts.length)];
-        createDanmu(text);
-        console.log(text);
-    }, interval);
+function startDanmuStream(interval) {
+    let start = 0;
+    function loop(now) {
+        const elapsed = now - start;
+        if(elapsed > interval) {
+            const text = danmuTexts[Math.floor(Math.random() * danmuTexts.length)];
+            createDanmu(text);
+            start = now;
+        }
+        requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
 }
 
-startDanmuStream();
+startDanmuStream(400);
 
 /** javascript for danmu end**/
