@@ -3,15 +3,15 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./index.css" />
-        <script src="./index.js"></script>
-        <title>整个文章</title>
+        <title>清华大学未央书院学生科协</title>
+        <link rel="icon" href="./images/wycollege.png" type="image/png" />
     </head>
     <body>
         <header>
             <div class="headpic">
                 <h1 class="headpic__title">
                     未央科协,
-                    <strong class="headpic__phrase--strong"> WYAST </strong>
+                    <strong class="headpic__phrase--strong">&nbspWYAST </strong>
                 </h1>
 
                 <!-- <a href="./components/headpic/index.html"> 
@@ -30,32 +30,31 @@
                                 class="near-black" />
                         </a>
                         <div class="navbar__leftelemframe">
-                            <div>
+                            <div class="navbar__dropdownbotton">
                                 <button
-                                    aria-haspopup="true"
-                                    aria-controls="menu--:r4:"
                                     class="navbar__elembotton"
                                     id="menu-button--menu--:r4:"
-                                    type="button"
-                                    data-reach-menu-button="">
-                                    Product
+                                    type="button">
+                                    资讯
                                     <img
                                         src="./icon/dropdown-icon.svg"
                                         class="navbar__icon"
                                         alt="Dropdown" />
                                 </button>
+                                <div class="navbar__dropdown">
+                                    <a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                    <a href="#">Link 3</a>
+                                </div>
                             </div>
                         </div>
                         <div class="navbar__leftelemframe">
-                            <div>
+                            <div class="navbar__dropdownbotton">
                                 <button
-                                    aria-haspopup="true"
-                                    aria-controls="menu--:r5:"
                                     class="navbar__elembotton"
                                     id="menu-button--menu--:r5:"
-                                    type="button"
-                                    data-reach-menu-button="">
-                                    Learn
+                                    type="button">
+                                    论坛
                                     <img
                                         src="./icon/dropdown-icon.svg"
                                         width="10"
@@ -63,18 +62,20 @@
                                         class="navbar__icon"
                                         alt="Dropdown" />
                                 </button>
+                                <div class="navbar__dropdown">
+                                    <a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                    <a href="#">Link 3</a>
+                                </div>
                             </div>
                         </div>
                         <div class="navbar__leftelemframe">
-                            <div>
+                            <div class="navbar__dropdownbotton">
                                 <button
-                                    aria-haspopup="true"
-                                    aria-controls="menu--:r6:"
                                     class="navbar__elembotton"
                                     id="menu-button--menu--:r6:"
-                                    type="button"
-                                    data-reach-menu-button="">
-                                    Community
+                                    type="button">
+                                    教程
                                     <img
                                         src="./icon/dropdown-icon.svg"
                                         width="10"
@@ -82,13 +83,16 @@
                                         class="navbar__icon"
                                         alt="Dropdown" />
                                 </button>
+                                <div class="navbar__dropdown">
+                                    <a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                    <a href="#">Link 3</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="navbar__leftelemframe">
+                        <!-- <div class="navbar__leftelemframe">
                             <div>
                                 <button
-                                    aria-haspopup="true"
-                                    aria-controls="menu--:r7:"
                                     class="navbar__elembotton"
                                     id="menu-button--menu--:r7:"
                                     type="button"
@@ -96,39 +100,44 @@
                                     <a
                                         class="navbar__linkbotton"
                                         href="/pricing"
-                                        >Pricing</a
+                                        >价格</a
                                     >
                                 </button>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="navbar__rightelemframe">
-                        <button
-                            class="navbar__searchbotton"
-                            data-testid="search-button">
-                            <img
-                                src="./icon/search-icon.svg"
-                                width="16"
-                                height="16"
-                                class="navbar__iconright"
-                                alt="Search" />Search
-                        </button>
-                        <button class="navbar__signinbotton">Sign in</button>
-                        <button class="navbar__signbotton">Sign up</button>
+                    <div class="navbar__lastelem">
+                        <div class="navbar__rightelemframe">
+                            <button
+                                class="navbar__searchbotton"
+                                data-testid="search-button">
+                                <img
+                                    src="./icon/search-icon.svg"
+                                    width="16"
+                                    height="16"
+                                    class="navbar__iconright"
+                                    alt="Search" />Search
+                            </button>
+                        </div>
+                        <div class="navbar__rightelemframe">
+                            <button class="navbar__signinbotton">注册</button>
+                            <button class="navbar__signbotton">关于我们</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
         <main>
             <article class="selection">
-                <section class="selection__section">
+                <section class="nav__selection__section">
                     <div class="nav__grid">
                         <div class="selection__item">
                             <a
                                 class="item__imgholder"
                                 href="./pages/info/index.html"
                                 target="_blank">
-                                <img src=images/icon-1.svg class="img__grid" />
+                                <img src=images/icon-1.svg class="img__grid"
+                                alt="资讯" />
                             </a>
                             <div class="item__description">
                                 <a
@@ -321,16 +330,29 @@
                         alt="Your Image" />
                     <div class="text__right">
                         <h1 class="department__title">原神启动</h1>
-                        我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数
+                        我要试试这里能放多少字数我要试试这里能放多少字数我要试试这里能放多少字数我
                     </div>
                 </div>
                 <div class="department__container">
                     <div class="text__left">
                         <h1 class="department__title">星铁开车</h1>
-                        Your text goes
-                        here,dshjfkjfahjfahkasjhfjsdsjkfdhfjksafjdfjdsjdfkfahffadskhf,
-                        as well as here.we do not know what to write here, so we
-                        just write some random words.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Morbi dictum ligula neque, eget efficitur turpis
+                        lobortis sodales. In hac habitasse platea dictumst. Cras
+                        gravida quam a turpis tempor tristique. Phasellus
+                        malesuada velit et elementum ullamcorper. Nulla
+                        pellentesque diam urna, sit amet vestibulum nisi
+                        lobortis sed. Morbi sollicitudin interdum odio, lobortis
+                        elementum nulla mattis sed. Proin pharetra non erat et
+                        luctus. Quisque lacinia pulvinar dapibus. Vivamus id
+                        convallis dolor. Phasellus pharetra erat est, ac
+                        pharetra lectus hendrerit ut. Donec ullamcorper lectus
+                        et elit scelerisque iaculis id vitae lorem. Ut sit amet
+                        erat diam. Cras eleifend leo ullamcorper purus pharetra,
+                        ut vulputate felis viverra. Mauris sit amet magna ut
+                        neque aliquet tristique. Nulla sagittis, sem a faucibus
+                        laoreet, augue erat elementum tellus, a consectetur
+                        risus risus non arcu. Vivamus ac pulvinar tortor.
                     </div>
                     <img
                         class="pic__right"
@@ -344,19 +366,29 @@
                         alt="Your Image" />
                     <div class="text__right">
                         <h1 class="department__title">原神启动</h1>
-                        Your text goes here Your text goes
-                        here,dshjfkjfahjfahkasjhfjsdsjkfdhfjksafjdfjdsjdfkfahffadskhf,
-                        as well as here.we do not know what to write here, so we
-                        just write some random words.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Morbi dictum ligula neque, eget efficitur turpis
+                        lobortis sodales. In hac habitasse platea dictumst. Cras
+                        gravida quam a turpis tempor tristique. Phasellus
+                        malesuada velit et elementum ullamcorper. Nulla
+                        pellentesque diam urna, sit amet vestibulum nisi
+                        lobortis sed. Morbi sollicitudin interdum odio, lobortis
+                        elementum nulla mattis sed. Proin pharetra non erat et
+                        luctus. Quisque lacinia pulvinar dapibus. Vivamus id
+                        convallis dolor. Phasellus pharetra erat est, ac
+                        pharetra lectus hendrerit ut. Donec ullamcorper lectus
+                        et elit scelerisque iaculis id vitae lorem. Ut sit amet
+                        erat diam. Cras eleifend leo ullamcorper purus pharetra,
+                        ut vulputate felis viverra. Mauris sit amet magna ut
+                        neque aliquet tristique. Nulla sagittis, sem a faucibus
+                        laoreet, augue erat elementum tellus, a consectetur
+                        risus risus non arcu. Vivamus ac pulvinar tortor.
                     </div>
                 </div>
                 <div class="department__container">
                     <div class="text__left">
                         <h1 class="department__title">星铁开车</h1>
-                        Your text goes
-                        here,dshjfkjfahjfahkasjhfjsdsjkfdhfjksafjdfjdsjdfkfahffadskhf,
-                        as well as here.we do not know what to write here, so we
-                        just write some random words.
+                        text
                     </div>
                     <img
                         class="pic__right"
@@ -370,11 +402,39 @@
                         alt="Your Image" />
                     <div class="text__right">
                         <h1 class="department__title">原神启动</h1>
-                        Your text goes here Your text goes
-                        here,dshjfkjfahjfahkasjhfjsdsjkfdhfjksafjdfjdsjdfkfahffadskhf,
-                        as well as here.we do not know what to write here, so we
-                        just write some random words.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Morbi dictum ligula neque, eget efficitur turpis
+                        lobortis sodales. In hac habitasse platea dictumst. Cras
+                        gravida quam a turpis tempor tristique. Phasellus
+                        malesuada velit et elementum ullamcorper. Nulla
+                        pellentesque diam urna, sit amet vestibulum nisi
+                        lobortis sed. Morbi sollicitudin interdum odio, lobortis
+                        elementum nulla mattis sed. Proin pharetra non erat et
+                        luctus. Quisque lacinia pulvinar dapibus. Vivamus id
+                        convallis dolor. Phasellus pharetra erat est, ac
+                        pharetra lectus hendrerit ut. Donec ullamcorper lectus
+                        et elit scelerisque iaculis id vitae lorem. Ut sit amet
+                        erat diam. Cras eleifend leo ullamcorper purus pharetra,
+                        ut vulputate felis viverra. Mauris sit amet magna ut
+                        neque aliquet tristique. Nulla sagittis, sem a faucibus
+                        laoreet, augue erat elementum tellus, a consectetur
+                        risus risus non arcu. Vivamus ac pulvinar tortor.
                     </div>
+                </div>
+                <div class="department__container">
+                    <div class="text__left">
+                        <h1 class="department__title">&nbsp研创中心</h1>
+                        研创中心是未央科协自有的高水平科研科创兴趣团队孵化中心，2023
+                        年建设的兴趣团队曾获得首都挑战杯挑战杯特等奖、清华大学挑战杯特等奖、二等奖等奖项。研创中心于
+                        2024
+                        年建设两支兴趣团队，分别是视听觉多模态融合兴趣团队和
+                        RIOS 兴趣团队，目前队伍分别有 5 人和 6
+                        人，以未央书院学生为主。研创中心支持项目的方式包括但不限于研创中心提供的经验支持、赛事服务和日常监督，以及未央书院科协的经费支持。
+                    </div>
+                    <img
+                        class="pic__right"
+                        src="./departments/yanchuang.jpg"
+                        alt="研创中心" />
                 </div>
                 <!-- departments:finish -->
             </article>
@@ -384,142 +444,56 @@
         </main>
         <footer>
             <div class="footer__top">
-                <div class="footer__top-container1">
-                    <div class="footer__top-container01">
-                        <div class="footer__title">
-                            <p>感谢合作组织的支持</p>
-                        </div>
-                        <div class="footer__title">
-                            <p>你们是未央科协</p>
-                        </div>
-                        <div class="footer__title">
-                            <p>不可或缺的前行动力！</p>
-                        </div>
-                    </div>
-                    <div class="footer__top-container02">
-                        <img
-                            src="./images/th.jpg"
-                            style="width: 100%; min-width: 75px" />
-                    </div>
-                </div>
                 <div class="footer__top-container2">
-                    <div class="footer__top-container03">
-                        <div class="footer__top-container001">
-                            <div style="width: 50%">
-                                <a
-                                    href="./pages/info/index.html"
-                                    target="_blank"
-                                    style="display: flex; width: 100%">
-                                    <img src=images/icon-1.png class="img__grid"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="footer__top-container002">
-                            <p class="footer__phrase">
-                                上面的图片可以替换为宽德投资的图片，这里就可以放关于它的描述啥的，一两句话吧
-                            </p>
-                        </div>
+                    <div class="footer__top-container01">
+                        <a href="https://www.wizardquant.com/" target="_blank">
+                            <img
+                                src="./sponsor/kuande.jpeg"
+                                class="sponsor__img__grid" />
+                        </a>
                     </div>
-                    <div class="footer__top-container03">
-                        <div class="footer__top-container001">
-                            <div style="width: 50%">
-                                <a
-                                    href="./pages/info/index.html"
-                                    target="_blank"
-                                    style="display: flex; width: 100%">
-                                    <img src=images/icon-1.png class="img__grid"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="footer__top-container002">
-                            <p class="footer__phrase">
-                                上面的图片可以替换为亚信科技的图片，这里就可以放关于它的描述啥的，一两句话吧
-                            </p>
-                        </div>
+                    <div class="footer__top-container01">
+                        <a
+                            href="https://www.asiainfo.com/zh_cn/index.html"
+                            target="_blank">
+                            <img
+                                src="./sponsor/yaxin.png"
+                                class="sponsor__img__grid" />
+                        </a>
                     </div>
-                </div>
-                <div class="footer__top-container3">
-                    <div class="footer__top-container04">
-                        <div class="footer__top-container001">
-                            <div style="width: 50%">
-                                <a
-                                    href="./pages/info/index.html"
-                                    target="_blank"
-                                    style="display: flex; width: 100%">
-                                    <img src=images/icon-1.png class="img__grid"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="footer__top-container002">
-                            <p class="footer__phrase">
-                                上面的图片可以替换为三创组织的图片，这里就可以放关于它的描述啥的，一两句话吧
-                            </p>
-                        </div>
+                    <div class="footer__top-container01">
+                        <a
+                            href="https://www.icenter.tsinghua.edu.cn/"
+                            target="_blank">
+                            <img
+                                src="./sponsor/icenter.jpg"
+                                class="sponsor__img__grid" />
+                        </a>
                     </div>
-                    <div class="footer__top-container04">
-                        <div class="footer__top-container001">
-                            <div style="width: 50%">
-                                <a
-                                    href="./pages/info/index.html"
-                                    target="_blank"
-                                    style="display: flex; width: 100%">
-                                    <img src=images/icon-1.png class="img__grid"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="footer__top-container002">
-                            <p class="footer__phrase">
-                                上面的图片可以替换为三创组织的图片，这里就可以放关于它的描述啥的，一两句话吧
-                            </p>
-                        </div>
+                    <div class="footer__top-container01">
+                        <a href="https://air.tsinghua.edu.cn/" target="_blank">
+                            <img
+                                src="./sponsor/air.jpg"
+                                class="sponsor__img__grid" />
+                        </a>
                     </div>
-                    <div class="footer__top-container04">
-                        <div class="footer__top-container001">
-                            <div style="width: 50%">
-                                <a
-                                    href="./pages/info/index.html"
-                                    target="_blank"
-                                    style="display: flex; width: 100%">
-                                    <img src=images/icon-1.png class="img__grid"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="footer__top-container002">
-                            <p class="footer__phrase">
-                                上面的图片可以替换为三创组织的图片，这里就可以放关于它的描述啥的，一两句话吧
-                            </p>
-                        </div>
+                    <div class="footer__top-container01">
+                        <a href="./pages/info/index.html" target="_blank">
+                            <img src=images/icon-1.png
+                            class="sponsor__img__grid" >
+                        </a>
                     </div>
-                    <div class="footer__top-container04">
-                        <div class="footer__top-container001">
-                            <div style="width: 50%">
-                                <a
-                                    href="./pages/info/index.html"
-                                    target="_blank"
-                                    style="display: flex; width: 100%">
-                                    <img src=images/icon-1.png class="img__grid"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="footer__top-container002">
-                            <a class="footer__phrase">
-                                上面的图片可以替换为三创组织的图片，这里就可以放关于它的描述啥的，一两句话吧
-                            </a>
-                        </div>
+                    <div class="footer__top-container01">
+                        <a href="./pages/info/index.html" target="_blank">
+                            <img src=images/icon-1.png
+                            class="sponsor__img__grid" >
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="footer__middle">
                 <a class="footer__icon" href="/">@未央科协<br />LOGO</a>
-                <a href="./components/footer/index.html" class="marginset__2">
-                    <button class="footer__button">前往尾巴页面</button>
-                </a>
+
                 <div class="footer__list-container">
                     <div class="footer__dummy"></div>
                     <div class="footer__list">
@@ -581,4 +555,5 @@
             </div>
         </footer>
     </body>
+    <script src="./index.js"></script>
 </html>

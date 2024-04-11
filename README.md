@@ -25,6 +25,14 @@ If you are working on a project in YuQue list, pls fill in that tickbox in order
 2. navbar 很困难。最好能实现老模版“跟着走”的效果，实在不行固定在 header 之下。
 3. 我已经写好了 header，大伙看看在你们的设备上是否好。
 
+### TODO
+
+1. 搜索框的搜索功能
+2. department 的图片拉伸问题 (已解决)
+3. 侧边栏的目录（？）
+4. 页脚的嵌套问题
+5. 优化代码，使之优雅简洁
+
 ## 更新日志
 
 从新到旧：
