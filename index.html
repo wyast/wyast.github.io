@@ -134,8 +134,7 @@
                         <div class="selection__item">
                             <a
                                 class="item__imgholder"
-                                href="./pages/info/index.html"
-                                target="_blank">
+                                href="./pages/info/index.html">
                                 <img src=images/icon-1.svg class="img__grid"
                                 alt="资讯" />
                             </a>
@@ -143,67 +142,55 @@
                                 <a
                                     class="text__grid"
                                     href="./pages/info/index.html"
-                                    target="_blank"
                                     >资讯</a
-                                >
-                                <time
-                                    class="item__time"
-                                    style="text-align: center"
-                                    >2024-03-10</time
                                 >
                             </div>
                         </div>
                         <div class="selection__item">
-                            <a class="item__imgholder" href="#">
+                            <a
+                                class="item__imgholder"
+                                href="#"
+                                onclick="displayAlert()">
                                 <img src=images/icon-2.svg class="img__grid" />
                             </a>
                             <div class="item__description">
                                 <a
                                     class="text__grid"
-                                    href="https://baidu.com"
-                                    target="_blank"
+                                    href="#"
+                                    onclick="displayAlert()"
                                     >论坛</a
-                                >
-                                <time
-                                    class="item__time"
-                                    style="text-align: center"
-                                    >2024-02-29</time
                                 >
                             </div>
                         </div>
                         <div class="selection__item">
-                            <a class="item__imgholder" href="#">
+                            <a
+                                class="item__imgholder"
+                                href="#"
+                                onclick="displayAlert()">
                                 <img src=images/icon-3.svg class="img__grid" />
                             </a>
                             <div class="item__description">
                                 <a
                                     class="text__grid"
-                                    href="https://baidu.com"
-                                    target="_blank"
+                                    href="#"
+                                    onclick="displayAlert()"
                                     >教程</a
-                                >
-                                <time
-                                    class="item__time"
-                                    style="text-align: center"
-                                    >2024-02-15</time
                                 >
                             </div>
                         </div>
                         <div class="selection__item">
-                            <a class="item__imgholder" href="#">
+                            <a
+                                class="item__imgholder"
+                                href="#"
+                                onclick="displayAlert()">
                                 <img src=images/icon-4.svg class="img__grid" />
                             </a>
                             <div class="item__description">
                                 <a
                                     class="text__grid"
-                                    href="https://baidu.com"
-                                    target="_blank"
-                                    >不是下载链接</a
-                                >
-                                <time
-                                    class="item__time"
-                                    style="text-align: center"
-                                    >2024-02-03</time
+                                    href="#"
+                                    onclick="displayAlert()"
+                                    >待建</a
                                 >
                             </div>
                         </div>
@@ -388,7 +375,7 @@
                     </div>
                     <img
                         class="pic__right"
-                        src="./images/xiangmu.png"
+                        src="./images/xiangmu2.png"
                         alt="科协项目部" />
                 </div>
                 <div class="department__container">
@@ -477,7 +464,7 @@
                     <div class="footer__top-container01">
                         <a href="#" target="_blank">
                             <img
-                                src="./sponsor/blank.png"
+                                src="./sponsor/wyast.png"
                                 class="sponsor__img__grid" />
                         </a>
                     </div>
@@ -548,4 +535,10 @@
         </footer>
     </body>
     <script src="./index.js"></script>
+    <script>
+        function displayAlert() {
+            alert("建造中...前方的区域以后再来探索吧！");
+            return false; // Prevent the default action of the link
+        }
+    </script>
 </html>
