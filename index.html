@@ -1,537 +1,552 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>
-            Productive-ly Bootstrap Website Template | Home :: w3layouts
-        </title>
-        <link href="./css/bootstrap.css" rel="stylesheet" type="text/css" />
-        <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="./js/jquery.min.js"></script>
-        <!-- Custom Theme files -->
-        <link href="./css/theme-style.css" rel="stylesheet" type="text/css" />
-        <script src="./js/jquery.easing.min.js"></script>
-        <!-- Custom Theme files -->
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script type="application/x-javascript">
-            addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
-        </script>
-        <link rel="stylesheet" href="css/danmu.css">
-        <!----webfonts---->
-        <link
-            href="http://fonts.googleapis.com/css?family=Raleway:400,100,300,500,700,800,900,600,200"
-            rel="stylesheet"
-            type="text/css" />
-        <link
-            href="http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600,700"
-            rel="stylesheet"
-            type="text/css" />
-        <!----//webfonts---->
-        <script src="./js/modernizr.custom.js" type="text/javascript"></script>
-        <script type="text/javascript" src="./js/jquery.smint.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $(".subMenu").smint({
-                    scrollSpeed: 1000,
-                });
-            });
-        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./index.css" />
+        <title>清华大学未央书院学生科协</title>
+        <link rel="icon" href="./images/wycollege.png" type="image/png" />
     </head>
-
     <body>
-        <!----start-container----->
-        <div class="head-bg sTop">
-            <div class="conatiner">
-                <div class="header-note">
-                    <span class="border"> </span>
-                    <h1>未央科协</h1>
-                    <p>
-                        这里放一些介绍文字，比如说这是什么，这里有什么。别自己写英文。
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!----//End-container----->
-        <!----start-top-nav---->
-        <nav class="subMenu navbar-custom navbar-scroll-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header page-scroll">
-                    <button
-                        type="button"
-                        class="navbar-toggle"
-                        data-toggle="collapse"
-                        data-target=".navbar-main-collapse">
-                        <img
-                            src="./images/menu-icon.svg"
-                            title="drop-down-menu" />
-                    </button>
-                </div>
-                <div class="h_logo">
-                    <div class="logo1">
-                        <a id="s3" href="#">展开</a>
-                    </div>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div
-                    class="collapse navbar-collapse navbar-main-collapse top-nav">
-                    <ul class="nav navbar-nav full-nav-top">
-                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                        <li class="page-scroll">
-                            <a id="sTop" class="subNavBtn" href="./pages/info/index.html">资讯</a>
-                        </li>
-                        <li class="page-scroll">
-                            <a id="s2" class="subNavBtn" href="#"
-                                >你最可爱！</a
-                            >
-                        </li>
-                        <li class="page-scroll">
-                            <a id="s3" class="subNavBtn" href="#">部门介绍</a>
-                        </li>
-                        <li class="page-scroll">
-                            <a id="s4" class="subNavBtn" href="#">wiki</a>
-                        </li>
-                        <li class="page-scroll">
-                            <a id="s5" class="subNavBtn download" href="#"
-                                >资源</a
-                            >
-                        </li>
-                        <!--点击标签后就高亮-->
-                        <script>
-                            document.addEventListener(
-                                "DOMContentLoaded",
-                                function () {
-                                    navItems =
-                                        document.querySelectorAll(".nav li");
+        <header>
+            <div class="headpic">
+                <h1 class="headpic__title">
+                    未央科协,
+                    <strong class="headpic__phrase--strong">&nbspWYAST </strong>
+                </h1>
 
-                                    navItems.forEach(function (item) {
-                                        item.addEventListener(
-                                            "click",
-                                            function () {
-                                                // 移除其他li的高亮样式
-                                                navItems.forEach(function (
-                                                    navItem
-                                                ) {
-                                                    navItem.classList.remove(
-                                                        "active"
-                                                    );
-                                                });
-                                                // 为被点击的li添加高亮样式
-                                                item.classList.add("active");
-                                                window.location.href='./pages/info/index.html'
-                                            }
-                                        );
-                                    });
-                                }
-                            );
-                        </script>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-                <div class="clearfix"></div>
+                <!-- <a href="./components/headpic/index.html"> 
+                    <button class="headpic__button">前往头图页面</button>
+                </a>-->
             </div>
-            <!-- /.container -->
+        </header>
+        <nav class="navbar">
+            <div class="navbar relative">
+                <div class="navbar__root">
+                    <div class="navbar__firstelem">
+                        <a class="navbar__leftlogo" href="/">
+                            <img
+                                src="./icon/logo.svg"
+                                alt="Observable"
+                                class="near-black" />
+                        </a>
+                        <div class="navbar__leftelemframe">
+                            <div class="navbar__dropdownbotton">
+                                <button
+                                    class="navbar__elembotton"
+                                    id="menu-button--menu--:r4:"
+                                    type="button">
+                                    资讯
+                                    <img
+                                        src="./icon/dropdown-icon.svg"
+                                        class="navbar__icon"
+                                        alt="Dropdown" />
+                                </button>
+                                <div class="navbar__dropdown">
+                                    <a href="#">建造中...</a>
+                                    <a href="#">建造中...</a>
+                                    <a href="#">建造中...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar__leftelemframe">
+                            <div class="navbar__dropdownbotton">
+                                <button
+                                    class="navbar__elembotton"
+                                    id="menu-button--menu--:r5:"
+                                    type="button">
+                                    论坛
+                                    <img
+                                        src="./icon/dropdown-icon.svg"
+                                        width="10"
+                                        height="16"
+                                        class="navbar__icon"
+                                        alt="Dropdown" />
+                                </button>
+                                <div class="navbar__dropdown">
+                                    <a href="#">建造中...</a>
+                                    <a href="#">建造中...</a>
+                                    <a href="#">建造中...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar__leftelemframe">
+                            <div class="navbar__dropdownbotton">
+                                <button
+                                    class="navbar__elembotton"
+                                    id="menu-button--menu--:r6:"
+                                    type="button">
+                                    教程
+                                    <img
+                                        src="./icon/dropdown-icon.svg"
+                                        width="10"
+                                        height="16"
+                                        class="navbar__icon"
+                                        alt="Dropdown" />
+                                </button>
+                                <div class="navbar__dropdown">
+                                    <a href="#">建造中...</a>
+                                    <a href="#">建造中...</a>
+                                    <a href="#">建造中...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="navbar__leftelemframe">
+                            <div>
+                                <button
+                                    class="navbar__elembotton"
+                                    id="menu-button--menu--:r7:"
+                                    type="button"
+                                    data-reach-menu-button="">
+                                    <a
+                                        class="navbar__linkbotton"
+                                        href="/pricing"
+                                        >价格</a
+                                    >
+                                </button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="navbar__lastelem">
+                        <div class="navbar__rightelemframe">
+                            <button
+                                class="navbar__searchbotton"
+                                data-testid="search-button">
+                                <img
+                                    src="./icon/search-icon.svg"
+                                    width="16"
+                                    height="16"
+                                    class="navbar__iconright"
+                                    alt="Search" />Search
+                            </button>
+                        </div>
+                        <div class="navbar__rightelemframe">
+                            <button class="navbar__signinbotton">注册</button>
+                            <button class="navbar__signbotton">关于我们</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
-        <!----//End-top-nav---->
-        <!---- start-top-grids---->
-        <div class="features s2">
-            <div class="container-fluid">
-                <div class="row top-grids">
-                    <div class="col-md-3 text-center grid1">
-                        <!--颜色暂且都是黑色，网址暂且都是百度-->
-                        <div class="grid">
-                            <img
-                                src="./images/icon-1.svg"
-                                alt="GOOD IMAGE"
-                                style="cursor: pointer"
-                                onclick="window.location.href='./pages/info/index.html';" />
-                            <h2>
+        <main>
+            <article class="selection">
+                <section class="nav__selection__section">
+                    <div class="nav__grid">
+                        <div class="selection__item">
+                            <a
+                                class="item__imgholder"
+                                href="./pages/info/index.html">
+                                <img src=images/icon-1.svg class="img__grid"
+                                alt="资讯" />
+                            </a>
+                            <div class="item__description">
                                 <a
-                                    style="color: black"
+                                    class="text__grid"
                                     href="./pages/info/index.html"
-                                    target="_blank"
-                                    >资讯</a
+                                    >资讯(建造完成)</a
                                 >
-                            </h2>
-                            <p>页面1描述</p>
+                            </div>
                         </div>
-                        <!-- <span class="plus"> </span> -->
-                    </div>
-                    <div class="col-md-3 text-center grid1">
-                        <div class="grid">
-                            <img
-                                src="./images/icon-2.svg"
-                                alt="GOOD IMAGE"
-                                style="cursor: pointer"
-                                onclick="window.open('https://baidu.com', '_blank');" />
-                            <h2>
+                        <div class="selection__item">
+                            <a
+                                class="item__imgholder"
+                                href="#"
+                                onclick="displayAlert()">
+                                <img src=images/icon-2.svg class="img__grid" />
+                            </a>
+                            <div class="item__description">
                                 <a
-                                    style="color: black"
-                                    href="https://baidu.com"
-                                    target="_blank"
-                                    >教程</a
-                                >
-                            </h2>
-                            <p>页面2描述</p>
-                        </div>
-                        <!-- <span class="plus"> </span> -->
-                    </div>
-                    <div class="col-md-3 text-center grid1">
-                        <div class="grid">
-                            <img
-                                src="./images/icon-3.svg"
-                                alt="GOOD IMAGE"
-                                style="cursor: pointer"
-                                onclick="window.open('https://baidu.com', '_blank');" />
-                            <h2>
-                                <a
-                                    style="color: black"
-                                    href="https://baidu.com"
-                                    target="_blank"
+                                    class="text__grid"
+                                    href="#"
+                                    onclick="displayAlert()"
                                     >论坛</a
                                 >
-                            </h2>
-                            <p>页面3描述</p>
+                            </div>
                         </div>
-                        <!-- <span class="eual"> </span> -->
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <div class="grid">
-                            <img
-                                src="./images/icon-4.svg"
-                                alt="GOOD IMAGE"
-                                style="cursor: pointer"
-                                onclick="window.location.href='https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/pc_default';" />
-                            <h2>
+                        <div class="selection__item">
+                            <a
+                                class="item__imgholder"
+                                href="#"
+                                onclick="displayAlert()">
+                                <img src=images/icon-3.svg class="img__grid" />
+                            </a>
+                            <div class="item__description">
                                 <a
-                                    style="color: black"
-                                    href="https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/pc_default"
-                                    target="_blank"
-                                    >好东西点点看</a
+                                    class="text__grid"
+                                    href="#"
+                                    onclick="displayAlert()"
+                                    >教程</a
                                 >
-                            </h2>
-                            <p>页面4描述</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
-
-        <!---- //End-top-grids---->
-        <!----start-Produtive---->
-        <div class="productive.ly s3">
-            <div id="cbp-so-scroller" class="cbp-so-scroller">
-                <div class="content_top">
-                    <div class="ipad_desc">
-                        <h3>办公室</h3>
-                        <p>
-                            办公室的介绍blablablaba-》右边要放能代表办公室的图片。其他五个部门也是如此
-                        </p>
-                    </div>
-                    <div class="ipad_img">
-                        <section
-                            class="cbp-so-section cbp-so-init cbp-so-animate">
-                            <article class="cbp-so-side cbp-so-side-right">
-                                <img src="./images/01.jpg" alt="" />
-                            </article>
-                        </section>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="content_bottom">
-                    <div class="devices">
-                        <section 
-                            class="cbp-so-section cbp-so-init cbp-so-animate">
-                            <article class="cbp-so-side cbp-so-side-left">
-                                <img src="./images/02.jpg" alt="" />
-                            </article>
-                        </section>
-                    </div>
-                    <div class="devices_desc">
-                        <h3>学术部</h3>
-                        <p>
-                            学术部的介绍blablablaba-》右边要放能代表学术部的图片。其他五个部门也是如此
-                        </p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="content_top">
-                    <div class="ipad_desc" id="about">
-                        <h3>赛事部</h3>
-                        <p>
-                            赛事部的介绍blablablaba-》右边要放能代表赛事部的图片。其他五个部门也是如此
-                        </p>
-                    </div>
-                    <div class="ipad_img">
-                        <section
-                            class="cbp-so-section cbp-so-init cbp-so-animate">
-                            <article class="cbp-so-side cbp-so-side-right">
-                                <img src="./images/01.jpg" alt="" />
-                            </article>
-                        </section>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="content_bottom" id="portfolio">
-                    <div class="devices">
-                        <section class="cbp-so-section cbp-so-init">
-                            <article class="cbp-so-side cbp-so-side-left">
-                                <img src="./images/02.jpg" alt="" />
-                            </article>
-                        </section>
-                    </div>
-                    <div class="devices_desc">
-                        <h3>项目部</h3>
-                        <p>
-                            项目部的介绍blablablaba-》右边要放能代表项目部的图片。其他五个部门也是如此
-                        </p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="content_top">
-                    <div class="ipad_desc" id="about">
-                        <h3>从游部</h3>
-                        <p>
-                            从游部的介绍blablablaba-》右边要放能代表从游部的图片。其他五个部门也是如此
-                        </p>
-                    </div>
-                    <div class="ipad_img">
-                        <section
-                            class="cbp-so-section cbp-so-init cbp-so-animate">
-                            <article class="cbp-so-side cbp-so-side-right">
-                                <img src="./images/congyou.png" alt="" />
-                            </article>
-                        </section>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="content_bottom" id="portfolio">
-                    <div class="devices">
-                        <section class="cbp-so-section cbp-so-init">
-                            <article class="cbp-so-side cbp-so-side-left">
-                                <img src="./images/02.jpg" alt="" />
-                            </article>
-                        </section>
-                    </div>
-                    <div class="devices_desc">
-                        <h3>研创中心</h3>
-                        <p>
-                            研创中心的介绍blablablaba-》右边要放能代表研创中心的图片。其他五个部门也是如此
-                        </p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-
-            <script src="./js/classie.js"></script>
-            <script src="./js/cbpScroller.js"></script>
-            <script>
-                new cbpScroller(document.getElementById("cbp-so-scroller"));
-            </script>
-        </div>
-        <div class="clearfix"></div>
-        <!----//End-Produtive---->
-        <!----/start-Down-load---->
-        <div class="download s4">
-            <div class="Downlod">
-                <h4>Download Producteve.ly for Free</h4>
-                <!-- <div class="row form">
-                    <div class="download-icons text-center">
-                        <div class="col-md-6 span1">
-                            <a href="#">
-                                <img src="./images/accont.svg" alt="" /><i
-                                    >Download for Windows
-                                </i>
-                                <div class="clearfix"></div>
+                        <div class="selection__item">
+                            <a
+                                class="item__imgholder"
+                                href="#"
+                                onclick="displayAlert()">
+                                <img src=images/icon-4.svg class="img__grid" />
                             </a>
-                        </div>
-                        <div class="col-md-6 span2">
-                            <a href="#">
-                                <img src="./images/accont.svg" alt="" /><i
-                                    >Download for Android</i
+                            <div class="item__description">
+                                <a
+                                    class="text__grid"
+                                    href="#"
+                                    onclick="displayAlert()"
+                                    >待建</a
                                 >
-                                <div class="clearfix"></div>
-                            </a>
+                            </div>
                         </div>
-                        <div class="clearfix"></div> -->
                     </div>
-                </div>
-            </div>
-        </div>
-        <!----//End-Down-load---->
-
-
-        <div id="danmu-container"></div>
-        <!----/Reviews---->
-        <div class="riviews s5">
-            <div class="container Reviews">
-                <h5>科协人要对你说</h5>
-                <div class="row Awesome">
-                   <span class="border-2"> </span>
-                    <div class="col-md-6 Fellow">
-                        <div class="follow-left pull-left">
-                            <img src="./images/pic1.jpg" alt="" />
-                        </div>
-                        <div class="follow-right pull-left">
-                            <p>
-                                同学1
-                            </p>
-                            <h6>加入科协，收获爱情！</h6>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-
-                    <span class="border-2"> </span>
-                    <div class="col-md-6 Fellow">
-                        <div class="follow-left pull-left">
-                            <img src="./images/pic1.jpg" alt="" />
-                        </div>
-                        <div class="follow-right pull-left">
-                            <p>
-                                同学2
-                            </p>
-                            <h6>这是一份像社团的社工，一个是社工的社团!</h6>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!----/
-        <div class="riviews s5">
-            <div class="container Reviews">
-                <h5>Awesome Reviews</h5>
-                <div class="row Awesome">
-                    <span class="border-2"> </span>
-                    <div class="col-md-6 Fellow">
-                        <div class="follow-left pull-left">
-                            <img src="./images/pic1.jpg" alt="" />
-                        </div>
-                        <div class="follow-right pull-left">
-                            <h6>Musthache Man</h6>
-                            <span>Designer and Developer</span>
-                        </div>
-                        <div class="clearfix"></div>
-                        <p>
-                            This is Photoshop's version of Lorem ipsum.Proin
-                            Gravida nibh velit actor aliquet.Aenean
-                            sollicitudian,Lorem quis bibendum actor,nii elit
-                            consequant ipsum,nec sagittis sem nibh id elit. diis
-                            sed odio sit amet mauris.
-                        </p>
-                    </div>
-                    <div class="col-md-6 Fellow">
-                        <div class="follow-left pull-left">
-                            <img src="./images/pic2.png" alt="" />
-                        </div>
-                        <div class="follow-right pull-left">
-                            <h6>Bearded Fellow</h6>
-                            <span>Proffessional Beard Grower</span>
-                        </div>
-                        <div class="clearfix"></div>
-                        <p>
-                            This is Photoshop's version of Lorem ipsum.Proin
-                            Gravida nibh velit actor aliquet.Aenean
-                            sollicitudian,Lorem quis bibendum actor,nii elit
-                            consequant ipsum,nec sagittis sem nibh id elit. diis
-                            sed odio sit amet mauris.
-                        </p>
-                    </div>
-                    <div class="col-md-6 Fellow">
-                        <div class="follow-left pull-left">
-                            <img src="./images/pic1.jpg" alt="" />
-                        </div>
-                        <div class="follow-right pull-left">
-                            <h6>Hair</h6>
-                            <span>Live on your face</span>
-                        </div>
-                        <div class="clearfix"></div>
-                        <p>
-                            This is Photoshop's version of Lorem ipsum.Proin
-                            Gravida nibh velit actor aliquet.Aenean
-                            sollicitudian,Lorem quis bibendum actor,nii elit
-                            consequant ipsum,nec sagittis sem nibh id elit. diis
-                            sed odio sit amet mauris.
-                        </p>
-                    </div>
-                    <div class="col-md-6 Fellow">
-                        <div class="follow-left pull-left">
-                            <img src="./images/pic2.png" alt="" />
-                        </div>
-                        <div class="follow-right pull-left">
-                            <h6>Manly Mike</h6>
-                            <span>Interest Enthusiast</span>
-                        </div>
-                        <div class="clearfix"></div>
-                        <p>
-                            This is Photoshop's version of Lorem ipsum.Proin
-                            Gravida nibh velit actor aliquet.Aenean
-                            sollicitudian,Lorem quis bibendum actor,nii elit
-                            consequant ipsum,nec sagittis sem nibh id elit. diis
-                            sed odio sit amet mauris.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        ---->
-        <!----//End-Awesome-Reviews---->
-        
-        <!----//End-social-icons--->
-        <!----start-copy-right---->
-        <div class="footer">
-            <div
-                class="col-md 6 collapse navbar-collapse navbar-main-collapse bottom-nav pull-left">
-                <ul class="nav navbar-nav full-nav-bottom">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="page-scroll">
-                        <a id="s1" class="subNavBtn" href="#">Productively</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a id="s2" class="subNavBtn" href="#">Contact us</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a id="s31" class="subNavBtn" href="#">Press</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-            <div class="row form2">
-                <div class="col-md 6 download-icons download-icons1 pull-right">
-                    <div class="span3">
-                        <a href="#">
-                            <img src="./images/winds2.png" alt="" /><i
-                                >Download for Windows
-                            </i>
-                            <div class="clearfix"></div>
-                        </a>
-                    </div>
-                    <div class="span4">
-                        <a href="#">
-                            <img src="./images/andrd2.png" alt="" /><i
-                                >Download for Android</i
+                </section>
+                <!--<section class="selection__section">
+                    <div class="selection__description">
+                        <h3 class="description__title">教程</h3>
+                        <p class="description__content">这里是一些教程。</p>
+                        <nav class="description__nav">
+                            <a
+                                href="./components/grid/index.html"
+                                class="description__link"
                             >
-                            <div class="clearfix"></div>
+                                查看列表样式
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                    fill="none"
+                                    class="child"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                         clip-rule="evenodd"
+                                        fill="currentColor"
+                                        d="M9.11458 11.5121L11.6146 8.51215L12.0414 8L11.6146 7.48785L9.11458 4.48785L7.88542 5.51215L9.29197 7.2L4 7.2V8.8L9.29197 8.8L7.88542 10.4879L9.11458 11.5121Z"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="selection__grid">
+                        <template x-for="article in articles">
+                            <div class="selection__item">
+                                <a :href="article.link" class="item__imgholder">
+                                    <img
+                                        :src="`https://picsum.photos/640/400.webp?blur=3&random=${Math.random()}`"
+                                        class="item__img"
+                                    />
+                                </a>
+                                <div class="item__description">
+                                    <a
+                                        class="item__title"
+                                        :href="article.link"
+                                        x-text="article.title"
+                                        >标题</a
+                                    >
+                                    <time
+                                        class="item__time"
+                                        x-text="article.time"
+                                        >时间</time
+                                    >
+                                </div>
+                            </div>
+                        </template>
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
+                                <img
+                                    src="https://picsum.photos/640/400.webp?blur=3&random=6"
+                                    class="item__img"
+                                />
+                            </a>
+                            <div class="item__description">
+                                <a class="item__title" href="#">更多内容</a>
+                                <time class="item__time">2024-02-01</time>
+                            </div>
+                        </div>
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
+                                <img
+                                    src="https://picsum.photos/640/400.webp?blur=3&random=7"
+                                    class="item__img"
+                                />
+                            </a>
+                            <div class="item__description">
+                                <a class="item__title" href="#">更多内容</a>
+                                <time class="item__time">2024-02-01</time>
+                            </div>
+                        </div>
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
+                                <img
+                                    src="https://picsum.photos/640/400.webp?blur=3&random=8"
+                                    class="item__img"
+                                />
+                            </a>
+                            <div class="item__description">
+                                <a class="item__title" href="#">更多内容</a>
+                                <time class="item__time">2024-02-01</time>
+                            </div>
+                        </div>
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
+                                <img
+                                    src="https://picsum.photos/640/400.webp?blur=3&random=9"
+                                    class="item__img"
+                                />
+                            </a>
+                            <div class="item__description">
+                                <a class="item__title" href="#">更多内容</a>
+                                <time class="item__time">2024-02-01</time>
+                            </div>
+                        </div>
+                        <div class="selection__item">
+                            <a class="item__imgholder" href="#">
+                                <img
+                                    src="https://picsum.photos/640/400.webp?blur=3&random=10"
+                                    class="item__img"
+                                />
+                            </a>
+                            <div class="item__description">
+                                <a class="item__title" href="#">更多内容</a>
+                                <time class="item__time">2024-02-01</time>
+                            </div>
+                        </div>
+                    </div>
+                </section>-->
+                <!-- departments:start -->
+                <div class="department__container">
+                    <img
+                        class="pic__left"
+                        src="./images/bangongshi.png"
+                        alt="科协办公室" />
+                    <div class="text__right">
+                        <h1 class="department__title">办公室</h1>
+                        <p>
+                            我们是未央科协内部的纽带，宣传报销、组织团建、统筹管理，都有我们的身影;
+                            我们是科协和同学间的桥梁，信息传达、合作共享、高效沟通，也是我们的使命。
+                        </p>
+                        <p>
+                            办公室的定位是一个科研科创资源与信息的节点，我们的工作主要分为两部分：对内组织科协例会团建，完善科协云盘管理，宣传科创学术活动，统筹科协财务报销；对外整合研创资源制作周报，与衔接院系合作承接赛事，共享科研信息资源。办公室也与科协其他各部门密切交流、通力合作，我们希望倾听、满足每一位同学在科研上的需求，营造浓厚的科研、科创氛围，讲好未央书院的科创故事！
+                        </p>
+                    </div>
+                </div>
+                <div class="department__container">
+                    <div class="text__left">
+                        <h1 class="department__title">学术部</h1>
+                        <p>
+                            学术部，主持学术技能的部门。
+                            我们有技术过硬的团队，掌握并传承深度学习、git、matlab等各方面的技术；我们是学术技能的媒介，源源不断地把新时代超一流技术用“学术技能讲座”和“学术推送”等平白易懂的方式向未央书院搬运；我们是科协的技术担当，当科协出现科技上的任务，便是我们出手之时。这一年中，我们主要负责如下工作：
+                        </p>
+                        <p>
+                            MATLAB
+                            大讲座。我们将以往的“学术技能讲座”升级为同时结合课程与科研应用的系列讲座，针对学习科研中非常普遍的数值计算编程语言MATLAB推出系统而精致的讲座。
+                        </p>
+                        <p>
+                            您现在正在浏览的网站，正出是我们建造并运营—— built
+                            from
+                            scratch。网页目前在初创阶段，不足良多；若有建议，欢迎联系我们！
+                        </p>
+                    </div>
+                    <img
+                        class="pic__right"
+                        src="./images/xueshu2.png"
+                        alt="科协学术部" />
+                </div>
+                <div class="department__container">
+                    <img
+                        class="pic__left"
+                        src="./images/saishi.png"
+                        alt="科协赛事部" />
+                    <div class="text__right">
+                        <h1 class="department__title">赛事部</h1>
+                        <p>
+                            未央书院科协赛事部主要负责各类赛事的策划、举办、承办。目前主要举办赛事包含：“未央城”科创比赛、“未央十二宫”挑战赛、与icenter合办工程认知与创新实践挑战赛等。
+                        </p>
+                        <p>
+                            “未央城”科创比赛基于亚信科技提供的真实工业场景数据集，选手们基于移动通信网络的多种特征信息，使用人工智能算法或其他方法建模，实现对用户的位置预测。“未央十二宫”挑战赛作为“未央书院工程导论”课程的补充，面向未央书院大一新生。同学们通过小组协作的形式，对某一工科细分领域展开文献调研，并通过课程汇报的形式展示调研结果。未央书院与iCenter联手打造的「工程认知与创新实践」课程面向未央书院所有院系专业学生，选课同学在课赛结合模式下，完成属于自己的科创作品。
+                        </p>
+                    </div>
+                </div>
+                <div class="department__container">
+                    <div class="text__left">
+                        <h1 class="department__title">项目部</h1>
+                        <p>
+                            未央科协项目部是连通未央科创与学校项目的桥梁，肩负着对内培养科创人才，对外输送优秀项目的使命，负责未央科创人才培养计划“北辰计划”的选拔与活动组织、面向大一新生的科创起步培训“北辰训练营”的筹办，并承担在“挑战杯”、“星火计划”、“学推计划”、“闯世界计划”等校级科创项目方面与学校进行对接的任务。
+                        </p>
+                        <p>
+                            我们目标是：让每一个有潜力的作品发光发热，为每一个有想法的学子保驾护航。
+                        </p>
+                    </div>
+                    <img
+                        class="pic__right"
+                        src="./images/xiangmu2.png"
+                        alt="科协项目部" />
+                </div>
+                <div class="department__container">
+                    <img
+                        class="pic__left"
+                        src="./images/congyou.jpg"
+                        alt="科协从游部" />
+                    <div class="text__right">
+                        <h1 class="department__title">从游部</h1>
+                        <p>
+                            从游部源于书院的“从游”文化，是一个年轻且富有未央特色的部门。我们希望成为师生之间、朋辈之间的桥梁，引导同学们在交流中树立科研志趣、培养学术品味、享受从游文化。
+                        </p>
+                        <p>
+                            2022-2023学年中，我们举办了51场未央从游坊，提供与教授嘉宾面对面探讨学科前沿的机会；开展了2期“大鱼海谈”系列教师访谈活动，呈现“大鱼”们教学科研之外的另一面；举办了5期朋辈沙龙活动，打造与优秀朋辈相互交流的平台。
+                        </p>
+                        <p>
+                            本学期中，从游部致力打造更有深度的从游坊、更加多元的大鱼海谈、更加成熟的朋辈沙龙，做从游文化的传播者与践行者。
+                        </p>
+                    </div>
+                </div>
+                <div class="department__container">
+                    <div class="text__left">
+                        <h1 class="department__title">&nbsp研创中心</h1>
+                        研创中心是未央科协自有的高水平科研科创兴趣团队孵化中心，2023
+                        年建设的兴趣团队曾获得首都挑战杯挑战杯特等奖、清华大学挑战杯特等奖、二等奖等奖项。研创中心于
+                        2024
+                        年建设两支兴趣团队，分别是视听觉多模态融合兴趣团队和
+                        RIOS 兴趣团队，目前队伍分别有 5 人和 6
+                        人，以未央书院学生为主。研创中心支持项目的方式包括但不限于研创中心提供的经验支持、赛事服务和日常监督，以及未央书院科协的经费支持。
+                    </div>
+                    <img
+                        class="pic__right"
+                        src="./departments/yanchuang.jpg"
+                        alt="研创中心" />
+                </div>
+                <!-- departments:finish -->
+            </article>
+            <danmu>
+                <div id="danmu__container"></div>
+            </danmu>
+        </main>
+        <footer>
+            <div class="footer__top">
+                <div class="footer__top-container2">
+                    <div class="footer__top-container01">
+                        <a href="https://www.wizardquant.com/" target="_blank">
+                            <img
+                                src="./sponsor/kuande.jpeg"
+                                class="sponsor__img__grid"
+                                style="height: 60px" />
                         </a>
                     </div>
-                    <div class="clearfix"></div>
+                    <div class="footer__top-container01">
+                        <a
+                            href="https://www.asiainfo.com/zh_cn/index.html"
+                            target="_blank">
+                            <img
+                                src="./sponsor/yaxin.png"
+                                class="sponsor__img__grid" />
+                        </a>
+                    </div>
+                    <div class="footer__top-container01">
+                        <a
+                            href="https://www.icenter.tsinghua.edu.cn/"
+                            target="_blank">
+                            <img
+                                src="./sponsor/icenter.jpg"
+                                class="sponsor__img__grid" />
+                        </a>
+                    </div>
+                    <div class="footer__top-container01">
+                        <a href="https://air.tsinghua.edu.cn/" target="_blank">
+                            <img
+                                src="./sponsor/air.jpg"
+                                class="sponsor__img__grid" />
+                        </a>
+                    </div>
+                    <div class="footer__top-container01">
+                        <a
+                            href="http://www.x-lab.tsinghua.edu.cn/"
+                            target="_blank">
+                            <img
+                                src="./sponsor/xlab2.png"
+                                class="sponsor__img__grid" />
+                        </a>
+                    </div>
+                    <div class="footer__top-container01">
+                        <a href="#" target="_blank">
+                            <img
+                                src="./sponsor/wyast.png"
+                                class="sponsor__img__grid" />
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="clearfix"></div>
-            <div class="row copy-right">
-                <div class="col-md-12 text-center">
-                    <p>
-                        Copyright © 2024 | <a id="s31" class="subNavBtn" href="./developers.html">List of developers</a>
-                    </p>
+            <div class="footer__middle">
+                <a class="footer__icon" href="/">@未央科协<br />LOGO</a>
+
+                <div class="footer__list-container">
+                    <div class="footer__dummy"></div>
+                    <!--
+                    <div class="footer__list">
+                        <h2 class="footer__list-title">部门</h2>
+                        <ul class="footer__list-content">
+                            <li>
+                                <a class="footer__link" href="#">这个部门</a>
+                            </li>
+                            <li>
+                                <a class="footer__link" href="#">那个部门</a>
+                            </li>
+                            <li><a class="footer__link" href="#">友链</a></li>
+
+                        
+                        </ul>
+                    </div>-->
+                    <div class="footer__list">
+                        <h2 class="footer__list-title">友链</h2>
+                        <ul class="footer__list-content">
+                            <li>
+                                <a
+                                    class="footer__link"
+                                    href="https://www.wyc.tsinghua.edu.cn/"
+                                    >未央书院</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="footer__link"
+                                    href="https://weyoung-learn.github.io/"
+                                    >未央学习部</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="footer__link"
+                                    href="https://liuyifan22.github.io/advice/"
+                                    >Advice Hub</a
+                                >
+                            </li>
+
+                            <!-- More links -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- More lists  -->
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__legal">
+                    &copy; 2024 wyast
+
+                    <!--，但推荐<a
+                        class="footer__link"
+                        href="https://creativecommons.org/licenses/by/4.0/"
+                        >Creative Commons
+                    </a>-->
+                </p>
+                <div class="footer__social">
+                    <a
+                        class="footer__link"
+                        href="https://github.com/wyast/wyast.github.io"
+                        >GitHub</a
+                    >
                 </div>
             </div>
-        </div>
-        <script src="js/danmu.js"></script> 
+        </footer>
     </body>
+    <script src="./index.js"></script>
+    <script>
+        function displayAlert() {
+            alert("建造中...前方的区域以后再来探索吧！");
+            return false; // Prevent the default action of the link
+        }
+    </script>
 </html>
