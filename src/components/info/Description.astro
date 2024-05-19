@@ -1,0 +1,25 @@
+<div>
+  <slot />
+</div>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+  }
+
+  div :global(h2) {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--near-black);
+    margin: 0;
+  }
+
+  div :global(p) {
+    font-size: 0.875rem;
+    color: var(--mid-gray);
+    margin: 0;
+  }
+</style>

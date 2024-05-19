@@ -1,0 +1,24 @@
+<section>
+  <div class="left">
+    <slot name="left" />
+  </div>
+  <div class="main">
+    <slot />
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem 0;
+    flex-wrap: wrap;
+  }
+  section> .left {
+    min-width: 12em;
+  }
+  section> .main {
+    flex-grow: 1;
+  }
+</style>

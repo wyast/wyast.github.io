@@ -1,0 +1,86 @@
+---
+
+---
+
+<div class="footer__top">
+  <div class="footer__top-container">
+    <p class="footer__title">
+      <span>欢迎</span>
+      <span>加入</span>
+      <span>未央</span>
+      <span>科协</span>
+    </p>
+  </div>
+  <div class="footer__phrase">
+    <span class="footer__phrase-word">只此程式，</span>
+    <span class="footer__phrase-word">万无一失。</span>
+    <span class="footer__phrase-word">--《增广贤文》</span>
+  </div>
+</div>
+
+<style>
+  .footer__top {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap;
+    padding: 1rem 3rem;
+    background-color: var(--navy);
+  }
+
+  .footer__top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 2rem 0;
+  }
+
+  .footer__button {
+    background-color: var(--light-red);
+    color: var(--near-white);
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 2rem;
+    font-size: 16px;
+    cursor: pointer;
+    will-change: background-color transform;
+    transition: background-color 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .footer__button:hover {
+    transition: background-color 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: var(--dark-red);
+  }
+
+  .footer__title {
+    font-size: 36px;
+    padding: 0;
+    margin: 0;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.125rem;
+  }
+
+  .footer__phrase {
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+    margin: 2rem 0;
+    font-family: serif;
+    font-size: 1.5rem;
+    color: var(--white);
+  }
+
+  .footer__phrase-word {
+    margin: 0;
+    padding-right: 0px;
+  }
+</style>

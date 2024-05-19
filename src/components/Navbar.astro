@@ -1,0 +1,366 @@
+---
+import { Image } from "astro:assets";
+import dropdown from "../images/icons/dropdown-icon.svg";
+import search from "../images/icons/search-icon.svg";
+---
+
+<nav class="navbar">
+  <div class="root">
+    <div class="firstelem">
+      <a class="leftlogo" href="/">
+        <Image src="/favicon.svg" alt="TODO: Logo" width="28" height="28" />
+      </a>
+      <div class="leftelemframe">
+        <div class="dropdownbutton">
+          <button class="elembutton" id="menu-button--menu--:r4:" type="button">
+            资讯
+            <Image src={dropdown} class="icon" alt="Dropdown" />
+          </button>
+          <div class="dropdown">
+            <a href="#">建造中...</a>
+            <a href="#">建造中...</a>
+            <a href="#">建造中...</a>
+          </div>
+        </div>
+      </div>
+      <div class="leftelemframe">
+        <div class="dropdownbutton">
+          <button class="elembutton" id="menu-button--menu--:r5:" type="button">
+            论坛
+            <Image src={dropdown} class="icon" alt="Dropdown" />
+          </button>
+          <div class="dropdown">
+            <a href="#">建造中...</a>
+            <a href="#">建造中...</a>
+            <a href="#">建造中...</a>
+          </div>
+        </div>
+      </div>
+      <div class="leftelemframe">
+        <div class="dropdownbutton">
+          <button class="elembutton" id="menu-button--menu--:r6:" type="button">
+            教程
+            <Image src={dropdown} class="icon" alt="Dropdown" />
+          </button>
+          <div class="dropdown">
+            <a href="#">建造中...</a>
+            <a href="#">建造中...</a>
+            <a href="#">建造中...</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lastelem">
+      <div class="rightelemframe">
+        <button class="searchbutton" data-testid="search-button">
+          <Image
+            src={search}
+            width="16"
+            height="16"
+            class="iconright"
+            alt="Search"
+          />Search
+        </button>
+      </div>
+      <div class="rightelemframe">
+        <button class="signinbutton">注册</button>
+        <button class="signbutton">关于我们</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  button {
+    appearance: auto;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+  }
+  .navbar {
+    font-size: 14px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    font-size: var(--font-size-6);
+    font-size: var(--font-size-5);
+    background-color: var(--white);
+  }
+  .root {
+    font-size: 14px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    font-size: var(--font-size-6);
+    font-size: var(--font-size-5);
+    background-color: var(--white);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-small);
+    padding-bottom: var(--spacing-small);
+    padding-left: var(--spacing-medium);
+    padding-right: var(--spacing-medium);
+    padding-left: var(--spacing-large);
+    padding-right: var(--spacing-large);
+    margin-left: auto;
+    border-color: var(--light-silver);
+  }
+
+  .root {
+    height: var(--navHeight);
+  }
+  .firstelem {
+    font-size: 14px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    font-size: var(--font-size-6);
+    font-size: var(--font-size-5);
+    background-color: var(--white);
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+  .leftlogo {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color: var(--near-black);
+    img {
+      width: 22px;
+    }
+  }
+  .leftelemframe {
+    display: flex;
+    font-size: 14px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    font-size: var(--font-size-6);
+    font-size: var(--font-size-5);
+    background-color: var(--white);
+    margin-left: var(--spacing-small);
+  }
+  .elembutton {
+    display: flex;
+    font-weight: 600;
+    padding: var(--spacing-none);
+    background-color: var(--transparent);
+    border-style: none;
+    border-width: 0;
+    padding: var(--spacing-small);
+    display: block;
+    border-radius: var(--border-radius-2);
+    align-items: center;
+    color: var(--dark-gray);
+  }
+  .leftelemframe > div {
+    display: inline-block;
+    position: relative;
+  }
+
+  /* Dropdown Content Start */
+  .dropdown {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 2px 0;
+    overflow: hidden;
+  }
+  .leftelemframe div:hover .dropdown {
+    display: block;
+    animation: fadeIn 0.2s;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .dropdown a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: small;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: background-color 0.2s;
+  }
+  .dropdown a:hover {
+    background-color: #f2f2f2;
+  }
+  /* Dropdown Content End */
+
+  .lastelem {
+    font-size: 14px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-size: var(--font-size-6);
+    font-size: var(--font-size-5);
+    background-color: var(--white);
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+  .rightelemframe {
+    display: flex;
+    font-size: 14px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    font-size: var(--font-size-6);
+    font-size: var(--font-size-5);
+    background-color: var(--white);
+    margin-right: var(--spacing-small);
+    z-index: 1;
+  }
+  .searchbutton {
+    display: flex;
+    align-items: center;
+    border-style: none;
+    border-width: 0;
+    background-color: var(--transparent);
+    font-weight: 600;
+    padding-left: var(--spacing-small);
+    padding-right: var(--spacing-small);
+    padding-top: var(--spacing-none);
+    padding-bottom: var(--spacing-none);
+    margin-right: 4px;
+    color: var(--mid-gray);
+    z-index: 1;
+  }
+  .signinbutton {
+    font-size: 14px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    min-width: 92px;
+    margin-right: 4px;
+    font-weight: 600;
+    border-radius: var(--border-radius-2);
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    padding: var(--spacing-small);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition-property: background-color, color, box-shadow;
+    color: var(--dark-gray);
+    background-color: var(--transparent);
+    border-color: var(--transparent);
+  }
+  .signbutton {
+    font-size: 14px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    min-width: 92px;
+    font-weight: 600;
+    border-radius: var(--border-radius-2);
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    padding: var(--spacing-small);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition-property: background-color, color, box-shadow;
+    color: var(--white);
+    background-color: var(--near-black);
+    border-color: var(--near-black);
+  }
+  .linkbutton {
+    padding: var(--spacing-small);
+    display: block;
+    border-radius: var(--border-radius-2);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    color: var(--dark-gray);
+  }
+  .icon {
+    margin-left: var(--spacing-small);
+  }
+  .iconright {
+    margin-right: var(--spacing-small);
+  }
+
+  @media screen and (max-width: 700px) {
+    .root {
+      flex-direction: column;
+    }
+    .firstelem,
+    .lastelem {
+      width: 100%;
+    }
+    .firstelem {
+      justify-content: flex-start;
+    }
+    .lastelem {
+      justify-content: flex-end;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .firstelem {
+      flex-direction: column;
+    }
+    .lastelem {
+      flex-direction: column;
+    }
+    .dropdown {
+      top: -50%;
+      left: 100%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0);
+    }
+    .rightelemframe {
+      flex-direction: column;
+    }
+    .searchbutton {
+      margin: 8px;
+    }
+  }
+</style>

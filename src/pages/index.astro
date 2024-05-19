@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Headpic from "../components/index/Headpic.astro";
+import Portal from "../components/index/Portal.astro";
+import Danmaku from "../components/index/Danmaku.astro";
+import ShowAll from "../components/index/ShowAll.astro";
+import Sponsors from "../components/index/Sponsors.astro";
+import FooterLink from "../components/FooterLink.astro";
+---
+
+<Layout title="主页">
+  <header>
+    <Headpic />
+  </header>
+  <Navbar />
+  <main>
+    <article>
+      <section>
+        <Portal />
+      </section>
+      <section>
+        <ShowAll />
+      </section>
+    </article>
+    <Danmaku />
+  </main>
+  <footer>
+    <Sponsors />
+    <FooterLink />
+  </footer>
+</Layout>
+
+<style>
+  main {
+    display: grid;
+    grid-template-columns: 1fr min(120ch, 100%) 1fr;
+  }
+  main > * {
+    grid-column: 2;
+  }
+</style>

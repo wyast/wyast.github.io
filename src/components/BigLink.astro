@@ -1,0 +1,38 @@
+---
+
+---
+
+<nav class="description__nav">
+  <slot />
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="arrow">
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      fill="currentColor"
+      d="M9.11458 11.5121L11.6146 8.51215L12.0414 8L11.6146 7.48785L9.11458 4.48785L7.88542 5.51215L9.29197 7.2L4 7.2V8.8L9.29197 8.8L7.88542 10.4879L9.11458 11.5121Z"
+    ></path>
+  </svg>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    margin: 1rem 0;
+    width: fit-content;
+  }
+  nav :global(a) {
+    font-size: 0.75rem;
+    display: flex;
+    text-decoration: none;
+  }
+  nav :global(a), .arrow {
+    color: var(--blue);
+    transition: color .15s ease-in;
+    will-change: color;
+  }
+  nav:hover :global(*) {
+    color: var(--washed-blue);
+  }
+</style>

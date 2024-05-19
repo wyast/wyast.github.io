@@ -1,0 +1,19 @@
+---
+// Grid that automatically changes column count based on screen width
+interface Props {
+  width: string;
+  gap: string;
+}
+const { width, gap } = Astro.props;
+---
+<div>
+  <slot />
+</div>
+
+<style define:vars={{ width, gap }}>
+  div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(var(--width), 100%), 1fr));
+    grid-gap: var(--gap);
+  }
+</style>

@@ -1,0 +1,98 @@
+---
+import { Image } from "astro:assets";
+import kuande from "./images/sponsors/kuande.jpeg";
+import yaxin from "./images/sponsors/yaxin.png";
+import icenter from "./images/sponsors/icenter.jpg";
+import air from "./images/sponsors/air.jpg";
+import xlab from "./images/sponsors/xlab2.png";
+import wyast from "./images/sponsors/wyast.png";
+---
+
+<div class="container">
+  <div class="item">
+    <a href="https://www.wizardquant.com/" target="_blank">
+      <Image src={kuande} alt="宽德投资" class="main"/>
+    </a>
+  </div>
+  <div class="item">
+    <a href="https://www.asiainfo.com/zh_cn/index.html" target="_blank">
+      <Image src={yaxin} alt="亚信科技" />
+    </a>
+  </div>
+  <div class="item">
+    <a href="https://www.icenter.tsinghua.edu.cn/" target="_blank">
+      <Image src={icenter} alt="iCenter" />
+    </a>
+  </div>
+  <div class="item">
+    <a href="https://air.tsinghua.edu.cn/" target="_blank">
+      <Image src={air} alt="AIR" />
+    </a>
+  </div>
+  <div class="item">
+    <a href="http://www.x-lab.tsinghua.edu.cn/" target="_blank">
+      <Image src={xlab} alt="XLab" />
+    </a>
+  </div>
+  <div class="item">
+    <a href="#" target="_blank">
+      <Image src={wyast} alt="未央科协" />
+    </a>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: grid;
+    padding: 0;
+    margin-left: 1rem;
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    width: 100%;
+  }
+  @media screen and (min-width: 30em) and (max-width: 45em) {
+    .container {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-gap: 3rem;
+    }
+  }
+  @media screen and (min-width: 45em) and (max-width: 60em) {
+    .container {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-gap: 3rem;
+    }
+  }
+  @media screen and (min-width: 60em) {
+    .container {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      grid-gap: 3rem;
+    }
+  }
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  img {
+    transition: transform 0.3s ease;
+    border-radius: 0.1rem;
+    border-color: var(--silver);
+    border-width: 0px;
+    border-style: solid;
+    display: flex;
+    margin: auto;
+    max-height: 50px;
+    width: auto;
+  }
+  img.main {
+    max-height: 75px;
+  }
+  img:hover {
+    border-width: 2px;
+  }
+</style>
