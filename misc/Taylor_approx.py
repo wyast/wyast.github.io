@@ -1,6 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider
+# 将输出结果保存到浏览器使用
+import io
+import base64
+from js import document
 
 # 泰勒级数函数
 def taylor_sin_corrected(x, n):
@@ -24,16 +28,15 @@ plt.plot(x, y_sin, label='True Sine', linestyle='--')
 plt.legend(loc='upper right')
 plt.ylim(-2, 2)
 
-# 创建滑动条
-axslider = plt.axes([0.25, 0.1, 0.65, 0.03])
-slider = Slider(axslider, 'Order', 1, 30, valinit=1, valstep=1)
+# 将图片输出，供浏览器使用
+def show():
+  buf = io.BytesIO()
+  plt.savefig(buf, format='png')
+  buf.seek(0)
+  img_str = 'data:image/png;base64,' + base64.b64encode(buf.read()).decode('UTF-8')
+  return img_str
 
 # 更新函数
-def update(val):
-    order = slider.val
-    l.set_ydata(taylor_sin_corrected(x, int(order)))
-    fig.canvas.draw_idle()
-
-slider.on_changed(update)
-
-plt.show()
+def update(order):
+  l.set_ydata(taylor_sin_corrected(x, int(order)))
+  return show()
