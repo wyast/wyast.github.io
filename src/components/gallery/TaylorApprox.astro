@@ -63,6 +63,7 @@ def update(order):
 </div>
 
 <script>
+  declare var loadPyodide: any;
   class PythonRunner extends HTMLElement {
     py: any;
     source: string | undefined;
