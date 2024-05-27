@@ -1,0 +1,145 @@
+---
+
+---
+
+<script is:inline src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"
+></script>
+<div class="wrapper">
+  <h2>使用泰勒展开，逼近sin函数</h2>
+  <p>运行的是python代码！</p>
+  <taylor-runner packages="numpy, matplotlib">
+    <pre class="status">Loading...</pre>
+    <div class="result"></div>
+    <div>
+      <label for="slider">Order</label>
+      <input type="range" min="1" max="30" value="1" step="1" id="slider" />
+      <span id="indicator">0</span>
+    </div>
+    <pre><code class="sourceEl">
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.widgets import Slider
+# 将输出结果保存到浏览器
+import io
+import base64
+from js import document
+
+# 泰勒级数函数
+def taylor_sin_corrected(x, n):
+    sin_approx = 0
+    for i in range(n):
+        coeff = (-1)**i
+        num = x**(2*i + 1)
+        denom = float(np.math.factorial(2*i + 1))
+        sin_approx += (coeff) * (num / denom)
+    return sin_approx
+
+# 创建初始图形
+x = np.linspace(-8*np.pi, 8*np.pi, 1000)
+y_sin = np.sin(x)
+y_taylor = taylor_sin_corrected(x, 1)
+
+fig, ax = plt.subplots()
+plt.subplots_adjust(bottom=0.25)
+l, = plt.plot(x, y_taylor, label='Taylor Approximation')
+plt.plot(x, y_sin, label='True Sine', linestyle='--')
+plt.legend(loc='upper right')
+plt.ylim(-2, 2)
+
+# 将图片输出，供浏览器使用
+def show():
+  buf = io.BytesIO()
+  plt.savefig(buf, format='png')
+  buf.seek(0)
+  img_str = 'data:image/png;base64,' + base64.b64encode(buf.read()).decode('UTF-8')
+  return img_str
+
+# 更新函数
+def update(order):
+  l.set_ydata(taylor_sin_corrected(x, int(order)))
+  return show()
+    </code></pre>
+  </taylor-runner>
+</div>
+
+<script>
+  class PythonRunner extends HTMLElement {
+    py: any;
+    source: string | undefined;
+    input: HTMLInputElement | undefined;
+    indicator: HTMLElement | undefined;
+    status: HTMLElement | undefined;
+    constructor() {
+      super();
+    }
+
+    async connectedCallback() {
+      const packages = this.getAttribute("packages");
+      const status: HTMLElement = this.querySelector(".status")!;
+      const sourceEl = this.querySelector(".sourceEl")!;
+      const input: HTMLInputElement = this.querySelector("#slider")!;
+      const indicator: HTMLElement = this.querySelector("#indicator")!;
+      const source = sourceEl.textContent!;
+
+      status.textContent = "Loading pyodide...";
+      // TODO: make a separate component for loading pyodide, then pass it
+      const py = await loadPyodide();
+      if (packages) {
+        status.textContent = "Loading micropip...";
+        await py.loadPackage("micropip");
+        const micropip = py.pyimport("micropip");
+        const packageList = packages.split(",");
+        for (const [i, pkg] of packageList.entries()) {
+          status.textContent = `Installing package ${pkg.trim()} (${i + 1}/${packageList.length})... `;
+          await micropip.install(pkg.trim());
+        }
+      }
+      this.source = source;
+      this.py = py;
+      this.input = input;
+      this.indicator = indicator;
+      this.status = status;
+      this.init();
+      this.input.addEventListener("input", () => {
+        this.run();
+      });
+      this.run();
+    }
+
+    init() {
+      this.status!.textContent = "Running...";
+      this.py.runPython(this.source);
+      this.status!.textContent = "";
+    }
+
+    run() {
+      this.indicator!.textContent = this.input!.value;
+      this.status!.textContent = "Running...";
+      const result = this.py.runPython(`update(${this.input!.value})`);
+      this.status!.textContent = "";
+      const img = document.createElement("img");
+      img.src = result;
+      this.querySelector(".result")!.innerHTML = "";
+      this.querySelector(".result")!.appendChild(img);
+    }
+
+    disconnectedCallback() {
+      this.py.gilRelease();
+    }
+  }
+
+  customElements.define("taylor-runner", PythonRunner);
+</script>
+
+<style>
+  .wrapper {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  .status {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+</style>
