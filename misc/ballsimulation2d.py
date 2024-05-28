@@ -48,9 +48,7 @@ y = fun(np.linspace(boundX[0], boundX[1], 1000))
 
 def update(frame):
     for particle in particles:
-        # 更新位置
         particle.position += particle.velocity * interval
-        # 碰撞检测和反射
         if particle.position[1] >= fun(particle.position[0]):
             particle.velocity = reflect(particle.velocity, fun, fun_sympy, particle.position[0], reflect_fac)
         if particle.position[0] <= boundX[0] or particle.position[0] >= boundX[1]:
@@ -58,13 +56,9 @@ def update(frame):
         if particle.position[1] <= boundY:
             particle.velocity[1] = -particle.velocity[1]
 
-        # 更新速度
         particle.velocity += particle.acceleration * interval
-        # 边界约束
-        particle.position = np.clip(particle.position, [boundX[0], boundY], [boundX[1], fun(particle.position[0])])        
-        # 清除上一帧
+        particle.position = np.clip(particle.position, [boundX[0], boundY], [boundX[1], fun(particle.position[0])])       
     ax.clear()
-        # 绘制粒子
     for particle in particles:
         ax.scatter(particle.position[0], particle.position[1], color='r', s= 20) # 100 * (1 - particle.position[1] / 6))
     ax.plot(np.linspace(boundX[0], boundX[1], 1000), y, color='gray')
