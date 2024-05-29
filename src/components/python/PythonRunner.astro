@@ -1,0 +1,124 @@
+---
+
+---
+
+<script is:inline src="https://cdn.jsdelivr.net/pyodide/v0.26.0/full/pyodide.js"
+></script>
+<python-runner>
+  <div class="content">
+    <pre class="status">Loading pyodide...</pre>
+    <div class="render"></div>
+    <details>
+      <summary>source</summary>
+      <pre><code class="source" /></pre>
+    </details>
+  </div>
+  <div class="controls">
+    <slot />
+  </div>
+</python-runner>
+
+<script>
+  declare var loadPyodide: any;
+  function packageFromCode(code: string) {
+    const re1 = /^import\s+([a-zA-Z0-9_]+)/g;
+    const re2 = /^from\s+([a-zA-Z0-9_]+)/g;
+    const getpkg = (re: RegExp) =>
+      code
+        .split("\n")
+        .map((line) => re.exec(line))
+        .filter((m) => m != null)
+        .map((m: any) => m[1]);
+    
+    const packages = getpkg(re1).concat(getpkg(re2));
+    return packages.filter(
+      (pkg) => !["os", "sys", "math", "random", "js", "io"].includes(pkg)
+    );
+  }
+  declare global {
+    interface Window {
+      playground: any;
+    }
+  }
+  const playground: any = {};
+  window.playground = playground;
+  loadPyodide()
+    .catch((err: any) => {
+      alert("Failed to load pyodide.");
+      console.error(err);
+    })
+    .then(async (py: any) => {
+      await py.loadPackage("micropip");
+      const micropip = py.pyimport("micropip");
+      class PythonRunner extends HTMLElement {
+        status: HTMLPreElement;
+        render: HTMLDivElement;
+        source: HTMLElement;
+        constructor() {
+          super();
+          this.status = this.querySelector(".status")!;
+          this.render = this.querySelector(".render")!;
+          this.source = this.querySelector(".source")!;
+          const renderRoot = this.render.attachShadow({ mode: "open" });
+          playground.root = renderRoot;
+        }
+
+        async connectedCallback() {
+          this.status.textContent = "Ready.";
+          this.addEventListener("runPython", (e: any) => this.run(e.detail));
+        }
+
+        async run({ code }: { code: string }) {
+          playground.root.innerHTML = "";
+          this.source.textContent = code;
+          const packages: string[] = packageFromCode(code);
+          for (const [i, pkg] of packages.entries()) {
+            this.status.textContent = `Installing ${pkg} (${i+1}/${packages.length})...`;
+            await micropip.install(pkg);
+          }
+          this.status.textContent = "Running...";
+          const result = await py.runPythonAsync(code);
+          this.status.textContent = "Ready.";
+          this.render.textContent = result;
+        }
+
+        disconnectedCallback() {}
+      }
+
+      customElements.define("python-runner", PythonRunner);
+    });
+</script>
+
+<style>
+  python-runner {
+    display: block;
+  }
+  .content {
+    padding: 1rem;
+    border: 1px solid var(--moon-gray);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  .controls {
+    display: flex;
+    gap: 1rem;
+  }
+
+  details {
+    border: 1px solid var(--moon-gray);
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+  }
+  summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+  }
+  details[open] {
+    padding: 0.5em;
+  }
+  details[open] summary {
+    border-bottom: 1px solid var(--moon-gray);
+    margin-bottom: 0.5em;
+  }
+</style>

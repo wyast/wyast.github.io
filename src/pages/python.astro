@@ -1,0 +1,131 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import PythonRunner from "../components/python/PythonRunner.astro";
+import FooterLink from "../components/FooterLink.astro";
+
+const example = `
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.widgets import Slider
+# 将输出结果保存到浏览器
+import io
+import base64
+from js import document, playground
+
+# 泰勒级数函数
+def taylor_sin_corrected(x, n):
+    sin_approx = 0
+    for i in range(n):
+        coeff = (-1)**i
+        num = x**(2*i + 1)
+        denom = float(np.math.factorial(2*i + 1))
+        sin_approx += (coeff) * (num / denom)
+    return sin_approx
+
+# 创建初始图形
+x = np.linspace(-8*np.pi, 8*np.pi, 1000)
+y_sin = np.sin(x)
+y_taylor = taylor_sin_corrected(x, 1)
+
+fig, ax = plt.subplots()
+plt.subplots_adjust(bottom=0.25)
+l, = plt.plot(x, y_taylor, label='Taylor Approximation')
+plt.plot(x, y_sin, label='True Sine', linestyle='--')
+plt.legend(loc='upper right')
+plt.ylim(-2, 2)
+
+# 将图片输出，供浏览器使用
+def show():
+  buf = io.BytesIO()
+  plt.savefig(buf, format='png')
+  buf.seek(0)
+  img_str = 'data:image/png;base64,' + base64.b64encode(buf.read()).decode('UTF-8')
+  return img_str
+
+# 更新函数
+def update(order):
+  l.set_ydata(taylor_sin_corrected(x, int(order)))
+  return show()
+
+img = document.createElement("img")
+img.src = update(10)
+playground.root.appendChild(img)
+`;
+---
+
+<Layout title="python游乐场">
+  <header>
+    <h1>Python游乐场</h1>
+    <Navbar />
+  </header>
+  <main>
+    <article>
+      <section class="python" x-data>
+        <div x-data="{source_code: ''}">
+          <PythonRunner>
+            <textarea
+              id="source"
+              x-data=`{
+                resize(){$el.style.height='auto';$el.style.height=$el.scrollHeight+5+'px'},
+              }`
+              x-init="source_code = $el.value;resize();$watch('source_code',resize)"
+              x-model="source_code">{example}</textarea
+            >
+            <button
+              @click="$dispatch('runPython', { code: source_code })"
+              >运行</button
+            >
+          </PythonRunner>
+        </div>
+      </section>
+      <section>
+        <p style="text-decoration: var(--red) wavy underline;">「正在施工」</p>
+        <h2>这是什么？</h2>
+        <p>
+          这是一个<strong>（内部）</strong>测试页面：运行了一个
+          <code>PythonRunner</code>
+          组件，它运行的代码内容与下面的文本框中输入的内容相同。
+        </p>
+        <p>
+          写好的python代码只要拷贝上去，点击运行按钮，就可以测试放在网页上以后运行的效果。
+        </p>
+        <p>每次运行，环境变量与内部DOM会被清空。</p>
+        <h3>一些例子</h3>
+        <ul>
+          <li>泰勒展开</li>
+          <li>小球模拟</li>
+        </ul>
+        <p>
+          目前这个组件安全性不高。如果你发现了一种在网页上随便搞破坏的方法，请
+          <a href="mailto:huangcx22@mails.tsinghua.edu.cn">告诉我</a
+          >，我会很高兴！
+        </p>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <FooterLink />
+  </footer>
+</Layout>
+
+<style>
+  main {
+    display: grid;
+    grid-template-columns: 1fr min(120ch, 100%) 1fr;
+  }
+  main > * {
+    grid-column: 2;
+  }
+  article {
+    margin: 4rem 1rem 6rem 1rem;
+  }
+  .python {
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+  }
+  textarea {
+    flex: 1;
+    resize: none;
+  }
+</style>

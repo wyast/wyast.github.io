@@ -77,20 +77,16 @@ import todo from "./images/icons/plane.svg";
   }
   .item > a > img {
     width: 100%;
-    aspect-ratio: 8 / 5;
+    transition: transform 0.3s ease;
+    aspect-ratio: initial;
     border-radius: 0.25rem;
     border-color: var(--silver);
-    border-width: 1px;
+    border-width: 0px;
     border-style: solid;
-    object-fit: cover;
-    transition:
-      box-shadow 0.15s ease,
-      transform 0.15s ease;
-    will-change: transform;
+    margin: 0 auto;
   }
-  .item > a > img:hover .item > a > img {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transform: translateY(-1px);
+  .item > a > img:hover {
+    border-width: 2px;
   }
 
   .item > div {
