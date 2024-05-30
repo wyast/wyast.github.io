@@ -1,10 +1,13 @@
 ---
-
+import Grid from "../Grid.astro";
 ---
 
 <script is:inline src="https://cdn.jsdelivr.net/pyodide/v0.26.0/full/pyodide.js"
 ></script>
 <python-runner>
+  <div class="controls">
+    <slot />
+  </div>
   <div class="content">
     <pre class="status">Loading pyodide...</pre>
     <div class="render"></div>
@@ -12,9 +15,6 @@
       <summary>source</summary>
       <pre><code class="source" /></pre>
     </details>
-  </div>
-  <div class="controls">
-    <slot />
   </div>
 </python-runner>
 
@@ -29,7 +29,7 @@
         .map((line) => re.exec(line))
         .filter((m) => m != null)
         .map((m: any) => m[1]);
-    
+
     const packages = getpkg(re1).concat(getpkg(re2));
     return packages.filter(
       (pkg) => !["os", "sys", "math", "random", "js", "io"].includes(pkg)
@@ -73,7 +73,7 @@
           this.source.textContent = code;
           const packages: string[] = packageFromCode(code);
           for (const [i, pkg] of packages.entries()) {
-            this.status.textContent = `Installing ${pkg} (${i+1}/${packages.length})...`;
+            this.status.textContent = `Installing ${pkg} (${i + 1}/${packages.length})...`;
             await micropip.install(pkg);
           }
           this.status.textContent = "Running...";
@@ -93,14 +93,20 @@
   python-runner {
     display: block;
   }
+
   .content {
     padding: 1rem;
     border: 1px solid var(--moon-gray);
     border-radius: 4px;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .controls {
     display: flex;
+    flex-direction: column;
     gap: 1rem;
   }
 

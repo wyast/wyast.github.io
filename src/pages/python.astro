@@ -50,6 +50,7 @@ def update(order):
 
 img = document.createElement("img")
 img.src = update(10)
+img.style.width = "100%"
 playground.root.appendChild(img)
 `;
 const exampleXData = "{source_code: `" + example + "`}";
@@ -63,18 +64,14 @@ const exampleXData = "{source_code: `" + example + "`}";
   <main>
     <article x-data={exampleXData}>
       <section class="python">
-        <div>
-          <PythonRunner>
-            <PythonEditor
-              x-model="source_code"
-            />
-            <button @click="$dispatch('runPython', { code: source_code })"
-              >运行</button
-            >
-          </PythonRunner>
-        </div>
+        <PythonRunner>
+          <PythonEditor x-model="source_code" />
+          <button @click="$dispatch('runPython', { code: source_code })"
+            >运行</button
+          >
+        </PythonRunner>
       </section>
-      <section x-data>
+      <section>
         <p style="text-decoration: var(--red) wavy underline;">「正在施工」</p>
         <h2>这是什么？</h2>
         <p>
@@ -88,7 +85,11 @@ const exampleXData = "{source_code: `" + example + "`}";
         <p>每次运行，环境变量与内部DOM会被清空。</p>
         <h3>一些例子</h3>
         <ul>
-          <li>泰勒展开 <button @click="source_code=$refs.taylor.textContent">载入</button></li>
+          <li>
+            泰勒展开 <button @click="source_code=$refs.taylor.textContent"
+              >载入</button
+            >
+          </li>
           <li>小球模拟</li>
         </ul>
         <textarea x-ref="taylor" style="display: none">{example}</textarea>
