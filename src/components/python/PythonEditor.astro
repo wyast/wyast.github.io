@@ -1,0 +1,73 @@
+---
+interface PythonEditor {
+  "x-model": string;
+}
+const xModel = Astro.props["x-model"];
+---
+
+<python-editor @code-set=`e => ${xModel} = e.detail`>
+  <textarea
+    x-model=`${xModel}`
+    x-init=`$dispatch("code-change", ${xModel}); $watch('${xModel}', value => $dispatch("code-change", value))`
+    class="dummy"></textarea>
+</python-editor>
+
+<script>
+  import { EditorView, basicSetup } from "codemirror";
+  import { ViewUpdate } from "@codemirror/view";
+  import { python } from "@codemirror/lang-python";
+
+  export class PythonEditor extends HTMLElement {
+    view: EditorView;
+    text: HTMLTextAreaElement;
+    constructor() {
+      super();
+      this.text = this.querySelector("textarea")!;
+      this.view = new EditorView({
+        extensions: [
+          basicSetup,
+          python(),
+          EditorView.updateListener.of((e: ViewUpdate) => {
+            const source = e.state.doc.toString();
+            this.dispatchEvent(new CustomEvent("code-set", { detail: source }));
+          }),
+        ],
+        parent: this,
+      });
+    }
+    get source() {
+      return this.view.state.doc.toString();
+    }
+    set source(value: string) {
+      this.view.dispatch({
+        changes: {
+          from: 0,
+          to: this.view.state.doc.length,
+          insert: value,
+        },
+      });
+    }
+
+    connectedCallback() {
+      this.addEventListener("code-change", (ev: Event) => {
+        const e: CustomEvent<string> = ev as CustomEvent<string>;
+        if (this.source === e.detail) return;
+        this.source = e.detail;
+      });
+    }
+  }
+
+  customElements.define("python-editor", PythonEditor);
+</script>
+
+<style>
+  python-editor {
+    display: block;
+    flex-grow: 1;
+    height: 100%;
+    /* border: 1px solid #eeeeee; */
+  }
+  .dummy {
+    display: none;
+  }
+</style>

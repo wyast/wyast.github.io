@@ -2,10 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import PythonRunner from "../components/python/PythonRunner.astro";
+import PythonEditor from "../components/python/PythonEditor.astro";
 import FooterLink from "../components/FooterLink.astro";
 
-const example = `
-import numpy as np
+const example = `import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider
 # 将输出结果保存到浏览器
@@ -52,6 +52,7 @@ img = document.createElement("img")
 img.src = update(10)
 playground.root.appendChild(img)
 `;
+const exampleXData = "{source_code: `" + example + "`}";
 ---
 
 <Layout title="python游乐场">
@@ -60,26 +61,20 @@ playground.root.appendChild(img)
     <Navbar />
   </header>
   <main>
-    <article>
-      <section class="python" x-data>
-        <div x-data="{source_code: ''}">
+    <article x-data={exampleXData}>
+      <section class="python">
+        <div>
           <PythonRunner>
-            <textarea
-              id="source"
-              x-data=`{
-                resize(){$el.style.height='auto';$el.style.height=$el.scrollHeight+5+'px'},
-              }`
-              x-init="source_code = $el.value;resize();$watch('source_code',resize)"
-              x-model="source_code">{example}</textarea
-            >
-            <button
-              @click="$dispatch('runPython', { code: source_code })"
+            <PythonEditor
+              x-model="source_code"
+            />
+            <button @click="$dispatch('runPython', { code: source_code })"
               >运行</button
             >
           </PythonRunner>
         </div>
       </section>
-      <section>
+      <section x-data>
         <p style="text-decoration: var(--red) wavy underline;">「正在施工」</p>
         <h2>这是什么？</h2>
         <p>
@@ -93,9 +88,10 @@ playground.root.appendChild(img)
         <p>每次运行，环境变量与内部DOM会被清空。</p>
         <h3>一些例子</h3>
         <ul>
-          <li>泰勒展开</li>
+          <li>泰勒展开 <button @click="source_code=$refs.taylor.textContent">载入</button></li>
           <li>小球模拟</li>
         </ul>
+        <textarea x-ref="taylor" style="display: none">{example}</textarea>
         <p>
           目前这个组件安全性不高。如果你发现了一种在网页上随便搞破坏的方法，请
           <a href="mailto:huangcx22@mails.tsinghua.edu.cn">告诉我</a
