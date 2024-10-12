@@ -1,0 +1,35 @@
+---
+import universe from "./images/universe.png";
+---
+
+<div class="headpic" style={{ "background-image": `url(${universe.src})` }}>
+  <h1 class="title">
+    未央科协,
+    <strong class="phrase--strong">&nbspWYAST </strong>
+  </h1>
+</div>
+
+<style>
+  .headpic {
+    background-size: cover; /* makes the image cover the entire width of the page */
+    background-repeat: no-repeat; /* prevents the image from repeating */
+    color: var(--near-white);
+    /*full on my screen: padding: 10rem 2rem 17rem 2rem;*/
+    padding: 12rem 2rem 20rem 2rem;
+  }
+
+  .title {
+    font-size: 4rem;
+    font-weight: 500;
+    margin: 0;
+    font-family: serif;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    padding-left: 10%;
+  }
+
+  .phrase--strong {
+    font-weight: 700;
+  }
+</style>

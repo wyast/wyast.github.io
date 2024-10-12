@@ -1,0 +1,123 @@
+---
+
+---
+
+<div class="links">
+  <a class="icon" href="/">@未央科协<br />LOGO</a>
+  <div class="list-container">
+    <div class="dummy"></div>
+    <div class="list">
+      <h2 class="list-title">友链</h2>
+      <ul class="list-content">
+        <li>
+          <a class="link" href="https://www.wyc.tsinghua.edu.cn/">未央书院</a>
+        </li>
+        <li>
+          <a class="link" href="https://weyoung-learn.github.io/">未央学习部</a>
+        </li>
+        <li>
+          <a class="link" href="https://liuyifan22.github.io/advice/"
+            >Advice Hub</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="bottom">
+  <p class="legal">&copy; 2024 wyast</p>
+  <div class="social">
+    <a class="link" href="https://github.com/wyast/wyast.github.io">GitHub</a>
+  </div>
+</div>
+
+<style>
+  /* Footer Middle */
+  .links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--near-black);
+    color: var(--white);
+    padding: 2rem;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    min-width: 5rem;
+    padding-bottom: 2rem;
+    color: var(--white);
+    text-decoration: wavy;
+  }
+
+  .dummy {
+    flex-grow: 1;
+  }
+
+  .list-container {
+    display: flex;
+    flex-grow: 1;
+    margin-left: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .list-title {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .list-content {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .list-content > li {
+    padding-right: 60px;
+  }
+
+  .link {
+    color: var(--white);
+    font-size: 0.75rem;
+    text-decoration: none;
+  }
+  .link:hover {
+    text-decoration: underline;
+  }
+
+  /* Footer Bottom */
+  .bottom {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--near-black);
+    color: var(--white);
+    padding: 2rem;
+    font-size: 0.75rem;
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .legal {
+    text-align: center;
+    font-size: 0.75rem;
+    margin: 0;
+  }
+</style>

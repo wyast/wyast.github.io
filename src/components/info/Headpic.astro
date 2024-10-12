@@ -1,0 +1,52 @@
+---
+
+---
+
+<div class="headpic">
+  <h1 class="headpic__title">
+    未央科协的资讯页面,
+    <strong class="headpic__phrase--strong"> 就在这里。 </strong>
+  </h1>
+  <a href="/">
+    <button class="headpic__button">返回主页</button>
+  </a>
+</div>
+
+<style>
+  .headpic {
+    background-color: var(--navy);
+    color: var(--near-white);
+    padding: 4rem 2rem 6rem 2rem;
+  }
+
+  .headpic__title {
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 0;
+    font-family: serif;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .headpic__phrase--strong {
+    font-weight: 700;
+  }
+
+  .headpic__button {
+    background-color: var(--light-red);
+    color: var(--near-white);
+    border: none;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+    padding: 0.5rem 2rem;
+    font-size: 16px;
+    cursor: pointer;
+    will-change: background-color transform;
+    transition: background-color 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .headpic__button:hover {
+    transition: background-color 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: var(--dark-red);
+  }
+</style>

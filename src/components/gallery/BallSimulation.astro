@@ -1,0 +1,225 @@
+---
+const source = `
+import numpy as np
+import sympy as sp
+import io
+import base64
+from js import document
+
+# 粒子类
+class Particle:
+    def __init__(self, position, velocity, acceleration):
+        self.position = position
+        self.velocity = velocity
+        self.acceleration = acceleration
+
+interval = 0.01
+num_particles = 20
+reflect_fac=-1
+
+# 这里np.zeros(2)是粒子位置，np.random.rand(2) * 20是粒子速度，np.array([0, -10])是粒子加速度
+particles = [Particle(np.zeros(2), np.random.rand(2) * 20, np.array([0, -10])) for _ in range(num_particles)]
+
+# 基于householder矩阵的反射函数
+def reflect(v, fun, fun_sympy, p, fac):
+    # Calculate normal vector
+    x = sp.symbols('x')
+    f_prime = sp.diff(fun_sympy, x)
+    fun_diff = f_prime.subs(x, p)
+    n = np.array([-fun_diff, 1], dtype=float)
+    n = n / np.linalg.norm(n)
+    # Householder matrix
+    H = np.eye(2) - 2 * np.outer(n, n)
+    # Reflect velocity
+    v1 = np.dot(H, v)
+    return v1 * abs(fac)
+
+# 定义边界
+boundX = [-np.pi, np.pi]
+boundY = 0
+
+x = sp.symbols('x')
+fun_sympy = 3 + 0.5 * sp.cos(2*x)
+fun = sp.lambdify(x, fun_sympy, "numpy")
+
+y = fun(np.linspace(boundX[0], boundX[1], 1000))
+
+
+def step():
+    for particle in particles:
+        # 更新位置
+        particle.position += particle.velocity * interval
+        # 碰撞检测和反射
+        if particle.position[1] >= fun(particle.position[0]):
+            particle.velocity = reflect(particle.velocity, fun, fun_sympy, particle.position[0], reflect_fac)
+        if particle.position[0] <= boundX[0] or particle.position[0] >= boundX[1]:
+            particle.velocity[0] = -particle.velocity[0]
+        if particle.position[1] <= boundY:
+            particle.velocity[1] = -particle.velocity[1]
+
+        # 更新速度
+        particle.velocity += particle.acceleration * interval
+        # 边界约束
+        particle.position = np.clip(particle.position, [boundX[0], boundY], [boundX[1], fun(particle.position[0])])        
+        # 清除上一帧
+
+def to_js(particles):
+    return [{"position": particle.position.tolist(), "velocity": particle.velocity.tolist(), "acceleration": particle.acceleration.tolist()} for particle in particles]
+
+`;
+---
+
+<script is:inline src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"
+></script>
+<div class="wrapper">
+  <h2>Python的小球模拟</h2>
+  <ball-runner packages="numpy, sympy">
+    <pre class="status">Loading...</pre>
+    <canvas class="result"></canvas>
+    <pre><code class="sourceEl">{source}</code></pre>
+    <!--TODO: 希望num_particles，reflect_fac（应为(-1,0)的数）以及粒子的位置、速度、加速度可以让用户通过网页输入-->
+  </ball-runner>
+</div>
+
+<script>
+  declare var loadPyodide: any;
+  type Particle = {
+    position: [number, number];
+    velocity: [number, number];
+    acceleration: [number, number];
+  };
+  class BallRunner extends HTMLElement {
+    py: any;
+    source: string | undefined;
+    input: HTMLInputElement | undefined;
+    indicator: HTMLElement | undefined;
+    status: HTMLElement | undefined;
+    result: HTMLCanvasElement | undefined;
+    constructor() {
+      super();
+    }
+
+    async connectedCallback() {
+      const packages = this.getAttribute("packages");
+      const status: HTMLElement = this.querySelector(".status")!;
+      const sourceEl = this.querySelector(".sourceEl")!;
+      const result: HTMLCanvasElement = this.querySelector(".result")!;
+      const source = sourceEl.textContent!;
+
+      status.textContent = "Loading pyodide...";
+      // TODO: make a separate component for loading pyodide, then pass it
+      const py = await loadPyodide();
+      if (packages) {
+        status.textContent = "Loading micropip...";
+        await py.loadPackage("micropip");
+        const micropip = py.pyimport("micropip");
+        const packageList = packages.split(",");
+        for (const [i, pkg] of packageList.entries()) {
+          status.textContent = `Installing package ${pkg.trim()} (${i + 1}/${packageList.length})... `;
+          await micropip.install(pkg.trim());
+        }
+      }
+      this.source = source;
+      this.py = py;
+      this.status = status;
+      this.result = result;
+      this.setCanvasSize();
+      this.init();
+      const loop = (dt: number) => {
+        this.run();
+        requestAnimationFrame(loop);
+      };
+      requestAnimationFrame(loop);
+    }
+
+    setCanvasSize() {
+      const canvas = this.result!;
+      canvas.width = this.offsetWidth - 20;
+      canvas.height = canvas.width * 0.5;
+    }
+
+    init() {
+      this.status!.textContent = "Running...";
+      this.py.runPython(this.source);
+      this.status!.textContent = "";
+      this.py.runPython(`
+        tempx = [3, 4]
+      `);
+    }
+
+    run() {
+      this.py.runPython(`step()`);
+      const particles: Particle[] = this.py
+        .runPython(`to_js(particles)`)
+        .toJs()
+        .map(Object.fromEntries);
+      const canvas: HTMLCanvasElement = this.result!;
+      const ctx = canvas.getContext("2d")!;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // scale the canvas
+      const xlim = [-4, 4];
+      const ylim = [0, 4];
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const scaleX = canvas.width / (xlim[1] - xlim[0]);
+      const scaleY = canvas.height / (ylim[1] - ylim[0]);
+      ctx.setTransform(
+        scaleX,
+        0,
+        0,
+        -scaleY,
+        -scaleX * xlim[0],
+        canvas.height - scaleY * ylim[0]
+      );
+
+      const boundX = this.py.globals.get("boundX").toJs();
+      ctx.beginPath();
+      ctx.strokeStyle = "gray";
+      ctx.lineWidth = 0.02;
+      ctx.moveTo(boundX[0], 3.5);
+      ctx.lineTo(boundX[0], 0);
+      ctx.moveTo(boundX[1], 0);
+      ctx.lineTo(boundX[1], 3.5);
+      ctx.stroke();
+
+      // ax.plot(np.linspace(boundX[0], boundX[1], 1000), y, color='gray')
+      const x = this.py.runPython(`list(np.linspace(boundX[0], boundX[1], 1000))`).toJs();
+      const y = this.py.runPython(`list(y)`).toJs();
+      ctx.beginPath();
+      ctx.strokeStyle = "gray";
+      ctx.lineWidth = 0.02;
+      ctx.moveTo(x[0], y[0]);
+      for (let i = 1; i < x.length; i++) ctx.lineTo(x[i], y[i]);
+      ctx.stroke();
+
+      particles.forEach((particle) => {
+        ctx.beginPath();
+        ctx.arc(particle.position[0], particle.position[1], 0.02, 0, Math.PI * 2);
+        ctx.fillStyle = "red";
+        ctx.fill();
+      });
+
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+    }
+
+    disconnectedCallback() {
+      this.py.gilRelease();
+    }
+  }
+
+  customElements.define("ball-runner", BallRunner);
+</script>
+
+<style>
+  .wrapper {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  .status {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+</style>
