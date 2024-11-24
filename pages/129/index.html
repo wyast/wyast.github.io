@@ -9,7 +9,7 @@
     <body>
         <header></header>
         <div class="headjpg">
-            <img src="source/head.jpg" style="width: 100%; object-fit: cover" />
+            <img src="source/head.jpg" />
         </div>
         <main>
             <div id="quiz-container" class="flex-container"></div>
@@ -102,7 +102,6 @@
                     const userInput =
                         document.getElementById("inputText").value;
                     console.log(userInput, score); //这一行要改成发送
-                    alert("保存成功");
                     closeModal();
                 };
 
