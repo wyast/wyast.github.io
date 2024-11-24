@@ -556,11 +556,12 @@ main > * {
     overflow: hidden;
     box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
+
 @media (max-width: 768px) {
     .modal-content {
-        width: 70%; /* Increase width for larger screens */
-        top: 0%;
-        left: 15%;
+        width: 90%; /* Increase width for larger screens */
+        top: 20%;
+        left: 5%;
     }
 }
 
