@@ -703,6 +703,7 @@ nav button {
     font-size: var(--font-size-6);
     font-size: var(--font-size-5);
     background-color: var(--white);
+    z-index: 999;
 }
 .navbar__root {
     font-size: 14px;
@@ -727,14 +728,21 @@ nav button {
     padding-right: var(--spacing-large);
     margin-left: auto;
     border-color: var(--light-silver);
+    height: var(--navHeight);
 }
-
 nav .relative {
     position: relative;
 }
-
-.navbar__root {
-    height: var(--navHeight);
+.navbar__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: var(--spacing-small) var(--spacing-large);
+    border-bottom: 1px solid var(--light-silver);
+    position: relative;
+    z-index: 1;
 }
 .navbar__firstelem {
     font-size: 14px;
@@ -749,6 +757,23 @@ nav .relative {
     display: flex;
     position: relative;
     align-items: center;
+    overflow: visible;
+}
+.navbar__toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-right: var(--spacing-medium);
+}
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-radius: 8px;
+    overflow: visible;
 }
 .navbar__leftlogo {
     display: flex;
@@ -759,20 +784,33 @@ nav .relative {
         width: 22px;
     }
 }
+.navbar__dropdownbutton {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    padding: var(--spacing-none);
+    background-color: var(--transparent);
+    border-style: none;
+    border-width: 0;
+    padding: var(--spacing-small);
+    display: block;
+    width: 300%;
+}
 .navbar__leftelemframe {
     display: flex;
     font-size: 14px;
-    position: -webkit-sticky;
-    position: sticky;
     top: 0;
     font-size: var(--font-size-6);
     font-size: var(--font-size-5);
     background-color: var(--white);
     margin-left: var(--spacing-small);
+    position: relative;
+    z-index: 1;
 }
 .navbar__elembotton {
     display: flex;
     font-weight: 600;
+    cursor: pointer;
     padding: var(--spacing-none);
     background-color: var(--transparent);
     border-style: none;
@@ -792,8 +830,8 @@ nav .relative {
 .navbar__dropdown {
     display: none;
     position: absolute;
-    z-index: 10;
-    width: 100%;
+    z-index: 9999;
+    width: 300%;
     box-sizing: border-box;
     background-color: #ffffff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -820,11 +858,16 @@ nav .relative {
     text-align: center;
     font-size: small;
     font-weight: 600;
-    padding: 5px 0;
+    padding: var(--spacing-small) var(--spacing-medium);
     transition: background-color 0.2s;
+    z-index: 1100;
 }
 .navbar__dropdown a:hover {
     background-color: #f2f2f2;
+}
+.navbar__leftelemframe:hover .navbar__dropdown,
+.navbar__leftelemframe:focus-within .navbar__dropdown {
+    display: block;
 }
 /* Dropdown Content End */
 
@@ -856,41 +899,22 @@ nav .relative {
 .navbar__searchbotton {
     display: flex;
     align-items: center;
-    border-style: none;
-    border-width: 0;
-    background-color: var(--transparent);
-    font-weight: 600;
-    padding-left: var(--spacing-small);
-    padding-right: var(--spacing-small);
-    padding-top: var(--spacing-none);
-    padding-bottom: var(--spacing-none);
-    margin-right: 4px;
-    color: var(--mid-gray);
-    z-index: 1;
+    flex-wrap: nowrap;
 }
-.navbar__signinbotton {
-    font-size: 14px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    min-width: 92px;
-    margin-right: 4px;
+.navbar__searchbotton,
+.navbar__signinbotton,
+.navbar__signbotton {
+    background: none;
+    border: none;
+    cursor: pointer;
     font-weight: 600;
-    border-radius: var(--border-radius-2);
-    border-style: solid;
-    border-width: 1px;
-    position: relative;
-    padding: var(--spacing-small);
+    padding: var(--spacing-small) var(--spacing-medium);
     display: flex;
     align-items: center;
-    justify-content: center;
-    transition: all 0.1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    transition-property: background-color, color, box-shadow;
-    color: var(--dark-gray);
-    background-color: var(--transparent);
-    border-color: var(--transparent);
+    color: var(--mid-gray);
+    white-space: nowrap; /* 防止按钮内的文字换行 */
+    flex-shrink: 1; /* 允许按钮在空间不足时收缩 */
+    margin-right: var(--spacing-small);
 }
 .navbar__signbotton {
     font-size: 14px;
@@ -924,45 +948,72 @@ nav .relative {
     align-items: center;
     color: var(--dark-gray);
 }
-.navbar__icon {
-    margin-left: var(--spacing-small);
-}
+
 .navbar__iconright {
     margin-right: var(--spacing-small);
 }
 
-@media screen and (max-width: 700px) {
-    .navbar__root {
+@media screen and (max-width: 768px) {
+    .navbar__menu {
+        display: none;
         flex-direction: column;
-    }
-    .navbar__firstelem,
-    .navbar__lastelem {
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
+        background-color: var(--white);
+        border-bottom: 1px solid var(--light-silver);
     }
-    .navbar__firstelem {
-        justify-content: flex-start;
-    }
-    .navbar__lastelem {
-        justify-content: flex-end;
-    }
-}
-@media screen and (max-width: 400px) {
-    .navbar__firstelem {
-        flex-direction: column;
-    }
-    .navbar__lastelem {
-        flex-direction: column;
+    .navbar__menu.active {
+        display: flex;
     }
     .navbar__dropdown {
-        top: -50%;
-        left: 100%;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0);
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: 150%;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+    }
+    .navbar__elembotton {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .navbar__leftelemframe {
+        margin-left: 0;
+        padding: var(--spacing-small) var(--spacing-large);
+        border-bottom: 1px solid var(--light-silver);
+    }
+    .navbar__lastelem {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
     }
     .navbar__rightelemframe {
-        flex-direction: column;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
     }
-    .navbar__searchbotton {
-        margin: 8px;
+}
+
+@media screen and (max-width: 480px) {
+    .navbar__dropdown {
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: 250%;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+    }
+    .navbar__elembotton {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .navbar__searchbotton,
+    .navbar__signinbotton,
+    .navbar__signbotton {
+        padding: var(--spacing-small);
+        font-size: 12px;
+        margin-right: var(--spacing-small);
     }
 }
 
