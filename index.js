@@ -92,7 +92,7 @@ function createDanmu(text) {
     danmu.className = 'danmu__text';
     danmu.style.color = generateRandomBlueHues();
     const width = Math.min(window.innerWidth, 120 * 8);
-    const size = Math.random()+1;
+    const size = Math.random() + 1;
     danmu.style.animationDuration = size * (width / 300) + 's';
     danmu.style.fontSize = (30 / size) + 'px';
     danmu.style.zIndex = size * 100;
@@ -108,7 +108,7 @@ function startDanmuStream(interval) {
     let start = 0;
     function loop(now) {
         const elapsed = now - start;
-        if(elapsed > interval) {
+        if (elapsed > interval) {
             const text = danmuTexts[Math.floor(Math.random() * danmuTexts.length)];
             createDanmu(text);
             start = now;
@@ -121,3 +121,12 @@ function startDanmuStream(interval) {
 startDanmuStream(400);
 
 /** javascript for danmu end**/
+
+/** javascript for navbars begin**/
+const toggleButton = document.querySelector('.navbar__toggle');
+const navbarMenu = document.querySelector('.navbar__menu');
+
+toggleButton.addEventListener('click', () => {
+    navbarMenu.classList.toggle('active');
+});
+/** javascript for navbars end**/
