@@ -136,97 +136,225 @@
                 <br>
                 以上便是插件的配置了，那么接下来，让我们新建第一个文件，并使用LaTeX吧！
             </p>
-        </section>
 
-        <section>
-            <h2>四、大赛日程</h2>
-            <p>
-                <img src="schedule.png" width="500px">
+
+
+            <p style="text-indent: 0;">
+                <strong>三、使用</strong><br>
+
+                第一步：现在我们的vscode左栏有了一个TeX图标：
+
             </p>
+            <img src="vs3.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+
+                点击之后获得如下界面：
+
+            </p>
+            <img src="vs4.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+
+                第二步：点击上栏“文件（F）”“新建文件”
+                <br>
+                出现如下窗口后，选择“文本文件”
+
+            </p>
+            <img src="vs5.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+
+                在此界面中点击“选择语言”
+
+            </p>
+            <img src="vs6.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+
+                搜索框输入“latex”，并如下图选择蓝框项。
+
+            </p>
+            <img src="vs7.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+
+                现在你获得了一张latex语言的白纸。最好先另存一下。
+                <br>
+                上栏“文件F”->“另存为”找一个你喜欢的位置。
+                <br>
+                第三步：请在白纸上贴上以下代码
+                <br>
+                随后，点击右上黄圈中绿色小三角，进行编译。
+
+            </p>
+            <img src="vs8.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+
+                之后，你会惊奇地发现：在你存放此代码的文件夹中多出了一些其他文件，包括一个pdf，这个pdf中，便是你此次的成果！
+                <br>
+                当然，你也可以点击黄圈旁边的蓝框，直接在vscode默认pdf查看器下查看。它会出现在侧边栏，十分方便。
+
+            </p>
+            <img src="vs9.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+
+                如果你耐心的进行到了这一步，那么恭喜你！现在你已经完成了最基本的环境配置，成为了一名LaTeX的使用者了！
+                <br>
+                以上教程如果在公众号中观感不佳，请参考云盘中的详细教程：
+                <br>
+                https://cloud.tsinghua.edu.cn/d/8a39fbad061e419b83f5/
+
+            </p>
+
         </section>
 
         <section>
-            <h2>五、竞赛方式</h2>
-            <ol type="1">
-                <li>本大赛为团体赛事，须以队伍为单位报名参赛。<strong>每支参赛伍可配备参赛选手最多3名，指导教师最多2名。</strong>
-                    每支参赛队伍的第一选手将作为领队，与大赛组委会进行对接联络；</li>
-                <li>本届大赛采用线上/线下结合方式进行。其中<strong>报名、初赛方案提交、决赛作品提交将在仿真秀平台赛事官网进行；</strong>
-                    初赛方案评审、决赛作品答辩的线上平台及线下地点待后续公告确认。</li>
-                <li>本大赛为免费赛事，大赛组委会不收取报名费用。其它因参赛产生的食宿、差旅、软硬件及耗材费用由参赛方自行承担。</li>
+            <h2>03、基本指令</h2>
+
+            <p style="text-indent: 0;">
+                <strong>一、插入公式</strong><br>
+            </p>
+            <img src="com1.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                <strong>赠送一段源代码：</strong>
+                <br>
+                \documentclass{article} 
+                <br>
+                \usepackage{ctex}
+                <br>
+                \usepackage{amsmath, amssymb, mathtools} 
+                <br>
+                
+                
+                \begin{document}
+                <br>
+                \centering
+                <br>
+                % 1 在文字段落中嵌入公式
+                <br>
+                为了使本事例看着像一篇文章，我们在这里写一点废话。现在突然来个公式$ E=mc^2 $当然，之
+                
+                后它还会出现。这些废话对插入公式教程也没有帮助，但作为废话，它的显著作用是帮助本示例看着像一篇文章。\\
+                <br>
+                % 在两个单“美元”符号之间输入你想要的公式。上角标用^表示。更多公式语法规则详见我们的讲座！
+                <br>
+                % 将鼠标移到公式上，vscode会帮你显示预期效果。
+                <br>
+                % 2 在新的一行插入单行公式
+                <br>
+                为了使本事例看着像一篇文章，我们在这里写一点废话。这
+                <br>
+                些废话对插入公式教程也没有帮助，但后面来了一个公式：
+                <br>
+                $$ (p + \frac{a}{{V_m}^2})(V_m + b) = RT $$
+                <br>
+                % 在两个双“美元”符号之间输入你想要的公式。下角标用_表示，frac是分数线的意思。
+                <br>
+                % 至于如何给公式标号、做多行公式、对齐等详见我们的讲座！
+                <br>
+                \end{document}
+                <br>
+                <br>
+                
+                
+                如果你成功完成运行，你将会得到一段优质论文（×
+
+            </p>
+            <img src="com2.webp" width="800px" style="display: block; margin: 0 auto;">
+                    
+            <p style="text-indent: 0;">
+                <strong>二、制作表格</strong><br>
+            </p>
+            <img src="com3.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                
+                \documentclass{article}%将文件定义为文章
+                <br>
+                \usepackage{diagbox}%这连着的四个是一些需要引用的外部的包
+                <br>
+                \usepackage{ctex}
+                <br>
+                \usepackage{float}
+                <br>
+                \usepackage{booktabs}
+                <br>
+                \begin{document}%文件从这里开始
+                <br>
+                \begin{table}[H]%开始一个表格，[H]的意思后面是控制表格位置的，在讲座上会提到
+                <br>
+                    \centering%将表格置中
+                    <br>
+                    \begin{tabular}{cccccc} %告诉LaTeX，表格一共六列，cccccc的意思是有六列，且他们都居中
+                    <br>
+                    \toprule %顶端横线
+                    <br>
+                    序号 & 姓名 & 性别 & 年龄 & 身高/cm & 体重/kg \\% ‘\\’表示换行，‘&’表示换列
+                    <br>
+                    \midrule %中间横线
+                    <br>
+                    1 & 张三 & M & 16 & 163 & 50 \\
+                    <br>
+                    2 & 王红 & F & 15 & 159 & 47 \\
+                    <br>
+                    3 & 李二 & M & 17 & 165 & 52 \\
+                    <br>
+                    \bottomrule %底端横线
+                    <br>
+                \end{tabular}%结束
+                <br>
+                \end{table}%结束表格
+                <br>
+                \end{document}%结束文件
+                <br>
+                <br>
+                如果你成功完成运行，将会得到：
+            </p>
+            <img src="com4.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                <strong>三、插入图片</strong>
+            </p>
+            <img src="com5.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                如果你成功的完成了运行，你将会得到：
+            </p>
+            <img src="com6.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                （注：点击右上红圈小三角编译，若左下黄框显示“√”，则说明编译通过。此时，在.tex文件同级目录下出现pdf，就是你所编写的。）
+            </p>
+
+
+
+
+        </section>
+
+        <section>
+            <h2>04、参考资料</h2>
+            <ol>
+                <li>2022年未央科协LaTeX相关推送：
+                    https://mp.weixin.qq.com/s/LoDPXa9BpFCEu2z-_sKZmg</li>
+                <li>宋朝人都能看懂的详细LaTeX环境配置教程：
+                    https://cloud.tsinghua.edu.cn/d/8a39fbad061e419b83f5/</li>
+                <li>插入参考文献：
+                    https://blog.csdn.net/anshiquanshu/article/details/127381927</li>
+                <li>多行公式编号：
+                    https://blog.csdn.net/Strive_For_Future/article/details/118609968</li>
             </ol>
         </section>
 
-        <section>
-            <h2>六、竞赛要求</h2>
-            <h3>（1）参赛人员</h3>
-            本届大赛的参赛选手必须是2024年度高等学校在籍研究生或本科生，指导教师须为在校专职教师。
-            <h3>（2）组队及分组</h3>
-            参赛队伍由符合上述人员要求的群体自行组成。<strong>每个参赛选手仅可加入1支参赛队伍，每个指导教师可最多同时指导2支参赛队伍。</strong>
-            大赛分为研究生赛道和本科生赛道，赛道确定以组内全部选手中最高学历为准。
-            <h3>（3）队伍变更 </h3>
-            <strong>参赛队伍报名确认后不得随意变更。</strong>如在大赛过程中出现成员因故无法参赛、成员替换、成员补充（需有相应名额剩余）等情况，
-            需由参赛队伍所属单位出具书面申请说明，并最晚于决赛作品答辩开赛10个工作日之前提交至大赛组委会，经核实后确认变更。
-            若参赛队伍整体无法参赛，则视为自动放弃竞赛。
-            <h3>（4）报名参赛</h3>
-            参赛队伍领队须将队伍成员的报名参赛信息及材料如实提交至大赛官网。
-            参赛队伍成员应始终与提交确认的信息保持一致，并在各个比赛环节进行确认。
-            <h3>（5）方案及作品 </h3>
-            参赛队伍须签署《作品真实性及版权使用授权承诺书》等相关材料。
-            参赛队伍领队须在对应比赛环节将方案、作品及相关材料提交至大赛官网。
-            <strong>参赛队伍不可直接使用过往公开赛事中已参赛的方案或作品，</strong>可在其基础上进行创新修改，或重新设计。
-            <strong>方案或作品文档中不得包含参赛队伍的单位、人员及其它可能泄露参赛对象的信息。</strong>
-        </section>
 
-        <section>
-            <h2>七、评审规则</h2>
-            <p>
-                大赛设置总分值100分，其中初赛方案评审分值50分，决赛作品答辩分值50分。各参赛队伍<strong>采取分步得分、
-                    累计总分的计分方式，</strong>分别计算各环节分值，累计相加得出总成绩。总成绩相同队伍，以决赛分值较高者获胜。
-            </p>
-        </section>
-
-        <section>
-            <h2>八、奖项设定</h2>
-            <p>
-                <img src="award.webp">
-                进入决赛其余选手均颁发优秀奖证书，获得二等奖及以上队伍的指导教师颁发优秀指导教师证书。
-                奖项设置会根据参赛队伍数量和参赛作品质量做适当调整。
-            </p>
-        </section>
-
-        <section>
-            <h2>九、报名方式</h2>
-            <p>
-                请扫描下方二维码填写报名问卷，并加入赛事通知群聊，更多资讯将在群内公布！
-            <div style="text-align: center;">
-                <img src="scan.webp">
-            </div>
-
-            </p>
-        </section>
-
-        <section>
-            <h2>十、联系方式</h2>
-            <p>
-                在竞赛过程中有任何比赛相关的问题，可联系大赛组委会对应负责的工作人员联系咨询，以下为大赛组委会联系方式。
-            </p>
-            <dl>
-                <dt>耿老师：</dt>
-                <dd>qhgzt@tsinghua.edu.cn</dd>
-                <dt>王老师：</dt>
-                <dd>wangyuanhang@mail.tsinghua.edu.cn</dd>
-                <dt>咨询电话：</dt>
-                <dd>010-52167830<br>010-62773749</dd>
-                <dt>微信客服：</dt>
-                <dd>fangzhenxiu555</dd>
-                <dt>联系邮箱：</dt>
-                <dd>OSE@fangzhenxiu.com</dd>
-        </section>
 
         <footer>
             <hr>
-            <p>排版＆文案丨大赛筹备组</p>
-            <p>审核丨雍卓远 牛浩懿 张景宇</p>
+            <p>文案丨陈甘 刘亦钒 代裕</p>
+            <p>审核丨陈奕臻 涂弘毅 牛浩懿 吴承晋</p>
             <p>网页丨周智扬</p>
         </footer>
     </main>
