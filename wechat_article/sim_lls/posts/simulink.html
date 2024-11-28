@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024秋Simulink讲座</title>
+    <link rel="stylesheet" type="text/css" href="../style/classless.css" />
+</head>
+
+<body onload="initializePage()">
+    <header>
+        <h1>2024秋Simulink讲座回顾</h1>
+        <p>未央科协学术部，<time>2024年10月</time></p>
+        <!-- <img src="https://placekitten.com/960/480" alt="一张猫片" /> -->
+        <nav class="noprint">
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2><span class="anchor" id="INTRO"></span>Simulink简介</h2>
+            <p>Simulink是一个强大的图形编程环境，由MathWorks公司开发，用于在MATLAB中进行仿真和模型基于的设计。它允许用户通过拖放的方式构建复杂的系统模型，这些模型可以包含多个相互连接的组件，如信号线、积分器、传输函数等。Simulink广泛应用于控制系统的设计、信号处理、通信系统、机器学习等领域，能够对动态系统进行仿真、分析和自动代码生成，从而加速了从算法开发到产品实现的整个过程。
+            </p>
+            <p>
+                Simulink是一种强大的仿真工具，广泛应用于控制系统设计、电力系统仿真、机械系统模拟等领域，通过图形化建模和仿真，帮助工程师和研究人员设计、测试和优化各种动态系统。
+            </p>
+            <figure>
+                <figcaption>Simulink控制的光伏系统</figcaption>
+                <img src="../material/simulink/simulink_intro1.webp"
+                    alt="">
+            </figure>
+            <figure>
+                <figcaption>Simulink实现的机器学习辅助风电控制</figcaption>
+                <img src="../material/simulink/simulink_intro2.webp"
+                    alt="">
+            </figure>
+            <figure>
+                <figcaption>Simulink控制的跳跃爬楼机器人</figcaption>
+                <img src="../material/simulink/simulink_intro3.webp"
+                    alt="">
+            </figure>
+            
+            <h2><span class="anchor" id="INSTALL"></span>安装Simulink</h2>
+            <p>点击下面的链接进入学校软件资源下载（当然也可以在info上找到这个入口），MATLAB在计算类软件中。点击第一个“Matlab安装手册及相关文件”和你的电脑系统对应的版本。至于版本，建议选择2021以后的（其中“a”“b”表示上半年、下半年版本，随意挑一个就好啦）。安装过程中会提示需要哪些插件，本推送中的功能只需要MATLAB即可实现，其他后续需要也可以后续安装。</p></p>
+            <a href="https://its.tsinghua.edu.cn/siji_list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1081" target="_blank">清华MATLAB下载链接：Matlab-清华大学信息化用户服务平台</a>
+            <figure><img src="../material/simulink/simulink_install1.png" alt="itsthu"></figure>
+            <p>记得勾选第二个Simulink</p>
+            <figure><img src="../material/simulink/simulink_install2.png" alt="sel"></figure>
+            <p>对于已经安装了MATLAB但未安装Simulink的同学，可见下图,点击这里的“获取更多APP”.</p>
+            <figure><img src="../material/simulink/simulink_install3.png" alt="3"></figure>
+            <p>搜索Simulink，安装</p>
+            <figure><img src="../material/simulink/simulink_install4.png" alt="4"></figure>
+            <figure><img src="../material/simulink/simulink_install5.png" alt="5"></figure>
+            <p>安装后重启Matlab，出现Simulink图标则表示安装成功</p>
+            <figure><img src="../material/simulink/simulink_install6.png" alt="6"></figure>
+
+            <h2><span class="anchor" id="APPLICATION"></span>一个弹簧振子的例子</h2>
+            <p>怎么对一个微分方程描述的系统进行建模？Simulink通过什么组件、什么方法来描述、处理一个复杂的系统？我们通过一个最简单的弹簧振子，来体验Simulink强大而简洁的功能。</p>
+            <figure>
+                <figcaption>向弹簧振子系统输入力</figcaption>
+                <img src="../material/simulink/oscillator1.webp"
+                    alt="">
+            </figure>
+            <figure>
+                <figcaption>建立对应Simulink模型</figcaption>
+                <img src="../material/simulink/oscillator2.webp"
+                    alt="">
+            </figure>
+            <figure>
+                <figcaption>系统输出振子位置x（受迫振动）</figcaption>
+                <img src="../material/simulink/oscillator3.webp"
+                    alt="">
+            </figure>
+            <p>建立仿真模型的具体过程可通过我们的讲座视频学习~</p>
+            
+            <h2><span class="anchor" id="VIDEO"></span>讲座视频b站回看</h2>
+            <p></p>
+            <a href="https://www.bilibili.com/video/BV1rryVYtENt/?spm_id_from=333.999.0.0&vd_source=bf57514af637323b41cfb426cb94fe8d" target="_blank">第一讲：Simulink基础</a>
+            <a href="https://www.bilibili.com/video/BV1kByVY8EC1?spm_id_from=333.788.recommend_more_video.0&vd_source=bf57514af637323b41cfb426cb94fe8d" target="_blank">第二讲：Simulink与传递函数</a>
+            <a href="https://www.bilibili.com/video/BV1YzSiYdEfw/?spm_id_from=333.788.recommend_more_video.-1&vd_source=bf57514af637323b41cfb426cb94fe8d" target="_blank">第三讲：Simulink系统建模</a>
+        </article>
+    </main>
+    <footer>
+        <hr>
+        <h5>❤来自未央科协</h5>
+        <p>
+            代码<a href="https://github.com/wyast/wyast.github.io">@GitHub</a>。<br />
+            <!-- 大部分样式来自<a href="http://github.com/emareg/classlesscss">classless.de</a>。<br />
+            <a href="mailto:john.doe@foo.bar">john.doe@foo.bar</a><br />
+            <a href="tel:+1234567890">+1234567890</a> -->
+        </p>
+    </footer>
+    <script>
+        function initializePage() {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+        function toggleDarkMode(el) {
+            var theme = 'light'
+            if (el.innerText == '🌚') {
+                el.innerText = '🌞'; theme = 'dark';
+            } else {
+                el.innerText = '🌚'; theme = 'light';
+            }
+            document.documentElement.setAttribute('data-theme', theme)
+        }
+    </script>
+    
+</body>
+
+</html>
