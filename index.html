@@ -5,18 +5,19 @@
         <link rel="stylesheet" href="./index.css" />
         <title>清华大学未央书院学生科协</title>
         <link rel="icon" href="./images/wycollege.png" type="image/png" />
+        <script src="js/world.js"></script>
+        <script defer src="js/fish.js"></script>
     </head>
     <body>
-        <header>
+        <header class="circly">
             <div class="headpic">
+                <canvas id="headpic-anim">
+                    canvas 元素还没加载出来，所以没有头图可以看 :(
+                </canvas>
                 <h1 class="headpic__title">
-                    未央科协,
-                    <strong class="headpic__phrase--strong">&nbspWYAST </strong>
+                    未央科协。
+                    <strong class="headpic__phrase--strong">WYAST.&nbsp&nbsp&nbsp</strong>
                 </h1>
-
-                <!-- <a href="./components/headpic/index.html"> 
-                    <button class="headpic__button">前往头图页面</button>
-                </a>-->
             </div>
         </header>
         <nav class="navbar">
@@ -44,13 +45,48 @@
                                         alt="Dropdown" />
                                 </button>
                                 <div class="navbar__dropdown">
-                                    <a href="#">建造中...</a>
-                                    <a href="#">建造中...</a>
-                                    <a href="#">建造中...</a>
+                                    <a
+                                        href="wechat_article/YouXiuKeXie/WEIYANGYOUXIUKEXIE.html"
+                                        >未央科协获评优秀科协</a
+                                    >
+                                    <a
+                                        href="wechat_article\tiaozhanbei\tiaozhanbei.html"
+                                        >未央捧起挑战杯</a
+                                    >
+                                    <a
+                                        href="wechat_article/ZhiWuDaZhanJiangShi/ZWDZJS.html"
+                                        >我在未央战僵尸？</a
+                                    >
                                 </div>
                             </div>
                         </div>
                         <div class="navbar__leftelemframe navbar__forum">
+                            <div class="navbar__dropdownbotton">
+                                <button
+                                    class="navbar__elembotton"
+                                    type="button">
+                                    教程
+                                    <img
+                                        src="./icon/dropdown-icon.svg"
+                                        class="navbar__icon"
+                                        alt="Dropdown" />
+                                </button>
+                                <div class="navbar__dropdown">
+                                    <a href="wechat_article\Matlab\Matlab.html"
+                                        >学术部MATLAB大讲堂</a
+                                    >
+                                    <a
+                                        href="wechat_article\sim_lls\posts\simulink.html"
+                                        >Simulink讲座</a
+                                    >
+                                    <a
+                                        href="https://summer-nuggets.netlify.app/gallery/rotating/"
+                                        >图形学剪切旋转技术</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar__leftelemframe navbar__tutorial">
                             <div class="navbar__dropdownbotton">
                                 <button
                                     class="navbar__elembotton"
@@ -68,35 +104,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="navbar__leftelemframe navbar__tutorial">
-                            <div class="navbar__dropdownbotton">
-                                <button
-                                    class="navbar__elembotton"
-                                    type="button">
-                                    教程
-                                    <img
-                                        src="./icon/dropdown-icon.svg"
-                                        class="navbar__icon"
-                                        alt="Dropdown" />
-                                </button>
-                                <div class="navbar__dropdown">
-                                    <a href="#">建造中...</a>
-                                    <a href="#">建造中...</a>
-                                    <a href="#">建造中...</a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="navbar__lastelem">
                     <div class="navbar__rightelemframe">
-                        <button class="navbar__searchbotton">
+                        <!-- <button class="navbar__searchbotton">
                             <img
                                 src="./icon/search-icon.svg"
                                 class="navbar__iconright"
                                 alt="Search" />Search
-                        </button>
-                        <button class="navbar__signinbotton">注册</button>
+                        </button> -->
+                        <!-- <button class="navbar__signinbotton">注册</button> -->
                         <button
                             class="navbar__signbotton"
                             onclick="location.href='./wechat_article/each_department-txy/general.html';">
