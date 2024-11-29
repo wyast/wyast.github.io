@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未央学术 | 叮！获得LaTeX金色技能书</title>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/magick.css"> -->
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./magick.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>未央学术 | 叮!获得LaTeX金色技能书</h1>
+            <img src="top.gif">
+        </header>
+
+        <section>
+            <h2>00、引言</h2>
+            <p style="text-indent: 0;">
+                等等，你说什么？<br>
+
+                你居然还在用word写实验报告！<br>
+
+                你居然无法让图片乖乖听话！<br>
+
+                你居然为了一个公式狂敲20分钟！<br>
+
+                你居然只是改了个数据表格就变成了一团乱麻！<br>
+
+                看来，你的lv终究还是太低了。<br>
+
+                不过，不用担心！<br>
+
+                未央科协向各位未小羊们赠送了金色品质的技能书——<strong>LaTeX讲座与系列推送</strong><br>
+
+                <img src="book.webp" width="200px" style="display: block; margin: 0 auto; padding: 10px 10px;">
+
+                小羊们，快来学习，点满技能点吧！相信在讲座和系列推送的帮助下，你们也一定能制作出像这样的高颜值的基物报告！<br>
+
+                <img src="report.webp" width="800px" style="display: block; margin: 0 auto;">
+            </p>
+        </section>
+
+
+        <section>
+            <h2>01、LaTeX介绍</h2>
+            <p>
+                LaTeX，是一种基于TEX的排版系统，由美国计算机学家莱斯利·兰伯特（LeslieLamport）在20世纪80年代初期开发，
+                利用这种格式，即使使用者没有排版和程序设计的知识也可以充分发挥由TeX所提供的强大功能，
+                能在几天、甚至几小时内生成很多具有书籍质量的印刷品。对于生成复杂表格和数学公式，这一点表现得尤为突出。
+                因此它非常适用于生成高印刷质量的科技和数学类文档。
+            </p>
+            <p>
+                那么接下来，我们将为各位未小羊介绍LaTeX的安装，测试，并从公式、图片、表格三个方面简要讲解LaTeX的使用。
+                关于具体的教程，敬请期待正式的讲座。
+            </p>
+        </section>
+
+        <section>
+            <h2>02、配置LaTeX </h2>
+            <p style="text-indent: 0;">
+                <strong>一、安装LaTeX语言包</strong><br>
+
+                第一步：进入这个链接，下载texlive2022.iso （预计需要20-30min）
+
+                https://mirrors.huaweicloud.com/CTAN/systems/texlive/Images/
+            </p>
+            <img src="in1.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                第二步：下载完成后，双击iso文件打开文件夹。找到“install-tl-windows.bat”后右键，以管理员身份运行，进入安装界面。
+            </p>
+            <img src="in2.png" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                （注：若你使用的是vscode，那么不用安装TeXWorks前端，在下图的红圈处取消勾选。）
+            </p>
+            <img src="in3.png" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                第三步：上图红框处为“个性化”，在左栏选择需要准备的语言。
+                不出意外的话我们只要中文和英文，所以如下图先点蓝框处“无”，再勾选图中三项。
+            </p>
+            <img src="in4.png" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                <strong>另附：MacOS用户的安装指南</strong>
+
+                （1）下载地址：http://www.tug.org/mactex/点击MacTeX Download下载MacTeX.pkg文件。
+                或者可以从TUNA镜像站下载MaxTeX安装镜像，
+                链接是https://mirrors.tuna.tsinghua.edu.cn/ctan/systems/mac/mactex/（选择MacTeX.pkg）
+            </p>
+            <img src="in5.png" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                （2）下载完成后打开访达中的下载目录，点击下载的pkg文件开始安装MacTeX。
+                连续点击“继续”“同意”“安装”等选项。在弹出的界面输入Mac密码开始安装软件。安装快结束时可能会弹出提示需要命令行开发者工具，点击安装。
+
+                （3）安装成功后，发现成功安装4或5个软件（有的同学没有Excalibur），将其拖入同一个分类。
+            </p>
+            <img src="in6.png" width="800px" style="display: block; margin: 0 auto;">
+
+
+
+
+
+            <p style="text-indent: 0;">
+                <strong>二、配置vscode中LaTeX插件</strong><br>
+
+                第一步：在下载并装好vscode之后，在“插件”中搜索并安装LaTeX Workshop。
+                <br>
+                第二步：在vscode界面中，同时按键盘上“Fn”和“F1”，跳出搜索框，键入setjson，选择蓝框项（打开用户设置）。
+                随后，你会发现出现了一个名叫{}setting.json的文件，你可以向其中贴入代码。
+                <br>
+
+                （注：如果是只读，那么说明你选了“打开默认设置”，回到上一步重来）
+
+            </p>
+            <img src="vs1.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                第三步：接下来，在两个黄色的最外层花括号之间任意选择一个空位置，并进入下面的网站获取以下两段代码。
+                并贴入空位置。贴好以后点击保存。
+            </p>
+            <img src="vs2.webp" width="800px" style="display: block; margin: 0 auto;">
+            <p style="text-indent: 0;">
+                代码网址：https://zhuanlan.zhihu.com/p/38178015
+                <br>
+                各单位请注意！！！！
+                <br>
+                不要做任何修改！不要删掉中括号。
+                <br>
+                以上便是插件的配置了，那么接下来，让我们新建第一个文件，并使用LaTeX吧！
+            </p>
+
+
+
+            <p style="text-indent: 0;">
+                <strong>三、使用</strong><br>
+
+                第一步：现在我们的vscode左栏有了一个TeX图标：
+
+            </p>
+            <img src="vs3.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+
+                点击之后获得如下界面：
+
+            </p>
+            <img src="vs4.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+
+                第二步：点击上栏“文件（F）”“新建文件”
+                <br>
+                出现如下窗口后，选择“文本文件”
+
+            </p>
+            <img src="vs5.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+
+                在此界面中点击“选择语言”
+
+            </p>
+            <img src="vs6.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+
+                搜索框输入“latex”，并如下图选择蓝框项。
+
+            </p>
+            <img src="vs7.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+
+                现在你获得了一张latex语言的白纸。最好先另存一下。
+                <br>
+                上栏“文件F”->“另存为”找一个你喜欢的位置。
+                <br>
+                第三步：请在白纸上贴上以下代码
+                <br>
+                随后，点击右上黄圈中绿色小三角，进行编译。
+
+            </p>
+            <img src="vs8.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+
+                之后，你会惊奇地发现：在你存放此代码的文件夹中多出了一些其他文件，包括一个pdf，这个pdf中，便是你此次的成果！
+                <br>
+                当然，你也可以点击黄圈旁边的蓝框，直接在vscode默认pdf查看器下查看。它会出现在侧边栏，十分方便。
+
+            </p>
+            <img src="vs9.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+
+                如果你耐心的进行到了这一步，那么恭喜你！现在你已经完成了最基本的环境配置，成为了一名LaTeX的使用者了！
+                <br>
+                以上教程如果在公众号中观感不佳，请参考云盘中的详细教程：
+                <br>
+                https://cloud.tsinghua.edu.cn/d/8a39fbad061e419b83f5/
+
+            </p>
+
+        </section>
+
+        <section>
+            <h2>03、基本指令</h2>
+
+            <p style="text-indent: 0;">
+                <strong>一、插入公式</strong><br>
+            </p>
+            <img src="om1.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                <strong>赠送一段源代码：</strong>
+                <br>
+                \documentclass{article} 
+                <br>
+                \usepackage{ctex}
+                <br>
+                \usepackage{amsmath, amssymb, mathtools} 
+                <br>
+                
+                
+                \begin{document}
+                <br>
+                \centering
+                <br>
+                % 1 在文字段落中嵌入公式
+                <br>
+                为了使本事例看着像一篇文章，我们在这里写一点废话。现在突然来个公式$ E=mc^2 $当然，之
+                
+                后它还会出现。这些废话对插入公式教程也没有帮助，但作为废话，它的显著作用是帮助本示例看着像一篇文章。\\
+                <br>
+                % 在两个单“美元”符号之间输入你想要的公式。上角标用^表示。更多公式语法规则详见我们的讲座！
+                <br>
+                % 将鼠标移到公式上，vscode会帮你显示预期效果。
+                <br>
+                % 2 在新的一行插入单行公式
+                <br>
+                为了使本事例看着像一篇文章，我们在这里写一点废话。这
+                <br>
+                些废话对插入公式教程也没有帮助，但后面来了一个公式：
+                <br>
+                $$ (p + \frac{a}{{V_m}^2})(V_m + b) = RT $$
+                <br>
+                % 在两个双“美元”符号之间输入你想要的公式。下角标用_表示，frac是分数线的意思。
+                <br>
+                % 至于如何给公式标号、做多行公式、对齐等详见我们的讲座！
+                <br>
+                \end{document}
+                <br>
+                <br>
+                
+                
+                如果你成功完成运行，你将会得到一段优质论文（×
+
+            </p>
+            <img src="om2.webp" width="800px" style="display: block; margin: 0 auto;">
+                    
+            <p style="text-indent: 0;">
+                <strong>二、制作表格</strong><br>
+            </p>
+            <img src="om3.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                
+                \documentclass{article}%将文件定义为文章
+                <br>
+                \usepackage{diagbox}%这连着的四个是一些需要引用的外部的包
+                <br>
+                \usepackage{ctex}
+                <br>
+                \usepackage{float}
+                <br>
+                \usepackage{booktabs}
+                <br>
+                \begin{document}%文件从这里开始
+                <br>
+                \begin{table}[H]%开始一个表格，[H]的意思后面是控制表格位置的，在讲座上会提到
+                <br>
+                    \centering%将表格置中
+                    <br>
+                    \begin{tabular}{cccccc} %告诉LaTeX，表格一共六列，cccccc的意思是有六列，且他们都居中
+                    <br>
+                    \toprule %顶端横线
+                    <br>
+                    序号 & 姓名 & 性别 & 年龄 & 身高/cm & 体重/kg \\% ‘\\’表示换行，‘&’表示换列
+                    <br>
+                    \midrule %中间横线
+                    <br>
+                    1 & 张三 & M & 16 & 163 & 50 \\
+                    <br>
+                    2 & 王红 & F & 15 & 159 & 47 \\
+                    <br>
+                    3 & 李二 & M & 17 & 165 & 52 \\
+                    <br>
+                    \bottomrule %底端横线
+                    <br>
+                \end{tabular}%结束
+                <br>
+                \end{table}%结束表格
+                <br>
+                \end{document}%结束文件
+                <br>
+                <br>
+                如果你成功完成运行，将会得到：
+            </p>
+            <img src="om4.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                <strong>三、插入图片</strong>
+            </p>
+            <img src="om5.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                如果你成功的完成了运行，你将会得到：
+            </p>
+            <img src="om6.webp" width="800px" style="display: block; margin: 0 auto;">
+
+            <p style="text-indent: 0;">
+                （注：点击右上红圈小三角编译，若左下黄框显示“√”，则说明编译通过。此时，在.tex文件同级目录下出现pdf，就是你所编写的。）
+            </p>
+
+
+
+
+        </section>
+
+        <section>
+            <h2>04、参考资料</h2>
+            <ol>
+                <li>2022年未央科协LaTeX相关推送：
+                    https://mp.weixin.qq.com/s/LoDPXa9BpFCEu2z-_sKZmg</li>
+                <li>宋朝人都能看懂的详细LaTeX环境配置教程：
+                    https://cloud.tsinghua.edu.cn/d/8a39fbad061e419b83f5/</li>
+                <li>插入参考文献：
+                    https://blog.csdn.net/anshiquanshu/article/details/127381927</li>
+                <li>多行公式编号：
+                    https://blog.csdn.net/Strive_For_Future/article/details/118609968</li>
+            </ol>
+        </section>
+
+
+
+        <footer>
+            <hr>
+            <p>文案丨陈甘 刘亦钒 代裕</p>
+            <p>审核丨陈奕臻 涂弘毅 牛浩懿 吴承晋</p>
+            <p>网页丨周智扬</p>
+        </footer>
+    </main>
+</body>
+
+</html>
