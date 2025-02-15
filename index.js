@@ -78,13 +78,13 @@ function generateRandomBlueHues() {
 //TODO: convert to custom html element
 
 const danmuTexts = [
-    "欢迎来到未央科协！",
+    "欢迎来到此网页！",
     "这是一个好弹幕！",
     "Hello World!",
     "这是一份像社团的社工，一个是社工的社团!",
-    "加入科协，收获爱情！",
-    "未央书院举起挑战杯",
-    "未央科协被评为优秀科协！",
+    "加入我们，收获爱情！",
+    //"未央书院举起挑战杯",
+    //"未央科协被评为优秀科协！",
 ];
 
 function createDanmu(text) {
