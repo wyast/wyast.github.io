@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>从游坊报名问卷</title>
+    <link rel="stylesheet" type="text/css" href="..\style\style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>从游坊报名问卷</h1>
+    </header>
+    <main>
+      <p class="c">
+        <strong class="wy">从游坊报名问卷</strong
+        >，需要筹办从游坊的班级需要在提示的时间期间填写该问卷。
+      </p>
+      <figure>
+        <img src="../material/fish/weiyang.gif" alt="未央大旗" />
+      </figure>
+
+      <article class="selection">
+                
+        <section class="selection__item">                    
+            <!-- <h1><b>从游活动报名问卷&darr;</b></h1> -->
+            
+            <h2>从游活动报名问卷&darr;</h2>
+            <h3 style="color: rebeccapurple;">！注意：从游坊举办时间应不早于:<span id="dateDisplay" ></span></h3>
+            
+            <script>
+                function updateDate() {
+                    const now = new Date();
+                    const fut = new Date(now.getTime()+3*24*60*60*1000) //单位是毫秒
+                    const dateString = fut.toLocaleDateString(); 
+                    document.getElementById('dateDisplay').textContent = dateString;
+                }
+
+                updateDate(); //初始化时更新日期
+                setInterval(updateDate, 86400000); //每天更新一次日期，单位也是毫秒
+            </script>
+            <div class="selection__item">
+                <a
+                    class="item__imgholder"
+                    href="https://www.wjx.cn/vm/rPiLNHK.aspx">
+                    <img
+                        src="https://bpic.588ku.com/element_origin_min_pic/19/12/11/c3f4ae1a60baf6092aec4b4b7d2866fa.jpg"
+                        class="item__img" />
+                </a>
+                <div class="item__description">
+                    <a
+                        class="item__title"
+                        href="https://www.wjx.cn/vm/rPiLNHK.aspx"
+                        style="color: goldenrod; font-size: 20px;"
+                        >问卷星链接&uarr;</a
+                    >
+                    <p>
+                        <a href="https://cloud.tsinghua.edu.cn/f/e8b1fd2c7d884c4bbd54/" style="font-size: 20px; text-decoration: none;">下载报名表云盘链接</a><br>
+                        <a href="https://cloud.tsinghua.edu.cn/u/d/494076c9a80f471f816a/" style="font-size: 20px; text-decoration: none;">上传报名表云盘链接</a>
+                        <h3 style="color: rebeccapurple; font-size: 20px;">!请在举办后7天内将报名表提交到上传链接</h3>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </article>
+    </main>
+  </body>
+</html>
