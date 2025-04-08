@@ -271,6 +271,7 @@ main > * {
   flex-wrap: wrap;
   padding: 1rem 3rem;
   background-color: #b8860b;
+}
 
 .footer__top-container {
   display: flex;
