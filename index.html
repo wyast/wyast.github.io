@@ -1,196 +1,164 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./index.css" />
-        <title>清华大学未央书院学生科协</title>
-        <link rel="icon" href="./images/wycollege.png" type="image/png" />
-        <script src="js/world.js"></script>
-        <script defer src="js/fish.js"></script>
-    </head>
-    <body>
-        <header class="circly">
-            <div class="headpic">
-                <canvas id="headpic-anim">
-                    canvas 元素还没加载出来，所以没有头图可以看 :(
-                </canvas>
-                <h1 class="headpic__title">
-                    未央科协。
-                    <strong class="headpic__phrase--strong">WYAST.&nbsp&nbsp&nbsp</strong>
-                </h1>
-            </div>
-        </header>
-        <nav class="navbar">
-            <div class="navbar__root">
-                <div class="navbar__firstelem">
-                    <button
-                        class="navbar__toggle"
-                        aria-label="Toggle navigation">
-                        <img
-                            src="./icon/logo.svg"
-                            alt="Logo"
-                            class="navbar__logo" />
-                    </button>
-                    <!-- 导航菜单 -->
-                    <div class="navbar__menu">
-                        <div class="navbar__leftelemframe navbar__info">
-                            <div class="navbar__dropdownbotton">
-                                <button
-                                    class="navbar__elembotton"
-                                    type="button">
-                                    资讯
-                                    <img
-                                        src="./icon/dropdown-icon.svg"
-                                        class="navbar__icon"
-                                        alt="Dropdown" />
-                                </button>
-                                <div class="navbar__dropdown">
-                                    <a
-                                        href="wechat_article/YouXiuKeXie/WEIYANGYOUXIUKEXIE.html"
-                                        >未央科协获评优秀科协</a
-                                    >
-                                    <a
-                                        href="wechat_article\tiaozhanbei\tiaozhanbei.html"
-                                        >未央捧起挑战杯</a
-                                    >
-                                    <a
-                                        href="wechat_article/ZhiWuDaZhanJiangShi/ZWDZJS.html"
-                                        >我在未央战僵尸？</a
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="navbar__leftelemframe navbar__forum">
-                            <div class="navbar__dropdownbotton">
-                                <button
-                                    class="navbar__elembotton"
-                                    type="button">
-                                    教程
-                                    <img
-                                        src="./icon/dropdown-icon.svg"
-                                        class="navbar__icon"
-                                        alt="Dropdown" />
-                                </button>
-                                <div class="navbar__dropdown">
-                                    <a href="wechat_article\Matlab\Matlab.html"
-                                        >学术部MATLAB大讲堂</a
-                                    >
-                                    <a
-                                        href="wechat_article\sim_lls\posts\simulink.html"
-                                        >Simulink讲座</a
-                                    >
-                                    <a
-                                        href="https://summer-nuggets.netlify.app/gallery/rotating/"
-                                        >图形学剪切旋转技术</a
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="navbar__leftelemframe navbar__tutorial">
-                            <div class="navbar__dropdownbotton">
-                                <button
-                                    class="navbar__elembotton"
-                                    type="button">
-                                    论坛
-                                    <img
-                                        src="./icon/dropdown-icon.svg"
-                                        class="navbar__icon"
-                                        alt="Dropdown" />
-                                </button>
-                                <div class="navbar__dropdown">
-                                    <a href="#">建造中...</a>
-                                    <a href="#">建造中...</a>
-                                    <a href="#">建造中...</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>清华大学未央书院学生科协</title>
+    <link rel="icon" href="./images/wycollege.png" type="image/png" />
+    <script src="js/world.js"></script>
+    <script defer src="js/fish.js"></script>
+  </head>
+  <body>
+    <header class="circly">
+      <div class="headpic">
+        <canvas id="headpic-anim">
+          canvas 元素还没加载出来，所以没有头图可以看 :(
+        </canvas>
+        <h1 class="headpic__title">
+          <!--未央科协-->
+          <strong class="headpic__phrase--strong">WYAST.&nbsp&nbsp&nbsp</strong>
+        </h1>
+      </div>
+    </header>
+    <nav class="navbar">
+      <div class="navbar__root">
+        <div class="navbar__firstelem">
+          <button class="navbar__toggle" aria-label="Toggle navigation">
+            <img src="./icon/logo.svg" alt="Logo" class="navbar__logo" />
+          </button>
+          <!-- 导航菜单 -->
+          <div class="navbar__menu">
+            <div class="navbar__leftelemframe navbar__info">
+              <div class="navbar__dropdownbotton">
+                <button class="navbar__elembotton" type="button">
+                  资讯
+                  <img
+                    src="./icon/dropdown-icon.svg"
+                    class="navbar__icon"
+                    alt="Dropdown"
+                  />
+                </button>
+                <div class="navbar__dropdown">
+                  <a href="wechat_article/YouXiuKeXie/WEIYANGYOUXIUKEXIE.html"
+                    >未央科协获评优秀科协</a
+                  >
+                  <a href="wechat_article\tiaozhanbei\tiaozhanbei.html"
+                    >未央捧起挑战杯</a
+                  >
+                  <a href="wechat_article/ZhiWuDaZhanJiangShi/ZWDZJS.html"
+                    >我在未央战僵尸？</a
+                  >
                 </div>
-                <div class="navbar__lastelem">
-                    <div class="navbar__rightelemframe">
-                        <!-- <button class="navbar__searchbotton">
+              </div>
+            </div>
+            <div class="navbar__leftelemframe navbar__forum">
+              <div class="navbar__dropdownbotton">
+                <button class="navbar__elembotton" type="button">
+                  教程
+                  <img
+                    src="./icon/dropdown-icon.svg"
+                    class="navbar__icon"
+                    alt="Dropdown"
+                  />
+                </button>
+                <div class="navbar__dropdown">
+                  <a href="wechat_article\Matlab\Matlab.html"
+                    >学术部MATLAB大讲堂</a
+                  >
+                  <a href="wechat_article\sim_lls\posts\simulink.html"
+                    >Simulink讲座</a
+                  >
+                  <a href="https://summer-nuggets.netlify.app/gallery/rotating/"
+                    >图形学剪切旋转技术</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="navbar__leftelemframe navbar__tutorial">
+              <div class="navbar__dropdownbotton">
+                <button class="navbar__elembotton" type="button">
+                  功能
+                  <img
+                    src="./icon/dropdown-icon.svg"
+                    class="navbar__icon"
+                    alt="Dropdown"
+                  />
+                </button>
+                <div class="navbar__dropdown">
+                  <a href="#">建造中...</a>
+                  <a href="#">建造中...</a>
+                  <a href="#">建造中...</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar__lastelem">
+          <div class="navbar__rightelemframe">
+            <!-- <button class="navbar__searchbotton">
                             <img
                                 src="./icon/search-icon.svg"
                                 class="navbar__iconright"
                                 alt="Search" />Search
                         </button> -->
-                        <!-- <button class="navbar__signinbotton">注册</button> -->
+            <!-- <button class="navbar__signinbotton">注册</button> -->
+            <!--去名
                         <button
                             class="navbar__signbotton"
                             onclick="location.href='./wechat_article/each_department-txy/general.html';">
-                            关于我们
+                            关于未央科协
                         </button>
-                    </div>
-                </div>
+                        -->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <article class="selection">
+        <section class="nav__selection__section">
+          <div class="nav__grid">
+            <div class="selection__item">
+              <a class="item__imgholder" href="./pages/info/index.html">
+                <img src=images/icon-1.svg class="img__grid" alt="资讯" />
+              </a>
+              <div class="item__description">
+                <a class="text__grid" href="./pages/info/index.html">资讯</a>
+              </div>
             </div>
-        </nav>
-        <main>
-            <article class="selection">
-                <section class="nav__selection__section">
-                    <div class="nav__grid">
-                        <div class="selection__item">
-                            <a
-                                class="item__imgholder"
-                                href="./pages/info/index.html">
-                                <img src=images/icon-1.svg class="img__grid"
-                                alt="资讯" />
-                            </a>
-                            <div class="item__description">
-                                <a
-                                    class="text__grid"
-                                    href="./pages/info/index.html"
-                                    >资讯</a
-                                >
-                            </div>
-                        </div>
 
-                        <div class="selection__item">
-                            <a
-                                class="item__imgholder"
-                                href="./pages/tutorial/index.html">
-                                <img src=images/icon-2.svg class="img__grid" />
-                            </a>
-                            <div class="item__description">
-                                <a
-                                    class="text__grid"
-                                    href="./pages/tutorial/index.html"
-                                    >教程</a
-                                >
-                            </div>
-                        </div>
-                        <div class="selection__item">
-                            <a
-                                class="item__imgholder"
-                                href="#"
-                                onclick="displayAlert()">
-                                <img src=images/icon-3.svg class="img__grid" />
-                            </a>
-                            <div class="item__description">
-                                <a
-                                    class="text__grid"
-                                    href="#"
-                                    onclick="displayAlert()"
-                                    >论坛</a
-                                >
-                            </div>
-                        </div>
-                        <div class="selection__item">
-                            <a
-                                class="item__imgholder"
-                                href="./pages/129/index.html">
-                                <img src=images/mao.png class="img__grid" />
-                            </a>
-                            <div class="item__description">
-                                <a
-                                    class="text__grid"
-                                    href="./pages/129/index.html"
-                                    >一二九特别活动</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!--<section class="selection__section">
+            <div class="selection__item">
+              <a class="item__imgholder" href="./pages/tutorial/index.html">
+                <img src=images/icon-2.svg class="img__grid" />
+              </a>
+              <div class="item__description">
+                <a class="text__grid" href="./pages/tutorial/index.html"
+                  >教程</a
+                >
+              </div>
+            </div>
+            <div class="selection__item">
+              <a class="item__imgholder" href="./pages/function/index.html">
+                <img src=images/icon-3.svg class="img__grid" />
+              </a>
+              <div class="item__description">
+                <a class="text__grid" href="./pages/function/index.html"
+                  >功能</a
+                >
+              </div>
+            <!-- </div>
+            <div class="selection__item">
+              <a class="item__imgholder" href="./pages/129/index.html">
+                <img src=images/mao.png class="img__grid" />
+              </a>
+              <div class="item__description">
+                <a class="text__grid" href="./pages/129/index.html"
+                  >一二九特别活动</a
+                >
+              </div>
+            </div> -->
+          </div>
+        </section>
+        <!--<section class="selection__section">
                     <div class="selection__description">
                         <h3 class="description__title">教程</h3>
                         <p class="description__content">这里是一些教程。</p>
@@ -303,7 +271,8 @@
                         </div>
                     </div>
                 </section>-->
-                <!-- departments:start -->
+        <!-- departments:start -->
+        <!-- 去名
                 <div class="department__container">
                     <img
                         class="pic__left"
@@ -430,15 +399,17 @@
                         src="./departments/yanchuang.jpg"
                         alt="研创中心" />
                 </div>
-                <!-- departments:finish -->
-            </article>
-            <danmu>
-                <div id="danmu__container"></div>
-            </danmu>
-        </main>
-        <footer>
-            <div class="footer__top">
-                <div class="footer__top-container2">
+            -->
+        <!-- departments:finish -->
+      </article>
+      <danmu>
+        <div id="danmu__container"></div>
+      </danmu>
+    </main>
+    <footer>
+      <div class="footer__top">
+        <div class="footer__top-container2">
+          <!-- 去名
                     <div class="footer__top-container01">
                         <a href="https://www.wizardquant.com/" target="_blank">
                             <img
@@ -456,46 +427,35 @@
                                 class="sponsor__img__grid" />
                         </a>
                     </div>
-                    <div class="footer__top-container01">
-                        <a
-                            href="https://www.icenter.tsinghua.edu.cn/"
-                            target="_blank">
-                            <img
-                                src="./sponsor/icenter.jpg"
-                                class="sponsor__img__grid" />
-                        </a>
-                    </div>
-                    <div class="footer__top-container01">
-                        <a href="https://air.tsinghua.edu.cn/" target="_blank">
-                            <img
-                                src="./sponsor/air.jpg"
-                                class="sponsor__img__grid" />
-                        </a>
-                    </div>
-                    <div class="footer__top-container01">
-                        <a
-                            href="http://www.x-lab.tsinghua.edu.cn/"
-                            target="_blank">
-                            <img
-                                src="./sponsor/xlab2.png"
-                                class="sponsor__img__grid" />
-                        </a>
-                    </div>
-                    <div class="footer__top-container01">
-                        <a href="#" target="_blank">
-                            <img
-                                src="./sponsor/wyast.png"
-                                class="sponsor__img__grid" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__middle">
-                <a class="footer__icon" href="#">@未央科协<br />LOGO</a>
+                    -->
+          <div class="footer__top-container01">
+            <a href="https://www.icenter.tsinghua.edu.cn/" target="_blank">
+              <img src="./sponsor/icenter.jpg" class="sponsor__img__grid" />
+            </a>
+          </div>
+          <div class="footer__top-container01">
+            <a href="https://air.tsinghua.edu.cn/" target="_blank">
+              <img src="./sponsor/air.jpg" class="sponsor__img__grid" />
+            </a>
+          </div>
+          <div class="footer__top-container01">
+            <a href="http://www.x-lab.tsinghua.edu.cn/" target="_blank">
+              <img src="./sponsor/xlab2.png" class="sponsor__img__grid" />
+            </a>
+          </div>
+          <div class="footer__top-container01">
+            <a href="#" target="_blank">
+              <img src="./sponsor/wyast.png" class="sponsor__img__grid" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__middle">
+        <a class="footer__icon" href="#">@WYAST<br />LOGO</a>
 
-                <div class="footer__list-container">
-                    <div class="footer__dummy"></div>
-                    <!--
+        <div class="footer__list-container">
+          <div class="footer__dummy"></div>
+          <!-- 
                     <div class="footer__list">
                         <h2 class="footer__list-title">部门</h2>
                         <ul class="footer__list-content">
@@ -510,62 +470,58 @@
                         
                         </ul>
                     </div>-->
-                    <div class="footer__list">
-                        <h2 class="footer__list-title">友链</h2>
-                        <ul class="footer__list-content">
-                            <li>
-                                <a
-                                    class="footer__link"
-                                    href="https://www.wyc.tsinghua.edu.cn/"
-                                    >未央书院</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    class="footer__link"
-                                    href="https://weyoung-learn.github.io/"
-                                    >未央学习部</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    class="footer__link"
-                                    href="https://liuyifan22.github.io/advice/"
-                                    >Advice Hub</a
-                                >
-                            </li>
+          <div class="footer__list">
+            <h2 class="footer__list-title">友链</h2>
+            <ul class="footer__list-content">
+              <li>
+                <a class="footer__link" href="https://www.wyc.tsinghua.edu.cn/"
+                  >未央书院</a
+                >
+              </li>
+              <li>
+                <a class="footer__link" href="https://weyoung-learn.github.io/"
+                  >未央学习部</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__link"
+                  href="https://liuyifan22.github.io/advice/"
+                  >Advice Hub</a
+                >
+              </li>
 
-                            <!-- More links -->
-                        </ul>
-                    </div>
-                </div>
-                <!-- More lists  -->
-            </div>
-            <div class="footer__bottom">
-                <p class="footer__legal">
-                    &copy; 2024 wyast
+              <!-- More links -->
+            </ul>
+          </div>
+        </div>
+        <!-- More lists  -->
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__legal">
+          &copy; 2025 wyast
 
-                    <!--，但推荐<a
+          <!--，但推荐<a
                         class="footer__link"
                         href="https://creativecommons.org/licenses/by/4.0/"
                         >Creative Commons
                     </a>-->
-                </p>
-                <div class="footer__social">
-                    <a
-                        class="footer__link"
-                        href="https://github.com/wyast/wyast.github.io"
-                        >GitHub</a
-                    >
-                </div>
-            </div>
-        </footer>
-    </body>
-    <script src="./index.js"></script>
-    <script>
-        function displayAlert() {
-            alert("建造中...前方的区域以后再来探索吧！");
-            return false; // Prevent the default action of the link
-        }
-    </script>
+        </p>
+        <div class="footer__social">
+          <a
+            class="footer__link"
+            href="https://github.com/wyast/wyast.github.io"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="./index.js"></script>
+  <script>
+    function displayAlert() {
+      alert("建造中...前方的区域以后再来探索吧！");
+      return false; // Prevent the default action of the link
+    }
+  </script>
 </html>

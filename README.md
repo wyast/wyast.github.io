@@ -60,3 +60,10 @@ If you are working on a project in YuQue list, pls fill in that tickbox in order
 -   finished LaTeX
 -   finished FISH
 -   add some harmless css
+   
+### 2025/4/20 BDN
+
+- 微微修改了一下从游坊问卷
+- 去掉了首页129活动的入口
+- 增加了一条弹幕
+
