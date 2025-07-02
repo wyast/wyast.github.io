@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>赛事项目征召</title>
+    <link rel="stylesheet" type="text/css" href="..\style\style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>赛事项目征召</h1>
+    </header>
+    <main>
+      <p>
+        <strong class="wy">赛事项目征召：</strong>这里是为各位同学征召赛事队友或项目成员搭建的平台。大家可以把相关的赛事队伍信息或者项目基本介绍以帖子的形式发布在下方区域，供其他同学了解和进一步联系。
+      </p>
+
+    <div id="post-component" style="height:400px; overflow-y:auto; border:1px solid #ccc; padding:10px;">
+        <div id="filters" style="margin-bottom:10px;">
+            <input type="text" id="searchInput" placeholder="Search posts..." style="margin-right:10px;" />
+            <select id="tagFilter">
+                <option value="">All Tags</option>
+                <option value="tag1">Tag1</option>
+                <option value="tag2">Tag2</option>
+                <option value="tag3">Tag3</option>
+            </select>
+        </div>
+        <ul id="postList" style="list-style-type:none; padding:0;"></ul>
+    </div>
+
+    <script>
+        // Dummy posts data
+        const posts = [];
+        for(let i = 1; i <= 50; i++){
+            posts.push({
+                id: i,
+                title: `Post Title ${i}`,
+                date: new Date(Date.now() - i * 86400000),
+                tags: i % 3 === 0 ? ['tag1'] : i % 3 === 1 ? ['tag2'] : ['tag3'],
+                url: `post${i}.html`
+            });
+        }
+        
+        // Sort posts: newest first
+        posts.sort((a, b) => b.date - a.date);
+
+        const postList = document.getElementById('postList');
+        const postComponent = document.getElementById('post-component');
+        const searchInput = document.getElementById('searchInput');
+        const tagFilter = document.getElementById('tagFilter');
+
+        let displayedCount = 0;
+        let currentPage = 1;
+        const batchSize = 10;
+
+        function renderPosts(reset = false, goToPage = null) {
+            // 设定目标页
+            if (goToPage !== null) {
+                currentPage = goToPage;
+            } else if (reset) {
+                currentPage = 1;
+            } else {
+                currentPage++;
+            }
+
+            if (reset || goToPage !== null) {
+                postList.innerHTML = "";
+            }
+
+            const searchText = searchInput.value.trim().toLowerCase();
+            const selectedTag = tagFilter.value;
+            const filtered = posts.filter(post => {
+                let matches = true;
+                if (searchText) matches = post.title.toLowerCase().includes(searchText);
+                if (matches && selectedTag) matches = post.tags.includes(selectedTag);
+                return matches;
+            });
+
+            const totalPages = Math.ceil(filtered.length / batchSize);
+
+            const start = (currentPage - 1) * batchSize;
+            const postsToShow = filtered.slice(start, start + batchSize);
+            postsToShow.forEach(post => {
+                const li = document.createElement('li');
+                li.style.marginBottom = "8px";
+                const a = document.createElement('a');
+                a.href = post.url;
+                a.textContent = `${post.title} (${post.date.toLocaleDateString()})`;
+                li.appendChild(a);
+                postList.appendChild(li);
+            });
+
+            // 如果本页内容不足撑满且还有后续页，自动加载
+            if ((reset || goToPage !== null) &&
+                postComponent.scrollHeight <= postComponent.clientHeight &&
+                currentPage < totalPages) {
+                renderPosts(false);
+            }
+        }
+
+
+        // Initial render of posts
+        renderPosts(true);
+
+        // Update list as user searches or filters
+        searchInput.addEventListener('input', () => renderPosts(true));
+        tagFilter.addEventListener('change', () => renderPosts(true));
+
+        // 监听鼠标滚轮在容器内滚动加载
+postComponent.addEventListener('wheel', e => {
+    if (e.deltaY > 0 &&
+        postComponent.scrollTop + postComponent.clientHeight >= postComponent.scrollHeight - 5) {
+        renderPosts();
+    }
+});
+    </script>
+
+  </body>
+</html>
