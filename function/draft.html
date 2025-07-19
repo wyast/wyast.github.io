@@ -28,23 +28,12 @@
         </div>
         <ul id="postList" style="list-style-type:none; padding:0;"></ul>
     </div>
+    </main>
 
     <script>
-        // Dummy posts data
+        const postFiles = ['test.html'];// 在这里添加实际的帖子文件名
         const posts = [];
-        for(let i = 1; i <= 50; i++){
-            posts.push({
-                id: i,
-                title: `Post Title ${i}`,
-                date: new Date(Date.now() - i * 86400000),
-                tags: i % 3 === 0 ? ['tag1'] : i % 3 === 1 ? ['tag2'] : ['tag3'],
-                url: `post${i}.html`
-            });
-        }
         
-        // Sort posts: newest first
-        posts.sort((a, b) => b.date - a.date);
-
         const postList = document.getElementById('postList');
         const postComponent = document.getElementById('post-component');
         const searchInput = document.getElementById('searchInput');
@@ -54,6 +43,41 @@
         let currentPage = 1;
         const batchSize = 10;
 
+        async function loadRealPosts() {
+            const promises = postFiles.map(async (filename, index) => {
+                try {
+                    const res = await fetch(`postfiles/${filename}`);
+                    const html = await res.text();
+                    const doc = new DOMParser().parseFromString(html, 'text/html');
+                    const title = doc.querySelector('h1')?.textContent?.trim() || `未命名帖 ${filename}`;
+                    posts.push({
+                        id: -index - 1,
+                        title: title,
+                        date: new Date(), // 可从 meta 标签获取实际时间
+                        tags: ['real'],
+                        url: `postfiles/${filename}`
+                    });
+                } catch (err) {
+                    console.error(`加载 ${filename} 失败:`, err);
+                }
+            });
+            await Promise.all(promises); // 等待所有帖子加载完成
+        }
+
+        // Dummy posts data
+        function loadDummyPosts() {
+            for (let i = 1; i <= 50; i++) {
+                posts.push({
+                    id: i,
+                    title: `Post Title ${i}`,
+                    date: new Date(Date.now() - i * 86400000),
+                    tags: i % 3 === 0 ? ['tag1'] : i % 3 === 1 ? ['tag2'] : ['tag3'],
+                    url: `post${i}.html`
+                });
+            }
+        }
+
+    
         function renderPosts(reset = false, goToPage = null) {
             // 设定目标页
             if (goToPage !== null) {
@@ -101,19 +125,24 @@
 
 
         // Initial render of posts
-        renderPosts(true);
+        (async () => {
+            await loadRealPosts();
+            loadDummyPosts();
+            posts.sort((a, b) => b.date - a.date); // Sort posts: newest first
+            renderPosts(true);
+        })();
 
         // Update list as user searches or filters
         searchInput.addEventListener('input', () => renderPosts(true));
         tagFilter.addEventListener('change', () => renderPosts(true));
 
         // 监听鼠标滚轮在容器内滚动加载
-postComponent.addEventListener('wheel', e => {
-    if (e.deltaY > 0 &&
-        postComponent.scrollTop + postComponent.clientHeight >= postComponent.scrollHeight - 5) {
-        renderPosts();
-    }
-});
+        postComponent.addEventListener('wheel', e => {
+            if (e.deltaY > 0 &&
+                postComponent.scrollTop + postComponent.clientHeight >= postComponent.scrollHeight - 5) {
+                renderPosts();
+            }
+        });
     </script>
 
   </body>
