@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>组队信息填写</title>
+  <style>
+    body {
+      font-family: 'Microsoft YaHei', sans-serif;
+      background: #f4f4f4;
+      height: 100vh;
+      display: flex;
+      justify-content: center; /* 水平居中 */
+      align-items: center;    /* 垂直居中 */
+      margin: 0;
+    }
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 320px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="teamForm" onsubmit="alert('提交成功！'); return false;">
+    <h2>组队信息</h2>
+
+    <label for="teamName">队伍名称</label>
+    <input type="text" id="teamName" name="teamName" placeholder="请输入队伍名称" required>
+
+    <label for="members">队员</label>
+    <input type="text" id="members" name="members" placeholder="请输入队员姓名（用逗号分隔）" required>
+
+    <button type="submit">提交</button>
+  </form>
+
+</body>
+</html>
