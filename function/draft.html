@@ -31,7 +31,7 @@
     </main>
 
     <script>
-        const postFiles = ['test.html'];// 在这里添加实际的帖子文件名
+        //const postFiles = ['test.html'];// 在这里添加实际的帖子文件名
         const posts = [];
         
         const postList = document.getElementById('postList');
@@ -39,41 +39,29 @@
         const searchInput = document.getElementById('searchInput');
         const tagFilter = document.getElementById('tagFilter');
 
-        let displayedCount = 0;
+        //let displayedCount = 0;
         let currentPage = 1;
         const batchSize = 10;
 
         async function loadRealPosts() {
-            const promises = postFiles.map(async (filename, index) => {
-                try {
-                    const res = await fetch(`postfiles/${filename}`);
-                    const html = await res.text();
-                    const doc = new DOMParser().parseFromString(html, 'text/html');
-                    const title = doc.querySelector('h1')?.textContent?.trim() || `未命名帖 ${filename}`;
-                    posts.push({
-                        id: -index - 1,
-                        title: title,
-                        date: new Date(), // 可从 meta 标签获取实际时间
-                        tags: ['real'],
-                        url: `postfiles/${filename}`
-                    });
-                } catch (err) {
-                    console.error(`加载 ${filename} 失败:`, err);
-                }
-            });
-            await Promise.all(promises); // 等待所有帖子加载完成
-        }
+            try {
+                const res = await fetch("http://101.200.45.82:3000/api/articles");
+                if (!res.ok) throw new Error("网络错误 " + res.status);
+                const data = await res.json();
 
-        // Dummy posts data
-        function loadDummyPosts() {
-            for (let i = 1; i <= 50; i++) {
-                posts.push({
-                    id: i,
-                    title: `Post Title ${i}`,
-                    date: new Date(Date.now() - i * 86400000),
-                    tags: i % 3 === 0 ? ['tag1'] : i % 3 === 1 ? ['tag2'] : ['tag3'],
-                    url: `post${i}.html`
+                data.forEach(article => {
+                    posts.push({
+                        id: article.id,
+                        title: article.title,
+                        date: new Date(), // 可以扩展：后端加时间字段
+                        tags: ["tag1"],   // 先给默认tag，后端可扩展
+                        url: "#",         // 如果需要详情页，这里替换
+                        members: article.members,
+                        content: article.content
+                    });
                 });
+            } catch (err) {
+                console.error("加载文章失败:", err);
             }
         }
 
@@ -96,22 +84,24 @@
             const selectedTag = tagFilter.value;
             const filtered = posts.filter(post => {
                 let matches = true;
-                if (searchText) matches = post.title.toLowerCase().includes(searchText);
+                if (searchText) matches = post.title.toLowerCase().includes(searchText) 
+                                      || post.content.toLowerCase().includes(searchText);
                 if (matches && selectedTag) matches = post.tags.includes(selectedTag);
                 return matches;
-            });
+            }); 
 
             const totalPages = Math.ceil(filtered.length / batchSize);
-
             const start = (currentPage - 1) * batchSize;
             const postsToShow = filtered.slice(start, start + batchSize);
+
             postsToShow.forEach(post => {
                 const li = document.createElement('li');
-                li.style.marginBottom = "8px";
-                const a = document.createElement('a');
-                a.href = post.url;
-                a.textContent = `${post.title} (${post.date.toLocaleDateString()})`;
-                li.appendChild(a);
+                li.style.marginBottom = "12px";
+                li.innerHTML = `
+                    <strong>${post.title}</strong> (${post.members})<br/>
+                    <small>${post.date.toLocaleDateString()}</small><br/>
+                    <div>${post.content}</div>
+                `;
                 postList.appendChild(li);
             });
 
@@ -127,7 +117,6 @@
         // Initial render of posts
         (async () => {
             await loadRealPosts();
-            loadDummyPosts();
             posts.sort((a, b) => b.date - a.date); // Sort posts: newest first
             renderPosts(true);
         })();
