@@ -9,7 +9,7 @@ app.use(express.json());
 // PostgreSQL连接配置
 const pool = new Pool({
   user: "postgres", // 替换为你的数据库用户名
-  host: "localhost",
+  host: "101.200.45.82",
   database: "teamdb",
   password: "250817", // 替换为你的数据库密码
   port: 5432,
