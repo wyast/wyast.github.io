@@ -24,11 +24,23 @@
                 <option value="tag1">Tag1</option>
                 <option value="tag2">Tag2</option>
                 <option value="tag3">Tag3</option>
-            </select>
+            </select>            
+        </div>   
+        <!-- 新添加的提交招募信息的区域 -->
+        <div id="publish-section" style="margin-bottom:10px;">
+            <input type="text" id="titleInput" placeholder="文章标题" style="margin-right:10px; margin-bottom:5px; display:block;" />
+            <input type="text" id="membersInput" placeholder="团队成员" style="margin-right:10px; margin-bottom:5px; display:block;" />
+            <textarea id="contentInput" placeholder="文章内容..." style="margin-right:10px; width:100%; height:80px;"></textarea>
+            <button id="addPostButton">发布文章</button>
         </div>
+
         <ul id="postList" style="list-style-type:none; padding:0;"></ul>
     </div>
     </main>
+
+    <!-- 引入postHandler.js文件 -->
+    <script src="js\postHandler.js"></script>
+
 
     <script>
         //const postFiles = ['test.html'];// 在这里添加实际的帖子文件名
