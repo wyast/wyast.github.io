@@ -142,7 +142,7 @@ new CozeWebSDK.WebChatClient({
    */
   config: {
     type: "bot",
-    bot_id: "7551319728645128255",
+    bot_id: "7565081803653611529",
     isIframe: false,
   },
   /**
@@ -205,7 +205,7 @@ new CozeWebSDK.WebChatClient({
      */
     footer: {
       isShow: true,
-      expressionText: "Powered by ...",
+      expressionText: "Powered by WYAST",
     },
     /**
      * Control the UI and basic capabilities of the chat box.
@@ -215,7 +215,7 @@ new CozeWebSDK.WebChatClient({
      * @param chatBot.el - Container for setting the placement of the chat box (Element).
      */
     chatBot: {
-      title: "Coze Bot",
+      title: "未小羊",
       uploadable: true,
       width: 390,
     },
