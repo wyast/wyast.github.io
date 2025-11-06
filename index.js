@@ -154,7 +154,7 @@ new CozeWebSDK.WebChatClient({
   auth: {
     type: "token",
     token:
-      "pat_pGmLA5zA9zSGGTGx6p8Skv1YGpvM5zNuqr4InViUeQVsx0oZD5jHKIuAkmmIH3aC",
+      "pat_XUWht6ZdPku8awOtm4bRnodYBTTkf2VOM0oaAKLZFLicE0vD80J6VwbCKSQYpKLw",
     onRefreshToken: async () => "token",
   },
   /**
